@@ -1,0 +1,180 @@
+{% extends 'base.html' %} <!-- Inherit base template -->
+{% load static %} <!-- Load static files -->
+{% load i18n %} <!-- Load internationalization for translations -->
+
+{% block page_title %}
+  <!-- Page title block -->
+  {% trans 'Home Page' %} <!-- Title for the home page -->
+{% endblock %}
+
+{% block PWA_Install_Alert %}
+  <!-- PWA Install Alert Block/Toast -->
+  <div class="toast pwa-install-alert shadow bg-white" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="5000" data-bs-autohide="true">
+    <div class="toast-body">
+      <div class="content d-flex align-items-center mb-2">
+        <img src="{% static 'img/icons/icon-72x72.png' %}" alt="" /> <!-- Icon for the toast -->
+        <h6 class="mb-0">{% trans 'Add to Home Screen' %}</h6> <!-- Text for the add to home screen alert -->
+        <button class="btn-close ms-auto" type="button" data-bs-dismiss="toast" aria-label="{% trans 'Close' %}"></button> <!-- Close button -->
+      </div>
+      <span class="mb-0 d-block">{% trans 'Click the Add to Home Screen button to use it like a regular app!' %}</span> <!-- Detailed instructions for the user -->
+    </div>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <!-- Main content block -->
+  <!-- Search Form -->
+  <div class="container">
+    <div class="search-form pt-3 rtl-flex-d-row-r">
+      <form action="{% url 'search' %}" method="get">
+        <!-- Use the URL for the search view -->
+        <input class="form-control" dir="rtl" type="search" name="query" placeholder="{% trans 'Search' %}" />
+        <button type="submit"><i class="ti ti-search"></i></button> <!-- Search button -->
+      </form>
+    </div>
+  </div>
+  <!-- Hero Wrapper -->
+  <div class="hero-wrapper" dir="ltr">
+    <div class="container">
+      <div class="pt-3">
+        <!-- Hero Slides Carousel -->
+        <div class="hero-slides owl-carousel">
+          {% for slider in sliders %}
+            <div class="single-hero-slide" style="background-image: url('{{ slider.media.url }}')">
+              <!-- Hero slide with background image -->
+              <div class="slide-content h-100 d-flex align-items-center">
+                <div class="slide-text">
+                  <h4 class="text-white mb-0" data-animation="fadeInUp" data-delay="100ms" data-duration="1000ms">{{ slider.title }}</h4> <!-- Slider title -->
+                  <p class="text-white" data-animation="fadeInUp" data-delay="400ms" data-duration="1000ms">{{ slider.sub_title }}</p> <!-- Slider subtitle -->
+                  {% if slider.link %}
+                    <a class="btn btn-primary" href="{{ slider.link }}" data-animation="fadeInUp" data-delay="800ms" data-duration="1000ms">{{ slider.button_text }}</a> <!-- Slider button (if any) -->
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product Categories Section -->
+  <div class="product-catagories-wrapper py-3">
+    <div class="container">
+      <div class="row g-2 rtl-flex-d-row-r">
+        {% for category in categories %}
+          <div class="col-3">
+            <div class="card catagory-card">
+              <div class="card-body px-2">
+                <a href="{% url 'category' category.id %}"><img src="{{ category.logo.url }}" alt="{{ category.title }}" /><span>{{ category.title }}</span></a> <!-- Category card with image and title -->
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  {% if products_with_offers %}
+    {% for offer, products in products_with_offers.items %}
+      <!-- Flash Sale Section for each offer -->
+      <div class="flash-sale-wrapper">
+        <div class="container">
+          <div class="section-heading d-flex align-items-center justify-content-between rtl-flex-d-row-r">
+            <h6 class="d-flex align-items-center rtl-flex-d-row-r"><i class="ti ti-bolt-lightning me-1 text-danger lni-flashing-effect"></i>{{ offer.title }}</h6>
+
+            <!-- Flash sale countdown for this specific offer -->
+            <ul class="sales-end-timer ps-0 d-flex align-items-center rtl-flex-d-row-r" data-countdown="{{ offer.active_until|date:'Y/m/d H:i:s' }}">
+              <li>
+                <span class="days">0</span>d
+              </li>
+              <li>
+                <span class="hours">0</span>h
+              </li>
+              <li>
+                <span class="minutes">0</span>m
+              </li>
+              <li>
+                <span class="seconds">0</span>s
+              </li>
+            </ul>
+          </div>
+          <!-- Flash Sale Slide for the specific offer -->
+          <div class="flash-sale-slide owl-carousel">
+            {% for product in products %}
+              {% include 'partials/flash_sale_card.html' %} <!-- flash sale card partial template -->
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      <br /> <!-- Adds a new line for spacing -->
+    {% endfor %}
+  {% endif %}
+
+  <!-- Dark Mode Toggle -->
+  <div class="container">
+    <div class="dark-mode-wrapper mt-3 bg-img p-4 p-lg-5">
+      <p class="text-white">
+        {% trans 'You can change your display to a dark background using a dark mode.' %}
+      </p>
+      <div class="form-check form-switch mb-0">
+        <label class="form-check-label text-white h6 mb-0" for="darkSwitch">{% trans 'Switch to Dark Mode' %}</label> <!-- Label for the dark mode switch -->
+        <input class="form-check-input" id="darkSwitch" type="checkbox" role="switch" /> <!-- Dark mode switch -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Product List Section -->
+  <div class="top-products-area py-3">
+    <div class="container">
+      <div class="section-heading d-flex align-items-center justify-content-between dir-rtl">
+        <h6>{% trans 'Products' %}</h6> <!-- Section title for products -->
+        <a class="btn btn-sm btn-light" href="{% url 'shop-grid' %}">{% trans 'View All' %}<i class="ms-1 ti ti-arrow-left"></i></a> <!-- View all button for products -->
+      </div>
+      <div class="row g-2">
+        {% for product in products %}
+          <!-- Product Card -->
+          {% include 'partials/product_card.html' %} <!-- Product card partial template -->
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  {% if first_banner %}
+    <!-- First Banner -->
+    <div class="container">
+      <div class="cta-text dir-rtl p-3 p-lg-4" style="background-image: url('{{ first_banner.image.url }}');">
+        <div class="row">
+          <div class="col-9">
+            <h5 class="text-white mb-1">{{ first_banner.title }}</h5> <!-- Banner title -->
+            {% if first_banner.text %}
+              <p class="text-white mb-3">{{ first_banner.text|safe }}</p> <!-- Banner text (if available) -->
+            {% endif %}
+            {% if first_banner.button_text %}
+              <a class="btn btn-primary" href="{{ first_banner.link }}">{{ first_banner.button_text }}</a> <!-- Banner button (if available) -->
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+  {% if second_banner %}
+    <!-- Second Banner -->
+    <div class="container">
+      <div class="cta-text dir-rtl p-3 p-lg-4" style="background-image: url('{{ second_banner.image.url }}');">
+        <div class="row">
+          <div class="col-9">
+            <h5 class="text-white mb-1">{{ second_banner.title }}</h5> <!-- Banner title -->
+            {% if second_banner.text %}
+              <p class="text-white mb-3">{{ second_banner.text }}</p> <!-- Banner text (if available) -->
+            {% endif %}
+            {% if second_banner.button_text %}
+              <a class="btn btn-primary" href="{{ second_banner.link }}">{{ second_banner.button_text }}</a> <!-- Banner button (if available) -->
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+{% endblock %}

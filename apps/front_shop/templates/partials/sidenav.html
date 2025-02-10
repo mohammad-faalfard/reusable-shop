@@ -1,0 +1,61 @@
+{% load static %}
+{% load i18n %}
+{% load humanize %}
+
+<!-- Sidenav Nav -->
+<div class="offcanvas offcanvas-end suha-offcanvas-wrap" tabindex="-1" id="suhaOffcanvas" aria-labelledby="suhaOffcanvasLabel">
+  <!-- Close button -->
+  <button class="btn-close btn-close-white" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  <!-- Offcanvas body -->
+  <div class="offcanvas-body">
+    <!-- Navigation Links -->
+    <ul class="sidenav-nav ps-0">
+      {% if request.user.is_authenticated %}
+        <!-- Authenticated User Links -->
+        <li>
+          <a href="{% url 'profile-page' %}"><i class="ti ti-user"></i>{% trans 'My Profile' %}</a>
+        </li>
+        <li>
+          <a href="{% url 'notification' %}">
+            <i class="ti ti-bell-ringing lni-tada-effect"></i>{% trans 'Notifications' %}
+            <span class="ms-1 badge badge-warning">{{ total_notifs }}</span>
+          </a>
+        </li>
+        <li >
+          <a href="{% url 'wishlist-list' %}"><i class="ti ti-heart"></i>{% trans 'My Wishlist' %}</a>
+        </li>
+        <li>
+          <a href="{% url 'settings' %}"><i class="ti ti-adjustments-horizontal"></i>{% trans 'Settings' %}</a>
+        </li>
+        <li>
+          <a href="{% url 'logout' %}"><i class="ti ti-logout"></i>{% trans 'Sign Out' %}</a>
+        </li>
+      {% else %}
+        <!-- Guest User Links -->
+        <li>
+          <a href="{% url 'login-page' %}"><i class="ti ti-login"></i>{% trans 'Sign In' %}</a>
+        </li>
+      {% endif %}
+      <!-- Separator for common links -->
+      <li>
+        <hr class="my-2" />
+      </li>
+
+      <!-- Common Links -->
+      <li class="suha-dropdown-menu">
+        <a href="#"><i class="ti ti-building-store"></i>{% trans 'Shop Pages' %}</a>
+        <ul>
+          <li>
+            <a href="{% url 'shop-grid' %}">{% trans 'Shop Grid' %}</a>
+          </li>
+          <li>
+            <a href="{% url 'flash-sale' %}">{% trans 'Flash Sale' %}</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="{% url 'pages' %}"><i class="ti ti-notebook"></i>{% trans 'All Pages' %}</a>
+      </li>
+    </ul>
+  </div>
+</div>

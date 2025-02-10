@@ -1,0 +1,312 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% load jalali_tags %}
+{% load humanize %}
+
+{% block page_title %}
+  {% trans 'Product Details' %}
+{% endblock %}
+
+{% block content %}
+  <div class="product-slide-wrapper">
+    <!-- Product Slides -->
+    <div class="product-slides owl-carousel">
+      {% for image in product_images %}
+        <!-- Single Product Slide -->
+        <div class="single-product-slide" style="background-image: url('{{ image.image.url }}')"></div>
+      {% endfor %}
+    </div>
+    <!-- Video Button --><a class="video-btn shadow-sm" id="singleProductVideoBtn" href="https://www.youtube.com/watch?v=lFGvqvPh5jI"><i class="ti ti-player-play"></i></a>
+  </div>
+  <div class="product-description pb-3">
+    <!-- Product Title & Meta Data -->
+    <div class="product-title-meta-data bg-white mb-3 py-3">
+      <div class="container d-flex justify-content-between rtl-flex-d-row-r">
+        <div class="p-title-price">
+          <!-- Dynamic Product Title -->
+          <h5 class="mb-1">{{ product.title }}</h5>
+          <p class="sale-price mb-0 lh-1">
+            تومان
+            {{product.price_with_discount|floatformat:"-1"|intcomma:False}}
+
+            {% if product.discount_amount%}<span>{{ product.price|intcomma:False }}</span>{%endif%}
+
+          </p>
+        </div>
+        <div class="p-wishlist-share">
+          <a id="wishlist-btn" ><i id="wishlist-heart" class="ti ti-heart {%if product.is_in_wishlist%} ti-heart-filled {%endif%}"></i></a>
+        </div>
+      </div>
+
+      <!-- Ratings -->
+      <div class="product-ratings">
+        <div class="container d-flex align-items-center justify-content-between rtl-flex-d-row-r">
+          <div class="ratings">
+            <!-- Dynamic Star Ratings -->
+            {% for star in product.get_rating.stars %}
+              {% if star == 1 %}
+                <i class="ti ti-star-filled"></i>
+              {% else %}
+                <i class="ti ti-star"></i>
+              {% endif %}
+            {% endfor %}
+          </div>
+          <!-- Average Rating -->
+          <div class="total-result-of-ratings">
+            <span>{{ product.get_rating.avg_rating }}</span>
+            <span>
+              {% if product.get_rating.avg_rating >= 4 %}
+                {% trans 'Very Good' %}
+              {% elif product.get_rating.avg_rating >= 2 %}
+                {% trans 'Average' %}
+              {% else %}
+                {% trans 'Poor' %}
+              {% endif %}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   {% if offer_info.offer %}
+    <div class="flash-sale-panel bg-white mb-3 py-3">
+      <div class="container">
+        <!-- Sales Offer Content -->
+        <div class="sales-offer-content d-flex align-items-end justify-content-between">
+          <!-- Sales End -->
+          <div class="sales-end">
+            <p class="mb-1 font-weight-bold">
+
+              <i class="ti ti-bolt-lightning lni-flashing-effect text-danger"></i> {% trans 'Flash sale end in' %}
+            </p>
+            <!-- Please use event time this format: YYYY/MM/DD hh:mm:ss -->
+            <ul class="sales-end-timer ps-0 d-flex align-items-center" data-countdown="{{offer_info.offer_end_at}}">
+              <li>
+                <span class="days">0</span>d
+              </li>
+              <li>
+                <span class="hours">0</span>h
+              </li>
+              <li>
+                <span class="minutes">0</span>m
+              </li>
+              <li>
+                <span class="seconds">0</span>s
+              </li>
+            </ul>
+          </div>
+          <!-- Sales Volume -->
+          <div class="sales-volume text-end">
+            <p class="mb-1 font-weight-bold">{{offer_info.offer_sold}}% {% trans 'Sold Out' %}</p>
+            <div class="progress" style="height: 0.375rem;">
+              <div class="progress-bar bg-warning" role="progressbar" style="width: {{offer_info.offer_sold}}%;" aria-valuenow="{{offer_info.offer_sold}}" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+    {% if grouped_product_properties %}
+      <!-- Selection Panel -->
+      <div class="selection-panel bg-white mb-3 py-3">
+        <div class="container d-flex align-items-center justify-content-between">
+          {% for title, properties in grouped_product_properties.items %}
+            <div class="choose-size-wrapper text-end">
+              <p class="mb-1 font-weight-bold">{{ title }}</p>
+              <div class="choose-size-radio d-flex align-items-center">
+                {% for property in properties %}
+                  <!-- Single Radio Input -->
+                  <div class="form-check mb-0 me-2">
+                    <input class="form-check-input" id="sizeRadio{{ property.id }}" type="radio" name="{{ title }}" value="{{ property.value }}" />
+                    <label class="form-check-label" for="sizeRadio{{ property.id }}">{{ property.value }}</label>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+      <div id="cart-feedback" style="display: none;"></div>
+    <!-- Add To Cart -->
+    <div class="cart-form-wrapper bg-white mb-3 py-3">
+      <div class="container">
+        <form class="cart-form"
+        hx-post="{% url 'add_product_to_cart_ajax' product.id %}"
+        hx-target="#cart-feedback"
+        >
+        {% csrf_token %}
+          <div class="order-plus-minus d-flex align-items-center">
+            <div class="quantity-button-handler">-</div>
+            <input class="form-control cart-quantity-input" type="text" step="1" name="quantity" value="{{total_inside_cart}}" />
+            <div class="quantity-button-handler">+</div>
+          </div>
+          <button class="btn btn-primary ms-3" type="submit">{% trans 'Add To Cart' %}</button>
+        </form>
+      </div>
+    </div>
+    <!-- Product Specification -->
+    <div class="p-specification bg-white mb-3 py-3">
+      <div class="container">
+        <h6>{% trans 'Specifications' %}:</h6>
+        <!-- Product Description -->
+        <p>{{ product.description|safe }}</p>
+
+        <ul class="mb-3 ps-3">
+          {% for title, properties in grouped_product_properties.items %}
+            <li>
+              <strong>{{ title }}:</strong>
+              {% for property in properties %}
+                {{ property.value }}{% if not forloop.last %}, {% endif %}
+              {% endfor %}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    <!-- Product Video -->
+    <!-- <div class="bg-img" style="background-image: url(img/product/18.jpg)">
+      <div class="container">
+        <div class="video-cta-content d-flex align-items-center justify-content-center">
+          <div class="video-text text-center">
+            <h4 class="mb-4">Summer Clothing</h4><a class="btn btn-primary rounded-circle" id="videoButton" href="https://www.youtube.com/watch?v=lFGvqvPh5jI"><i class="ti ti-player-play"></i></a>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    {% if related_products %}
+      <!-- Related Products Slides -->
+      <div class="related-product-wrapper bg-white py-3 mb-3">
+        <div class="container">
+          <!-- Section Header -->
+          <div class="section-heading d-flex align-items-center justify-content-between rtl-flex-d-row-r">
+            <h6>{% trans 'Related Products' %}</h6>
+            <a class="btn btn-sm btn-light" href="{% url 'shop-grid' %}">
+              {% trans 'View All' %}
+              <i class="ms-1 ti ti-arrow-left"></i>
+            </a>
+          </div>
+          <div class="related-product-slide owl-carousel" dir="ltr">
+            {% for product in related_products %}
+              <!-- Product Card -->
+              {% include 'partials/product_card.html' %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    {% endif %}
+    <!-- Rating & Review Wrapper -->
+    <div class="rating-and-review-wrapper bg-white py-3 mb-3 dir-rtl">
+      <div class="container">
+        <h6>{% trans 'Ratings & Reviews' %}</h6>
+        <div class="rating-review-content">
+          <ul class="ps-0">
+            <!-- Iterate through reviews -->
+            {% for review in product_reviews %}
+              <li class="single-user-review d-flex">
+                <div class="rating-comment">
+                  <div class="rating">
+                    <!-- Render stars based on the review's stars -->
+                    {% for star in review.get_stars %}
+                      {% if star == 1 %}
+                        <i class="ti ti-star-filled"></i>
+                      {% else %}
+                        <i class="ti ti-star"></i>
+                      {% endif %}
+                    {% endfor %}
+                  </div>
+                  <p class="comment mb-0">{{ review.text|safe }}</p>
+                  <span class="name-date">{{ review.user.full_name }} — {{ review.created_at|to_jalali:'%Y/%m/%d' }}</span>
+                </div>
+              </li>
+            {% empty %}
+              <li>
+                {% trans 'No reviews yet.' %}
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Ratings Submit Form -->
+    {% comment %}need to fix bug how to submit - also show proper messages to user{% endcomment %}
+    <div class="ratings-submit-form bg-white py-3 dir-rtl">
+      <div class="container">
+        <h6>{% trans 'Submit A Review' %}</h6>
+        <form action="{% url 'single_product' product_id=product.id %}" method="POST" id="review-form">
+          {% csrf_token %}
+
+          <div class="stars mb-3" dir="ltr">
+            <input class="star-1" type="radio" name="star" id="star1" value="1" />
+            <label class="star-1" for="star1"></label>
+            <input class="star-2" type="radio" name="star" id="star2" value="2" />
+            <label class="star-2" for="star2"></label>
+            <input class="star-3" type="radio" name="star" id="star3" value="3" />
+            <label class="star-3" for="star3"></label>
+            <input class="star-4" type="radio" name="star" id="star4" value="4" />
+            <label class="star-4" for="star4"></label>
+            <input class="star-5" type="radio" name="star" id="star5" value="5" checked />
+            <label class="star-5" for="star5"></label>
+            <span></span>
+          </div>
+
+          <textarea class="form-control mb-3" id="comments" name="comment" cols="30" rows="10" data-max-length="200" placeholder="{% trans 'Write your review...' %}"></textarea>
+          {% if user.is_anonymous %}
+          <button class="btn btn-secondary" disabled>{% trans 'Login First' %}</button>
+        {% else %}
+          <!-- Use an anchor tag to link to the payment method page when the button is clicked -->
+          <button class="btn btn-primary" type="submit">{% trans 'Save Review' %}</button>
+        {% endif %}
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+<script>
+  form = document.getElementById('review-form');
+  const wishlistHeart = document.getElementById("wishlist-heart")
+  document.getElementById("wishlist-btn").addEventListener('click', function(e) {
+
+  fetch("{% url 'toggle_wishlist' product_id=product.id %}", {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRFToken': '{{ csrf_token }}', // Add CSRF token for security
+      },
+      body: {}
+    }).then(response => response.json())
+    .then(data => { if (data == 1){
+      wishlistHeart.classList.add("ti-heart-filled");
+      }
+      else{
+        wishlistHeart.classList.remove("ti-heart-filled")
+      }})
+    .catch(error => console.error('Error submitting review:', error));
+  });
+
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    // Add your review submission logic here
+    console.log('Review submitted!',event);
+    fetch("{% url 'single_product_review' product_id=product.id %}", {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRFToken': '{{ csrf_token }}', // Add CSRF token for security
+      },
+      body: JSON.stringify({
+        star: document.querySelector('input[name="star"]:checked').value ,
+        comment: document.getElementById('comments').value
+      })
+    }).then(response => response.json())
+    .then(data => console.log('Review submitted!',data))
+    .catch(error => console.error('Error submitting review:', error));
+  });
+
+</script>
+{% endblock %}

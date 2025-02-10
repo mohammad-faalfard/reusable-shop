@@ -1,0 +1,37 @@
+{% extends 'base.html' %} <!-- Extends the base template for consistent layout -->
+{% load static %} <!-- Loads static files like images, CSS, and JavaScript -->
+{% load i18n %} <!-- Loads translation tools for internationalization -->
+
+{% block page_title %}
+  {% trans 'Cash On Delivery' %} <!-- Page title, translated to the appropriate language -->
+{% endblock %}
+
+{% block content %}
+  <div class="page-content-wrapper">
+    <div class="container">
+      <!-- Checkout Wrapper Section -->
+      <div class="checkout-wrapper-area py-3">
+        <!-- Credit Card Information Section -->
+        <div class="credit-card-info-wrapper">
+          <!-- Display credit card image -->
+          <img class="d-block mb-4" src="{% static 'img/bg-img/credit-card.png' %}" alt="{% trans 'Credit Card Image' %}" />
+
+          <!-- Information about Cash On Delivery payment -->
+          <div class="cod-info text-center mb-3">
+            <p>
+              {% trans 'Pay when you receive your products' %} <!-- Informing the customer about COD -->
+            </p>
+          </div>
+
+          <!-- Form to trigger the order creation process -->
+          <form action="{% url 'create-order' %}" method="POST">
+            {% csrf_token %} <!-- CSRF protection for the form submission -->
+
+            <!-- Button to submit the order and proceed with Cash On Delivery -->
+            <button type="submit" class="btn btn-primary btn-lg w-100">{% trans 'Order Now' %} <!-- Translated button text for placing the order --></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

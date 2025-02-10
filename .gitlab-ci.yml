@@ -1,0 +1,27 @@
+image: tiangolo/docker-with-compose
+
+before_script:
+  - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASS $CI_REGISTRY
+
+stages:
+  - buildStag
+  - deployStag
+
+build-stag:
+  stage: buildStag
+  script:
+    - docker build . -t reg.changeme.com/shop-backend:staging
+    - docker push reg.change.com/shop-backend:staging
+  only:
+    - staging
+
+
+deploy-stag:
+  stage: deployStag
+  tags:
+    - deploy-gr
+
+  script:
+    - docker stack deploy -c docker-compose.staging.yml --with-registry-auth shop-backend-staging
+  only:
+    - staging

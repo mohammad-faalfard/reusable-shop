@@ -1,0 +1,26 @@
+{% extends 'base.html' %} <!-- Inherit base template -->
+{% load static %} <!-- Load static files -->
+{% load i18n %} <!-- Load internationalization for translations -->
+
+{% block page_title %} <!-- Page title block -->
+  {% trans 'Offline Detected' %} <!-- Title for the page when offline -->
+{% endblock %}
+
+{% block content %} <!-- Main content block -->
+    <div class="container">
+      <!-- Offline Area -->
+      <div class="offline-area-wrapper py-3 d-flex align-items-center justify-content-center">
+        <div class="offline-text text-center">
+          <!-- Offline Image -->
+          <img class="mb-4 px-4" src="{% static 'img/bg-img/no-internet.png' %}" alt="" />
+
+          <!-- Offline Message -->
+          <h5>{% trans 'No Internet Connection!' %}</h5> <!-- Heading for the no internet message -->
+          <p>{% trans "Seems like you're offline, please check your internet connection. This page doesn't support when you offline!" %}</p> <!-- Explanation of the issue -->
+
+          <!-- Back to Home Button -->
+          <a class="btn btn-primary btn-lg" href="{% url 'home' %}">{% trans 'Back Home' %}</a> <!-- Button to redirect user to the home page -->
+        </div>
+      </div>
+    </div>
+{% endblock %}

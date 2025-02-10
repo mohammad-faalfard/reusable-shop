@@ -1,0 +1,71 @@
+{% extends 'base.html' %} <!-- Inherit base template -->
+{% load static %} <!-- Load static files -->
+{% load i18n %} <!-- Load internationalization for translations -->
+
+{% block body %}
+  <!-- Main body block -->
+  <!-- Login Wrapper Area -->
+  <div class="login-wrapper d-flex align-items-center justify-content-center text-center">
+    <!-- Background Shape -->
+    <div class="background-shape"></div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-10 col-lg-8">
+          <!-- Logo Image -->
+          <img class="big-logo" src="{% static 'img/core-img/logo-white.png' %}" alt="" />
+
+          <!-- Display error messages if any -->
+          {% if messages %}
+            <div class="alert alert-danger">
+              {% for message in messages %}
+                <p>{{ message }}</p> <!-- Loop through and display messages -->
+              {% endfor %}
+            </div>
+          {% endif %}
+
+          <!-- Register Form -->
+          <div class="register-form mt-5">
+            <!-- Login form with POST method -->
+            <form action="{% url 'login-page' %}" method="POST">
+              {% csrf_token %} <!-- CSRF protection -->
+
+              <!-- Username Input -->
+              <div class="form-group text-start mb-4">
+                <span>{% trans 'Username' %}</span> <!-- Label for username -->
+                <label for="username"><i class="ti ti-user"></i></label>
+                <input class="form-control" id="username" type="text" name="username" placeholder="info@example.com" required />
+              </div>
+
+              <!-- Password Input -->
+              <div class="form-group text-start mb-4">
+                <span>{% trans 'Password' %}</span> <!-- Label for password -->
+                <label for="password"><i class="ti ti-key"></i></label>
+                <input class="form-control" id="password" type="password" name="password" placeholder="{% trans 'Password' %}" required />
+              </div>
+
+              <!-- Submit Button -->
+              <button class="btn btn-warning btn-lg w-100" type="submit">{% trans 'Log In' %}</button>
+            </form>
+          </div>
+
+          <!-- Login Meta Data (Forgot Password / Register) -->
+          <div class="login-meta-data">
+            <a class="forgot-password d-block mt-3 mb-1" href="{% url 'forget-password' %}">{% trans 'Forgot Password?' %}</a> <!-- Forgot password link -->
+            <p class="mb-0">
+              {% trans "Didn't have an account?" %}
+              <a class="mx-1" href="register.html">{% trans 'Register Now' %}</a> <!-- Link to registration page -->
+            </p>
+          </div>
+
+          <!-- View As Guest Button -->
+          <div class="view-as-guest mt-3">
+            <a class="btn btn-primary btn-sm" href="{% url 'home' %}">
+              {% trans 'View as guest' %}
+              <i class="ps-2 ti ti-arrow-left"></i> <!-- Button to continue as a guest -->
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %} <!-- End of body block -->

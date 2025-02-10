@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block page_title %}
+  {% trans 'Pages' %}
+{% endblock %}
+{% block content %}
+  <div class="container">
+    <ul class="page-nav ps-0">
+      <li>
+        <a href="{% url 'home' %}">{% trans 'Home' %}<i class="ti ti-arrow-left"></i></a>
+      </li>
+      <li>
+        <a href="{% url 'intro' %}">{% trans 'Intro/Flash Screen' %}<i class="ti ti-arrow-left"></i></a>
+      </li>
+      <li class="nav-title">
+        {% trans 'Shop' %}
+      </li>
+      <li>
+        <a href="{% url 'shop-grid' %}">{% trans 'Shop Grid' %}<i class="ti ti-arrow-left"></i></a>
+      </li>
+      <li>
+        <a href="{% url 'shop-list' %}">{% trans 'Shop List' %}<i class="ti ti-arrow-left"></i></a>
+      </li>
+      <li>
+        <a href="{% url 'wishlist-list' %}">{% trans 'Wishlist List' %}<i class="ti ti-arrow-left"></i></a>
+      </li>
+      <li>
+        <a href="{% url 'flash-sale' %}">{% trans 'Flash Sale' %}<i class="ti ti-arrow-left"></i></a>
+      </li>
+      <li>
+        <a href="{% url 'my-orders' %}">{% trans 'Order Status' %}<i class="ti ti-arrow-left"></i></a>
+      </li>
+      <li class="nav-title">
+        {% trans 'Cart & Checkout' %}
+      </li>
+      <li>
+        <a href="{% url 'cart' %}">{% trans 'Cart' %}<i class="ti ti-arrow-left"></i></a>
+      </li>
+      <li>
+        <a href="{% url 'checkout' %}">{% trans 'Checkout' %}<i class="ti ti-arrow-left"></i></a>
+      </li>
+      {% comment %} <li>
+        <a href="checkout-bank.html">{% trans 'Checkout Bank' %}<i class="ti ti-arrow-left"></i></a>
+      </li> {% endcomment %}
+      <li>
+        <a href="{% url 'payment-method-cash' %}">{% trans 'Checkout Cash' %}<i class="ti ti-arrow-left"></i></a>
+      </li>
+      <li>
+        <a href="{% url 'payment-success' %}">{% trans 'Payment Success' %}<i class="ti ti-arrow-left"></i></a>
+      </li>
+      <li class="nav-title">
+        {% trans 'Authentication' %}
+      </li>
+      <li>
+        <a href="{% url 'login-page' %}">{% trans 'Login' %}<i class="ti ti-arrow-left"></i></a>
+      </li>
+      {% comment %} <li>
+        <a href="register.html">{% trans 'Register' %}<i class="ti ti-arrow-left"></i></a>
+      </li>
+      <li>
+        <a href="otp.html">{% trans 'OTP Send' %}<i class="ti ti-arrow-left"></i></a>
+      </li>
+      <li>
+        <a href="otp-confirm.html">{% trans 'OTP Confirmation' %}<i class="ti ti-arrow-left"></i></a>
+      </li> {% endcomment %}
+      <li>
+        <a href="{% url 'forget-password' %}">{% trans 'Forget Password' %}<i class="ti ti-arrow-left"></i></a>
+      </li>
+      <li>
+        <a href="{% url 'change-password' %}">{% trans 'Change Password' %}<i class="ti ti-arrow-left"></i></a>
+      </li>
+      <li>
+        <a href="{% url 'forget-password-success' %}">{% trans 'Forget Password Success' %}<i class="ti ti-arrow-left"></i></a>
+      </li>
+      <li class="nav-title">
+        {% trans 'Blog' %}
+      </li>
+      <li>
+        <a href="{% url 'blog-grid' %}">{% trans 'Blog Grid' %}<i class="ti ti-arrow-left"></i></a>
+      </li>
+      <li>
+        <a href="{% url 'blog-list' %}">{% trans 'Blog List' %}<i class="ti ti-arrow-left"></i></a>
+      </li>
+      {% comment %} <li class="nav-title">
+        {% trans 'Chat & Notifications' %}
+      </li> {% endcomment %}
+      {% comment %} <li>
+        <a href="message.html">{% trans 'Message/Chat' %}<i class="ti ti-arrow-left"></i></a>
+      </li>
+      <li>
+        <a href="notifications.html">{% trans 'Notifications' %}<i class="ti ti-arrow-left"></i></a>
+      </li>
+      <li>
+        <a href="notification-details.html">{% trans 'Notifications Details' %}<i class="ti ti-arrow-left"></i></a>
+      </li> {% endcomment %}
+      <li class="nav-title">
+        {% trans 'Miscellaneous' %}
+      </li>
+      <li>
+        <a href="{% url 'profile-page' %}">{% trans 'profile' %}<i class="ti ti-arrow-left"></i></a>
+      </li>
+      <li>
+        <a href="{% url 'edit-profile' %}">{% trans 'Edit Profile' %}<i class="ti ti-arrow-left"></i></a>
+      </li>
+      <li>
+        <a href="{% url 'about-us' %}">{% trans 'About Us' %}<i class="ti ti-arrow-left"></i></a>
+      </li>
+      <li>
+        <a href="{% url 'contact' %}">{% trans 'Contact Us' %}<i class="ti ti-arrow-left"></i></a>
+      </li>
+      <li>
+        <a href="{% url 'offline' %}">{% trans 'Offline' %}<i class="ti ti-arrow-left"></i></a>
+      </li>
+      <li>
+        <a href="#">{% trans 'Select Language' %}<i class="ti ti-arrow-left"></i></a>
+      </li>
+      <li>
+        <a href="{% url 'privacy-policy' %}">{% trans 'Privacy Policy' %}<i class="ti ti-arrow-left"></i></a>
+      </li>
+      <li>
+        <a href="{% url 'settings' %}">{% trans 'Settings' %}<i class="ti ti-arrow-left"></i></a>
+      </li>
+      <li>
+        <a href="{% url 'support' %}">{% trans 'Support' %}<i class="ti ti-arrow-left"></i></a>
+      </li>
+    </ul>
+  </div>
+{% endblock %}

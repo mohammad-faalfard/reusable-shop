@@ -1,0 +1,36 @@
+{% extends 'base.html' %} <!-- Extends the base template for consistent layout across pages -->
+{% load static %} <!-- Load static files for resources like images, CSS, JS -->
+{% load static i18n %} <!-- Load translation files for internationalization -->
+{% load humanize %} <!-- Load humanize filter for formatting data, such as date/time -->
+
+{% block page_title %}
+  {% trans 'profile' %} <!-- Translated page title for user profile -->
+{% endblock %}
+
+{% block content %}
+
+
+      <div class="container">
+        <!-- Section Heading-->
+        <div class="section-heading d-flex align-items-center pt-3 justify-content-between rtl-flex-d-row-r">
+          <h6>{% trans 'Notification(s)' %}</h6><a class="notification-clear-all text-secondary" href="#">{% trans 'Clear All' %}</a>
+        </div>
+        <!-- Notifications Area-->
+        <div class="notification-area pb-2">
+          <div class="list-group">
+            {% for notif in notifs%}
+            <!-- Single Notification-->
+             <a class="list-group-item d-flex align-items-center border-0 {% if notif.is_seen %} readed {%endif%}" href="{% url 'notification-details' notif.id%}">
+              <span class="noti-icon hide-bubble">
+                <i class="ti ti-bell-ringing "></i>
+              </span>
+              <div class="noti-info hide-bubble">
+                <h6 class="mb-1">{{notif.title}}</h6><span>{{notif.created_at|timesince}} {% trans 'Before' %}</span>
+              </div>
+            </a>
+            {%endfor%}
+
+          </div>
+        </div>
+      </div>
+{% endblock %}

@@ -1,0 +1,158 @@
+{% extends 'base.html' %} <!-- Extends the base template for a consistent layout across pages -->
+{% load static %} <!-- Load static files for resources like images, CSS, JS -->
+{% load i18n %} <!-- Load internationalization (i18n) for translating content -->
+
+{% block page_title %}
+  {% trans 'Settings' %} <!-- Title of the page, translated to the appropriate language -->
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <div class="settings-wrapper py-3">
+      <!-- Single Setting Card for Night Mode -->
+      <div class="card settings-card">
+        <div class="card-body">
+          <!-- Single Settings for Night Mode toggle -->
+          <div class="single-settings d-flex align-items-center justify-content-between">
+            <div class="title">
+              <i class="ti ti-moon"></i><span>{% trans 'Night Mode' %}</span>
+            </div>
+            <div class="data-content">
+              <div class="toggle-button-cover">
+                <div class="button r">
+                  <input class="checkbox" id="darkSwitch" type="checkbox" />
+                  <div class="knobs"></div>
+                  <div class="layer"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Single Setting Card for RTL Mode -->
+      <div class="card settings-card">
+        <div class="card-body">
+          <!-- Single Settings for RTL Mode toggle -->
+          <div class="single-settings d-flex align-items-center justify-content-between">
+            <div class="title">
+              <i class="ti ti-pilcrow"></i><span>{% trans 'RTL Mode' %}</span>
+            </div>
+            <div class="data-content">
+              <div class="toggle-button-cover">
+                <div class="button r">
+                  <input class="checkbox" id="rtlSwitch" type="checkbox" />
+                  <div class="knobs"></div>
+                  <div class="layer"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Single Setting Card for Availability -->
+      <div class="card settings-card">
+        <div class="card-body">
+          <!-- Single Settings for Availability toggle -->
+          <div class="single-settings d-flex align-items-center justify-content-between">
+            <div class="title">
+              <i class="ti ti-circle-check"></i><span>{% trans 'Availability' %}</span>
+            </div>
+            <div class="data-content">
+              <div class="toggle-button-cover">
+                <div class="button r">
+                  <input class="checkbox" type="checkbox" checked />
+                  <div class="knobs"></div>
+                  <div class="layer"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Single Setting Card for Notifications -->
+      <div class="card settings-card">
+        <div class="card-body">
+          <!-- Single Settings for Notifications toggle -->
+          <div class="single-settings d-flex align-items-center justify-content-between">
+            <div class="title">
+              <i class="ti ti-bell-ringing"></i><span>{% trans 'Notifications' %}</span>
+            </div>
+            <div class="data-content">
+              <div class="toggle-button-cover">
+                <div class="button r">
+                  <input class="checkbox" type="checkbox" checked />
+                  <div class="knobs"></div>
+                  <div class="layer"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Single Setting Card for Language -->
+      <div class="card settings-card">
+        <div class="card-body">
+          <!-- Single Settings for Language link -->
+          <div class="single-settings d-flex align-items-center justify-content-between">
+            <div class="title">
+              <i class="ti ti-language"></i><span>{% trans 'Language' %}</span>
+            </div>
+            <div class="data-content">
+              <a href="">{% trans 'Farsi' %}<i class="ti ti-arrow-left"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Single Setting Card for Support -->
+      <div class="card settings-card">
+        <div class="card-body">
+          <!-- Single Settings for Support link -->
+          <div class="single-settings d-flex align-items-center justify-content-between">
+            <div class="title">
+              <i class="ti ti-question-mark"></i><span>{% trans 'Support' %}</span>
+            </div>
+            <div class="data-content">
+              <a href="{% url 'support' %}">{% trans 'Get Help' %}<i class="ti ti-arrow-left"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Single Setting Card for Privacy Policy -->
+      <div class="card settings-card">
+        <div class="card-body">
+          <!-- Single Settings for Privacy Policy link -->
+          <div class="single-settings d-flex align-items-center justify-content-between">
+            <div class="title">
+              <i class="ti ti-shield-lock"></i><span>{% trans 'Privacy Policy' %}</span>
+            </div>
+            <div class="data-content">
+              <a href="{% url 'privacy-policy' %}">{% trans 'View' %}<i class="ti ti-arrow-left"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Display the Password Change option only if the user is authenticated -->
+      {% if user.is_authenticated %}
+        <div class="card settings-card">
+          <div class="card-body">
+            <div class="single-settings d-flex align-items-center justify-content-between">
+              <div class="title">
+                <i class="ti ti-key"></i><span>{% trans 'Password' %}</span>
+              </div>
+              <div class="data-content">
+                <a href="{% url 'change-password' %}">{% trans 'Change' %}<i class="ti ti-arrow-left"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}

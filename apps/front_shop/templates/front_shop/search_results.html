@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %} <!-- Load static files -->
+{% load i18n %} <!-- Load internationalization for translations -->
+
+{% block page_title %}
+  {% trans 'Search Results' %}
+{% endblock %}
+
+{% block content %}
+  <div class="py-3">
+    <div class="container">
+      <div class="row g-1 align-items-center rtl-flex-d-row-r" dir="ltr">
+        <div class="row g-2">
+          {% for product in products %}
+            {% include 'partials/product_card.html' with product=product %}
+          {% empty %}
+            <p dir="rtl">
+              {% trans 'No products found.' %}
+            </p>
+          {% endfor %}
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination" dir="rtl">
+          {% if products.has_previous %}
+            <a href="?query={{ query }}&page=1" class="btn btn-primary">{% trans 'First' %}</a>
+            <a href="?query={{ query }}&page={{ products.previous_page_number }}" class="btn btn-primary">«</a>
+          {% endif %}
+
+          <span>{% trans 'Page' %} {{ products.number }} {% trans 'of' %} {{ total_pages }}</span>
+
+          {% if products.has_next %}
+            <a href="?query={{ query }}&page={{ products.next_page_number }}" class="btn btn-primary">»</a>
+            <a href="?query={{ query }}&page={{ products.paginator.num_pages }}" class="btn btn-primary">{% trans 'Last' %}</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

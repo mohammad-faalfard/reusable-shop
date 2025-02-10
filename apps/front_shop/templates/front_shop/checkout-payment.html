@@ -1,0 +1,34 @@
+{% extends 'base.html' %} <!-- Extends the base template for consistent layout across pages -->
+{% load static %} <!-- Loads static files such as images, CSS, and JavaScript -->
+{% load static i18n %} <!-- Loads translation files to support internationalization -->
+
+{% block page_title %}
+  {% trans 'Payment Method' %} <!-- Set the page title to "Payment Method" and make it translatable -->
+{% endblock %}
+
+{% block content %}
+  <div class="page-content-wrapper">
+    <div class="container">
+      <!-- Checkout Wrapper Section -->
+      <div class="checkout-wrapper-area py-3">
+        <!-- Choose Payment Method Section -->
+        <div class="choose-payment-method">
+          <div class="row g-2 justify-content-center rtl-flex-d-row-r">
+            <!-- Single Payment Method Option -->
+            <div class="col-6 col-md-5">
+              <div class="single-payment-method">
+                <!-- Link to Cash On Delivery payment method -->
+                <a class="cash" href="{% url 'payment-method-cash' %}">
+                  <!-- Icon representing cash on delivery -->
+                  <i class="ti ti-shield-dollar"></i>
+                  <!-- Translatable title for the payment method -->
+                  <h6>{% trans 'Cash On Delivary' %}</h6>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

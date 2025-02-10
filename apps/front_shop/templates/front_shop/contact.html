@@ -1,0 +1,74 @@
+{% extends 'base.html' %} <!-- Extending the base layout for the page -->
+
+{% load static %} <!-- Loading static files (CSS, JS, images) -->
+{% load i18n %} <!-- Loading internationalization for translations -->
+{% load humanize %} <!-- Loading humanize template filter for formatting -->
+
+{% block page_title %}
+  {% trans 'Contact Us' %} <!-- Title of the page -->
+{% endblock %}
+
+{% block content %}
+  <!-- Google Maps Embed Section -->
+  <div class="google-maps-wrap">
+    <!-- Google Maps iframe embedded with a location -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37902.096510377676!2d101.6393079588335!3d3.103387873464772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc49c701efeae7%3A0xf4d98e5b2f1c287d!2sKuala%20Lumpur%2C%20Federal%20Territory%20of%20Kuala%20Lumpur%2C%20Malaysia!5e0!3m2!1sen!2sbd!4v1591684973931!5m2!1sen!2sbd" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+  </div>
+
+  <!-- Main container for the page content -->
+  <div class="container">
+    <div class="card">
+      <!-- Card component to hold content -->
+      <div class="card-body">
+        <div class="rtl-text-right">
+          <!-- Text aligned for right-to-left languages -->
+          <h5 class="mb-1">{% trans 'Contact Us' %}</h5> <!-- Section title -->
+          <p class="mb-4">
+            {% trans 'Write to us. We will reply to you as soon as possible. But yes, it can take up to 24 hours.' %}
+          </p> <!-- Instructions for contacting -->
+        </div>
+
+        <!-- Contact Form Section -->
+        <div class="contact-form mt-3">
+          <form action="{% url 'contact' %}" method="POST">
+            <!-- Form submission to the contact URL -->
+            {% csrf_token %} <!-- CSRF token for form security -->
+
+            <!-- Form Fields for Name, Email, Subject, Category, Relevant URL, and Message -->
+            <div>{{ form.name }}</div>
+            <div>{{ form.email }}</div>
+            <div>{{ form.subject }}</div>
+            <div>{{ form.category }}</div>
+            <div>{{ form.relevant_url }}</div>
+            <div>{{ form.message }}</div>
+
+            <!-- Submit Button to send the form -->
+            <button class="btn btn-primary btn-lg w-100" type="submit">{% trans 'Send Now' %}</button>
+          </form>
+        </div>
+
+        <!-- Success Message (if any) -->
+        {% if success_message %}
+          <div class="alert alert-success mt-3">{{ success_message }}</div>
+        {% endif %}
+
+        <!-- Display Validation Errors (if any) -->
+        {% if form.errors %}
+          <div class="alert alert-danger mt-3">
+            <ul>
+              <!-- Loop through form fields to display any errors -->
+              {% for field in form %}
+                {% for error in field.errors %}
+                  <li>{{ error }}</li> <!-- Display individual error -->
+                {% endfor %}
+              {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- Spacer at the bottom -->
+    <div class="pb-3"></div>
+  </div>
+{% endblock %}

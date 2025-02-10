@@ -1,0 +1,85 @@
+{% extends 'base.html' %}  <!-- Extending the base layout for the page -->
+
+{% load static %}  <!-- Loading static files (CSS, JS, images) -->
+{% load i18n %}  <!-- Loading internationalization for translations -->
+
+{% block page_title %}
+  {% trans 'Edit Profile' %}  <!-- Title of the page -->
+{% endblock %}
+
+{% block content %}
+  <div class="page-content-wrapper"> <!-- Wrapper for the page content -->
+    <div class="container"> <!-- Container for the content -->
+      <div class="profile-wrapper-area py-3"> <!-- Section for user profile editing -->
+
+        <!-- Card for displaying user meta data (username, phone, email) -->
+        <div class="card user-data-card">
+          <div class="card-body">
+            <!-- Form for editing user profile -->
+            <form method="post" enctype="multipart/form-data">
+              {% csrf_token %}  <!-- CSRF token for form security -->
+
+              <!-- Display non-field errors for profile form -->
+              {{ profile_form.non_field_errors }}
+              <h5>{% trans 'User' %}</h5>
+
+              <!-- First Name input field -->
+              <div class="mb-3">{{ profile_form.first_name.label_tag }}
+                {{ profile_form.first_name }}
+              </div>
+
+              <!-- Last Name input field -->
+              <div class="mb-3">{{ profile_form.last_name.label_tag }}
+                {{ profile_form.last_name }}
+              </div>
+
+              <!-- Username input field -->
+              <div class="mb-3">{{ profile_form.username.label_tag }}
+                {{ profile_form.username }}
+              </div>
+
+              <!-- Phone number input field -->
+              <div class="mb-3">{{ profile_form.phone_number.label_tag }}
+                {{ profile_form.phone_number }}
+              </div>
+
+              <!-- Email input field -->
+              <div class="mb-3">{{ profile_form.email.label_tag }}
+                {{ profile_form.email }}
+              </div>
+
+              <!-- Address section heading -->
+              <h5>{% trans 'Address Details' %}</h5>
+
+              <!-- Display non-field errors for address form -->
+              {{ address_form.non_field_errors }}
+
+              <!-- Title input field for address -->
+              <div class="mb-3">{{ address_form.title.label_tag }}
+                {{ address_form.title }}
+              </div>
+
+              <!-- Postal code input field for address -->
+              <div class="mb-3">{{ address_form.postal_code.label_tag }}
+                {{ address_form.postal_code }}
+              </div>
+
+              <!-- City input field for address -->
+              <div class="mb-3">{{ address_form.city.label_tag }}
+                {{ address_form.city }}
+              </div>
+
+              <!-- Street input field for address -->
+              <div class="mb-3">{{ address_form.street.label_tag }}
+                {{ address_form.street }}
+              </div>
+
+              <!-- Submit button to save changes -->
+              <button class="btn btn-primary btn-lg w-100" type="submit">{% trans 'Save All Changes' %}</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

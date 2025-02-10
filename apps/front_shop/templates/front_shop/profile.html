@@ -1,0 +1,30 @@
+{% extends 'base.html' %} <!-- Extends the base template for consistent layout across pages -->
+{% load static %} <!-- Load static files for resources like images, CSS, JS -->
+{% load static i18n %} <!-- Load translation files for internationalization -->
+{% load humanize %} <!-- Load humanize filter for formatting data, such as date/time -->
+
+{% block page_title %}
+  {% trans 'profile' %} <!-- Translated page title for user profile -->
+{% endblock %}
+
+{% block content %}
+
+    <div class="container">
+      <!-- Profile Wrapper Section -->
+      <div class="profile-wrapper-area py-3">
+        <!-- User Information Card -->
+        <div class="card user-info-card">
+          <div class="card-body p-4 d-flex align-items-center">
+            <div class="user-info">
+              <p class="mb-0 text-white">{{ username }}@</p> <!-- Display the username followed by '@' -->
+              <h5 class="mb-0 text-white">{{ full_name }}</h5> <!-- Display the full name of the user -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Include User Meta Data Card -->
+        {% include 'partials/profile_card.html' %} <!-- Include additional user meta information from partials/profile_card.html -->
+      </div>
+    </div>
+
+{% endblock %}

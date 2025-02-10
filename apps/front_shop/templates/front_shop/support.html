@@ -1,0 +1,68 @@
+{% extends 'base.html' %} <!-- Extends the base template for a consistent page structure -->
+{% load static %} <!-- Load static files (images, CSS, JavaScript) for the page -->
+{% load static i18n %} <!-- Load internationalization (i18n) to allow for translated text -->
+
+{% block page_title %}
+  {% trans 'support' %} <!-- Translated title for the page, "Support" -->
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <!-- Support Section Wrapper -->
+    <div class="support-wrapper py-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="faq-heading text-center">{% trans 'How can we help you with?' %}</h5>
+          <!-- Heading asking for support request -->
+
+          <!-- Search Form for FAQs -->
+          <form class="faq-search-form" action="#" method="">
+            <input class="form-control" type="search" name="search" placeholder="{% trans 'Search' %}" />
+            <!-- Input field for search -->
+            <button type="submit"><i class="ti ti-search"></i></button>
+            <!-- Search button -->
+          </form>
+        </div>
+      </div>
+
+      <!-- Loop through FAQ Groups -->
+      {% for group in faq_groups %}
+        <div class="accordian-area-wrapper mt-3">
+          <!-- FAQ Group Card -->
+          <div class="card accordian-card">
+            <div class="card-body">
+              <h5 class="accordian-title">{{ group.title }}</h5>
+              <!-- Display the FAQ group title -->
+              <div class="accordion" id="accordion{{ group.id }}">
+                <!-- Loop through FAQs in each group -->
+                {% for faq in group.faqs.all %}
+                  <!-- Single Accordion for each FAQ -->
+                  <div class="accordian-header" id="heading{{ faq.id }}">
+                    <button class="d-flex align-items-center justify-content-between w-100 collapsed btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ faq.id }}" aria-expanded="false" aria-controls="collapse{{ faq.id }}">
+                      <span>
+                        {% if faq.logo %}
+                          <!-- If a logo exists for the FAQ, display it -->
+                          <img src="{{ faq.logo.url }}" alt="{{ faq.title }} Logo" class="faq-logo-circle" />
+                        {% else %}
+                          <!-- If no logo exists, display a default icon -->
+                          <i class="ti ti-star"></i>
+                        {% endif %}
+                        {{ faq.title }}
+                      </span>
+                      <i class="ti ti-arrow-down"></i>
+                      <!-- Arrow icon indicating the accordion can be expanded -->
+                    </button>
+                  </div>
+                  <div class="collapse" id="collapse{{ faq.id }}" aria-labelledby="heading{{ faq.id }}" data-bs-parent="#accordion{{ group.id }}">
+                    <p>{{ faq.answer|safe }}</p>
+                    <!-- Display the FAQ answer -->
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

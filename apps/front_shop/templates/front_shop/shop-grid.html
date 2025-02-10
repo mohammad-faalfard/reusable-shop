@@ -1,0 +1,258 @@
+{% extends 'base.html' %} <!-- Extends the base template for a consistent layout across pages -->
+{% load static %} <!-- Load static files for resources like images, CSS, JS -->
+{% load i18n %} <!-- Load internationalization (i18n) for translating content -->
+{% load my_filters %}
+{% block page_title %}
+  {% trans 'Shop Grid' %} <!-- Title of the page, translated to the appropriate language -->
+{% endblock %}
+
+{% block extra_header_action %}
+<div class="filter-option ms-2" data-bs-toggle="offcanvas" data-bs-target="#suhaFilterOffcanvas" aria-controls="suhaFilterOffcanvas">
+  <i class="ti ti-adjustments-horizontal"></i>
+  </div>
+{%endblock%}
+
+{% block content %}
+  <div class="py-3">
+    <div class="container">
+      <div class="row g-1 align-items-center rtl-flex-d-row-r" dir="ltr">
+        <!-- Product Categories Slider -->
+        <div class="col-8">
+          <div class="product-catagories owl-carousel catagory-slides">
+            {% for category in categories %}
+              <a class="shadow-sm" href="?category={{ category.id }}">
+                <img src="{{ category.logo.url }}" alt="{{ category.title }}" /> <!-- Display category logo -->
+                {{ category.title }} <!-- Display category title -->
+              </a>
+            {% endfor %}
+          </div>
+          </div>
+
+          <div class="offcanvas offcanvas-start suha-filter-offcanvas-wrap" tabindex="-1" id="suhaFilterOffcanvas" aria-labelledby="suhaFilterOffcanvasLabel">
+            <!-- Close button-->
+            <button class="btn-close text-reset" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <!-- Offcanvas body-->
+            <div class="offcanvas-body py-5">
+              <div class="container">
+                <div class="row">
+                  <div class="col-12">
+                    <!-- Catagory-->
+                    <div class="widget catagory mb-4">
+                      <h6 class="widget-title mb-2">{% trans 'Brand' %}</h6>
+                      <div class="widget-desc">
+                        <!-- Single Checkbox-->
+                        {% for value, label in filters.form.fields.brand.choices %}
+                        {% if "---" not in label %}
+                          <div class="form-check">
+                            <input class="form-check-input" id="filter-brand" type="checkbox" value="{{value}}"
+                            {% if value|stringformat:"s"  in request.GET|get_list:"brand" %} checked{% endif %}
+                            >
+                            <label class="form-check-label" for="zara">{{label }}</label>
+                          </div>
+                          {%endif%}
+                        {%endfor%}
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <!-- Catagory-->
+                    <div class="widget catagory mb-4">
+                      <h6 class="widget-title mb-2">{% trans 'Categories' %}</h6>
+                      <div class="widget-desc">
+                        <!-- Single Checkbox-->
+                        {% for value, label in filters.form.fields.category.choices %}
+                        {% if "---" not in label %}
+                          <div class="form-check">
+                            <input class="form-check-input" id="filter-category" type="checkbox"  value="{{value}}"
+                            {% if value|stringformat:"s"  in request.GET|get_list:"category" %} checked{% endif %}
+
+                            >
+                            <label class="form-check-label" for="zara">{{label}}</label>
+                          </div>
+                          {%endif%}
+                        {%endfor%}
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <!-- Ratings-->
+                    <div class="widget ratings mb-4">
+                      <h6 class="widget-title mb-2">{% trans 'Ratings' %}</h6>
+                      <div class="widget-desc">
+
+                        <!-- Single Checkbox-->
+                        <div class="form-check">
+                          <input class="form-check-input rating" id="5star" type="checkbox" value="5" {% if '5'  in request.GET|get_list:"rating" %} checked{% endif %}>
+                          <label class="form-check-label" for="5star">
+                            <i class="ti ti-star-filled text-warning"></i>
+                            <i class="ti ti-star-filled text-warning"></i>
+                            <i class="ti ti-star-filled text-warning"></i>
+                            <i class="ti ti-star-filled text-warning"></i>
+                            <i class="ti ti-star-filled text-warning"></i>
+                          </label>
+                        </div>
+
+                        <!-- Single Checkbox-->
+                        <div class="form-check">
+                          <input class="form-check-input rating" id="4star" type="checkbox" value="4" {% if '4'  in request.GET|get_list:"rating" %} checked{% endif %}>
+                          <label class="form-check-label" for="4star"><i class="ti ti-star-filled text-warning"></i><i class="ti ti-star-filled text-warning"></i><i class="ti ti-star-filled text-warning"></i><i class="ti ti-star-filled text-warning"></i><i class="ti ti-star-filled text-secondary"></i></label>
+                        </div>
+                        <!-- Single Checkbox-->
+                        <div class="form-check">
+                          <input class="form-check-input rating" id="3star" type="checkbox" value="3" {% if '3'  in request.GET|get_list:"rating" %} checked{% endif %}>
+                          <label class="form-check-label" for="3star"><i class="ti ti-star-filled text-warning"></i><i class="ti ti-star-filled text-warning"></i><i class="ti ti-star-filled text-warning"></i><i class="ti ti-star-filled text-secondary"></i><i class="ti ti-star-filled text-secondary"></i></label>
+                        </div>
+                        <!-- Single Checkbox-->
+                        <div class="form-check">
+                          <input class="form-check-input rating" id="2star" type="checkbox" value="2" {% if '2'  in request.GET|get_list:"rating" %} checked{% endif %}>
+                          <label class="form-check-label" for="2star"><i class="ti ti-star-filled text-warning"></i><i class="ti ti-star-filled text-warning"></i><i class="ti ti-star-filled text-secondary"></i><i class="ti ti-star-filled text-secondary"></i><i class="ti ti-star-filled text-secondary"></i></label>
+                        </div>
+                        <!-- Single Checkbox-->
+                        <div class="form-check">
+                          <input class="form-check-input rating" id="1star" type="checkbox" value="1" {% if '1'  in request.GET|get_list:"rating" %} checked{% endif %}>
+                          <label class="form-check-label" for="1star"><i class="ti ti-star-filled text-warning"></i><i class="ti ti-star-filled text-secondary"></i><i class="ti ti-star-filled text-secondary"></i><i class="ti ti-star-filled text-secondary"></i><i class="ti ti-star-filled text-secondary"></i></label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <!-- Price Range-->
+                    <div class="widget price-range mb-4">
+                      <h6 class="widget-title mb-2">{% trans 'Price Range' %}</h6>
+                      <div class="widget-desc">
+                        <!-- Min Value-->
+                        <div class="row g-2">
+                          <div class="col-6">
+                            <div class="form-floating">
+                              <input class="form-control" id="min-price" type="text" placeholder="1" value="{{ request.GET.min_price}}">
+                              <label for="floatingInput">{% trans 'Min' %}</label>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="form-floating">
+                              <input class="form-control" id="max-price" type="text" placeholder="9000000" value="{{ request.GET.max_price}}">
+                              <label for="floatingInput">{% trans 'Max' %}</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <!-- Apply Filter-->
+                    <div class="apply-filter-btn"><a class="btn btn-lg btn-success w-100" href="#">{% trans 'Apply Filter' %}</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <!-- Product Sorting Dropdown -->
+        <div class="col-4">
+          <div class="select-product-catagory">
+
+              <select name="sort" id="selectProductCatagory"
+              class="right small border-0"
+              aria-label="Default select example"
+
+              >
+                  <option value="" disabled {% if not request.GET.sort %}selected{% endif %}>
+                      {% trans 'Sort by' %}
+                  </option>
+                  <option value="newest" {% if request.GET.sort == "newest" %}selected{% endif %}>
+                      {% trans 'Newest' %}
+                  </option>
+                  <option value="popular" {% if request.GET.sort == "popular" %}selected{% endif %}>
+                      {% trans 'Popular' %}
+                  </option>
+                  <option value="rating" {% if request.GET.sort == "rating" %}selected{% endif %}>
+                      {% trans 'Rating' %}
+                  </option>
+              </select>
+          </div>
+        </div>
+      </div>
+        <div class="mb-3"></div>
+
+        <!-- Shop Grid Product List -->
+        <div class="row g-2 rtl-flex-d-row-r">
+          <div class="top-products-area py-3">
+            <div class="container">
+              <div class="row g-2">
+                {% for product in products %}
+                  <!-- Display each product as a card -->
+                  {% include 'partials/product_card.html' %}
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+
+document.querySelector('.apply-filter-btn a').addEventListener('click', function (event) {
+    event.preventDefault(); // Prevent the default anchor behavior
+
+    // Initialize an object to store query parameters
+    const params = new URLSearchParams(window.location.search);
+
+    // Get all selected brands
+    const selectedBrands = Array.from(document.querySelectorAll('#filter-brand:checked'))
+        .map(input => input.value);
+    if (selectedBrands.length > 0) {
+        params.delete('brand'); // Clear existing brand parameters
+        selectedBrands.forEach(brand => params.append('brand', brand));
+    } else {
+        params.delete('brand');
+    }
+
+    // Get all selected categories
+    const selectedCategories = Array.from(document.querySelectorAll('#filter-category:checked'))
+        .map(input => input.value);
+    if (selectedCategories.length > 0) {
+        params.delete('category'); // Clear existing category parameters
+        selectedCategories.forEach(category => params.append('category', category));
+    } else {
+        params.delete('category');
+    }
+
+    // Get all selected categories
+    const selectedRating = Array.from(document.querySelectorAll('.rating:checked'))
+        .map(input => input.value);
+    if (selectedRating.length > 0) {
+        params.delete('rating'); // Clear existing rating parameters
+        selectedRating.forEach(rating => params.append('rating', rating));
+    } else {
+        params.delete('rating');
+    }
+
+    // Add price range filter
+    const minPrice = document.getElementById('min-price').value.trim();
+    const maxPrice = document.getElementById('max-price').value.trim();
+
+    if (minPrice) {
+        params.set('min_price', minPrice);
+    } else {
+        params.delete('min_price');
+    }
+
+    if (maxPrice) {
+        params.set('max_price', maxPrice);
+    } else {
+        params.delete('max_price');
+    }
+
+    // Add the updated query string to the URL and reload the page
+    const newUrl = `${window.location.pathname}?${params.toString()}`;
+    window.location.href = newUrl;
+});
+
+
+</script>
+{% endblock %}

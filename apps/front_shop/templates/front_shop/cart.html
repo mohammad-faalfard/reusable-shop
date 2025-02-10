@@ -1,0 +1,182 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load static i18n %}
+{% load humanize %}
+
+{% block page_title %}
+  {% trans 'cart' %}
+{% endblock %}
+
+{% block content %}
+  <div class="page-content-wrapper">
+    <div class="container">
+      <!-- Cart Wrapper -->
+      <div class="cart-wrapper-area py-3">
+        <div class="cart-table card mb-3">
+          <div class="table-responsive card-body">
+            <table class="table mb-0">
+              <tbody>
+                {% for item in items %}
+                  <tr id="item-{{ item.id }}">
+                    <th scope="row">
+                      <a class="remove-product" href="#" hx-post="{% url 'remove_product_from_cart_ajax' item.product.id %}" hx-target="#item-{{ item.id }}" hx-swap="outerHTML"><i class="ti ti-x"></i></a>
+                    </th>
+                    <td>
+                      <img class="rounded" src="{{ item.product.product_images.first.image.url }}" alt="" />
+                    </td>
+                    <td>
+                      <a class="product-title" href="{% url 'single_product' item.product.id %}">{{ item.product.title }}<span class="mt-1">${{ item.product.price_with_discount|floatformat:'-1'|intcomma:False }} ×<div class="quantity" id="item-{{ item.id }}-quantity">{{ item.quantity }}</div></span></a>
+                    </td>
+                    <td>
+                      <div class="quantity">
+                        <form action="" hx-trigger="change delay:1s" hx-post="{% url 'add_product_to_cart_ajax' item.product.id %}" hx-target="#item-{{ item.id }}-quantity">
+                          {% csrf_token %}
+                          <input class="qty-text" type="number" min="1" max="99" value="{{ item.quantity }}" name="quantity" hx-trigger="change delay:1.5s" hx-post="{% url 'cart_total_price_ajax' %}" hx-target=".total_price" />
+                        </form>
+                      </div>
+                    </td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- Coupon Area -->
+        <div class="card coupon-card mb-3">
+          <div class="card-body">
+            <div class="apply-coupon">
+              <h6 class="mb-0">{% trans 'Have a coupon?' %}</h6>
+              <p class="mb-2">
+                {% trans 'Enter your coupon code here &amp; get awesome discounts!' %}
+              </p>
+              <div class="coupon-form" dir="ltr">
+                <form id="coupon-form" method="POST" onsubmit="applyCoupon(event)">
+                  {% csrf_token %}
+                  <input class="form-control" type="text" placeholder="CP30" name="coupon_code" id="coupon_code" value="{{coupon_code}}"/>
+                  <button class="btn btn-primary" type="submit" id="coupon-btn">   {% if has_coupon%}  {% trans 'Remove' %} {% else %} {% trans 'Apply' %}  {% endif %} </button>
+                </form>
+                <div id="coupon-message" class="mt-2"></div>
+                <div id="loading-spinner" class="spinner-border text-primary" style="display: none;" role="status"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cart Amount Area-->
+        <div class="card cart-amount-area">
+          <div class="card-body d-flex align-items-center justify-content-between">
+            <h5 class="total-price mb-0" id="total-price">$<span class="counter total_price" id="total-price-value">{{ total_price|floatformat:'-1'|intcomma:False }}</span></h5>
+            {% if user.is_anonymous %}
+              <button class="btn btn-secondary" disabled>{% trans 'Login And Complete Your Profile First' %}</button>
+            {% else %}
+              <!-- Use an anchor tag to link to the payment method page when the button is clicked -->
+              <a class="btn btn-primary" href="{% url 'checkout' %}">{% trans 'Checkout Now' %}</a>
+            {% endif %}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Listen for clicks on the remove buttons
+      document.querySelectorAll('.remove-product').forEach(function (removeBtn) {
+        removeBtn.addEventListener('click', function (e) {
+          e.preventDefault() // Prevent default link behavior
+
+          var itemId = this.closest('tr').id.replace('item-', '') // Get the item ID from the tr
+          // Delay the request by 500ms
+          setTimeout(function () {
+            // Perform an AJAX request to remove the item
+            fetch('{% url "cart_total_price_ajax" %}', {
+              method: 'POST',
+              headers: {
+                'X-CSRFToken': '{{ csrf_token }}', // Add CSRF token for security
+                'Content-Type': 'application/json'
+              }
+            })
+              .then((response) => response.text()) // Parse as plain text
+              .then((data) => {
+                // If successful, update the total price
+                if (data !== undefined) {
+                  // Update total price on the page
+                  document.querySelector('.total_price').innerText = `${data}`
+                } else {
+                  console.error("{% trans 'Error removing item from cart' %}")
+                }
+              })
+              .catch((error) => console.error('Error:', error))
+          }, 500)
+        })
+      })
+    })
+    // Function to handle applying coupon
+    function applyCoupon(event) {
+      event.preventDefault()
+
+      let couponCode = document.getElementById('coupon_code')
+      let couponCodeValue = couponCode.value.trim()
+      const couponMessage = document.getElementById('coupon-message')
+      const loadingSpinner = document.getElementById('loading-spinner')
+      const totalPriceElement = document.getElementById('total-price-value')
+      const couponBtn = document.getElementById('coupon-btn')
+      const couponBtnText = couponBtn.textContent.trim()
+      const apply =  "{% trans 'Apply' %}"
+      const remove =  "{% trans 'Remove' %}"
+
+      // Reset previous messages
+      couponMessage.textContent = ''
+      loadingSpinner.style.display = 'inline-block'
+
+      // Check if the button text is "Remove" and clear the input field to remove the coupon
+      if (couponBtnText === remove) {
+        couponCodeValue = ''
+      }
+
+      // Make AJAX request to apply coupon
+      fetch("{% url 'apply_coupon' %}", {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+        },
+        body: JSON.stringify({ coupon_code: couponCodeValue })
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          loadingSpinner.style.display = 'none'
+
+          if (data.success) {
+            if (couponBtnText === remove) {
+              couponCode.value = ''
+              couponMessage.textContent = "{% trans 'Coupon removed successfully!' %}"
+              couponMessage.classList.add('text-success')
+              couponBtn.textContent = apply // Update button text to apply again
+
+            }else {
+            // Show success message and update total price
+            couponMessage.textContent = "{% trans 'Coupon applied successfully!' %}"
+            couponMessage.classList.remove('text-danger')
+            couponMessage.classList.add('text-success')
+            couponBtn.textContent = remove // Update button text to apply again
+            }
+
+            totalPriceElement.textContent = data.total_price.toLocaleString() // Update the total price
+          } else {
+            // Show error message
+            couponMessage.textContent = data.error || 'Invalid coupon!'
+            couponMessage.classList.remove('text-success')
+            couponMessage.classList.add('text-danger')
+          }
+        })
+        .catch((error) => {
+          loadingSpinner.style.display = 'none'
+          couponMessage.textContent = "{% trans 'An error occurred while applying the coupon.' %}"
+          couponMessage.classList.remove('text-success')
+          couponMessage.classList.add('text-danger')
+        })
+    }
+  </script>
+{% endblock %}

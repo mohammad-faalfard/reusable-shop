@@ -1,0 +1,41 @@
+{% load static %}
+{% load i18n %}
+{% load humanize %}
+
+<!-- Flash Sale Card -->
+<div class="card flash-sale-card">
+  <div class="card-body">
+    <a href="{% url 'single_product' product.id %}">
+      {% if product.product_images.first %}
+        <!-- Product Thumbnail: Displays the product image if available -->
+        <img src="{{ product.product_images.first.image.url }}" alt="{{ product.product_images.first.alt_text }}" />
+      {% else %}
+        <!-- Placeholder image if no product image is available -->
+        <img src="#" alt="#" />
+      {% endif %}
+
+      <span class="product-title">{{ product.title }}</span>
+      <!-- Product Price: Displays price with discount if applicable -->
+      <p class="sale-price">
+        {% if product.has_discount %}
+          <!-- Price with discount -->
+          {{ product.price_with_discount|floatformat:0|intcomma:False }}
+          تومان
+          <br>
+          <!-- Original price -->
+          <span class="real-price">{{ product.price|floatformat:0|intcomma:False }}</span>
+        {% else %}
+          <!-- Regular price -->
+          {{ product.price|floatformat:0|intcomma:False }} تومان
+        {% endif %}
+      </p>
+      <span class="progress-title" dir="rtl">
+        {% if product.calculate_remaining_stock > 0 %}
+          {{ product.calculate_remaining_stock }}عدد باقی مانده
+        {% else %}
+          ناموجود
+        {% endif %}
+      </span>
+    </a>
+  </div>
+</div>

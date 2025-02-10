@@ -1,0 +1,23 @@
+{% extends 'base.html' %} <!-- Extends the base template for common layout -->
+{% load static %} <!-- Load static files for resources like images, CSS, JS -->
+{% load static i18n %} <!-- Load translation files for internationalization -->
+
+{% block page_title %}
+  {% trans 'Payment Success' %} <!-- Translated page title for payment success -->
+{% endblock %}
+
+{% block body %}
+  <!-- Order/Payment Success -->
+  <div class="order-success-wrapper">
+    <div class="content text-center">
+      <div class="display-1 text-white mb-2">
+        <i class="ti ti-basket-dollar"></i> <!-- Icon for payment success -->
+      </div>
+      <h5 class="text-white">{% trans 'Payment Successful' %}</h5> <!-- Success message -->
+      <p class="text-white opacity-75">
+        {% trans 'We will notify you of all the details via email. Thank you!' %} <!-- Notification about email details -->
+      </p>
+      <a class="btn btn-primary mt-3" href="{% url 'home' %}"><i class="ti"></i>{% trans 'Shopping Again' %} <!-- Button to navigate back to home --></a>
+    </div>
+  </div>
+{% endblock %}

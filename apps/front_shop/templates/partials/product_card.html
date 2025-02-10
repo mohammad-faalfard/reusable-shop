@@ -1,0 +1,110 @@
+{% load static %}
+{% load i18n %}
+{% load humanize %}
+
+<!-- Product Card -->
+
+<div class="col-6 col-md-4">
+  <div class="card product-card bg-gray shadow-none">
+    <div class="card-body card-body-p">
+      <div class="top">
+        <!-- Product Badge (e.g., 'New' label) -->
+        <div class="products-tags">
+          {% if product.has_discount %}
+          <span
+            class="badge rounded-pill {% if product.best_offer %} badge-warning {% else %} badge-danger {% endif %}"
+            >{{product.discount_percent|floatformat:0}}%-
+          </span>
+          {%else%}
+          <span class="badge rounded-pill badge-success">{% trans 'New' %}</span>
+          {% endif %}
+        </div>
+        <!-- Wishlist Button: Toggles the product's presence in the wishlist -->
+        <a
+          class="wishlist-btn"
+          href="#"
+          hx-post="{% url 'toggle_wishlist' product.id %}"
+          hx-trigger="click"
+          hx-swap="none"
+          ><i class="ti
+          {% if product.is_in_wishlist %}
+          ti-heart-filled
+          {%else%}
+          ti-heart
+          {%endif%}
+
+           "></i
+        ></a>
+
+        <a
+          class="product-thumbnail d-block"
+          href="{% url 'single_product' product.id %}"
+        >
+          {% if product.product_images.first %}
+          <!-- Product Thumbnail: Displays the product image if available -->
+          <img
+            class="mb-2"
+            src="{{ product.product_images.first.image.url }}"
+            alt="{{ product.product_images.first.alt_text }}"
+          />
+          {% else %}
+          <!-- Placeholder image if no product image is available -->
+          <img class="mb-2" src="#" alt="#" />
+          {% endif %}
+          {% if product.best_offer %}
+          <ul
+            class="offer-countdown-timer d-flex align-items-center shadow-sm"
+            data-countdown="{{product.best_offer_end_date_str}}"
+          >
+            <li><span class="days">0</span>d</li>
+            <li><span class="hours">0</span>h</li>
+            <li><span class="minutes">0</span>m</li>
+            <li><span class="seconds">0</span>s</li>
+          </ul>
+          {%endif%}
+        </a>
+      </div>
+      <div class="bottom">
+        <!-- Product Title: Link to the product's detailed page -->
+        <a class="product-title" href="{% url 'single_product' product.id %}"
+          >{{ product.title }}</a
+        >
+
+        <!-- Product Price: Displays price with discount if applicable -->
+        <p class="sale-price">
+          {% if product.has_discount %}
+          <!-- Price with discount -->
+          {{ product.price_with_discount|floatformat:0|intcomma:False }}
+          تومان<br />
+          <!-- Original price -->
+          <span>{{ product.price|floatformat:0|intcomma:False }} تومان</span>
+          {% else %}
+          <!-- Regular price -->
+          {{ product.price|floatformat:0|intcomma:False }} تومان <br />
+          {% endif %}
+        </p>
+
+        <!-- Product Rating: Displays the star rating for the product -->
+        <div class="product-rating">
+          {% for star in product.get_rating.stars %} {% if star == 1 %}
+          <!-- Filled star for rated points -->
+          <i class="ti ti-star-filled"></i>
+          {% else %}
+          <!-- Empty star for non-rated points -->
+          <i class="ti ti-star"></i>
+          {% endif %} {% endfor %}
+        </div>
+
+        <!-- Add to Cart Button: Quick add product to cart -->
+        <button
+          class="btn btn-primary btn-sm"
+          hx-post="{% url 'quick_add_product_to_cart_ajax' product.id %}"
+          hx-trigger="click"
+          hx-swap="none"
+        >
+          <i class="ti ti-plus"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,64 @@
+{% load static %}
+{% load i18n %}
+{% load humanize %}
+
+<!-- User Data Card -->
+<div class="card user-data-card">
+  <div class="card-body">
+    <!-- Full Name Section -->
+    <div class="single-profile-data d-flex align-items-center justify-content-between">
+      <div class="title d-flex align-items-center">
+        <i class="ti ti-user"></i><span>&nbsp;{% trans 'Full Name' %}</span>
+      </div>
+      <div class="data-content">{{ full_name | default:"-" }}</div>
+    </div>
+
+    <!-- Email Address Section -->
+    <div class="single-profile-data d-flex align-items-center justify-content-between">
+      <div class="title d-flex align-items-center">
+        <i class="ti ti-mail"></i><span>&nbsp;{% trans 'Email Address' %}</span>
+      </div>
+      <div class="data-content">{{ email | default:"-" }}</div>
+    </div>
+
+    <!-- Phone Number Section -->
+    <div class="single-profile-data d-flex align-items-center justify-content-between">
+      <div class="title d-flex align-items-center">
+        <i class="ti ti-phone"></i><span>&nbsp;{% trans 'Phone' %}</span>
+      </div>
+      <div class="data-content">{{ phone | default:"-" }}</div>
+    </div>
+
+    <!-- Address Section -->
+    <div class="single-profile-data d-flex align-items-center justify-content-between">
+      <div class="title d-flex align-items-center">
+        <i class="ti ti-ship"></i><span>&nbsp;{% trans 'Address' %}:</span>
+      </div>
+      <div class="data-content">
+        <!-- Address Title -->
+        <span>{{ address.title }}</span>
+        <span class="separator">-</span>
+        <!-- Street -->
+        <span>{{ address.street  | default:"-"}}</span>
+        {% if address.postal_code %}
+          <!-- Postal Code (if available) -->
+          <span class="separator">,</span>
+          <span>{{ address.postal_code }}</span>
+        {% endif %}
+        <!-- City -->
+        <span class="separator">,</span>
+        <span>{{ address.city.title }}</span>
+        <!-- State -->
+        <span class="separator">,</span>
+        <span>{{ address.city.state.title }}</span>
+      </div>
+    </div>
+    <div class="single-profile-data d-flex align-items-center justify-content-between">
+      <div class="title d-flex align-items-center"><i class="ti ti-star-filled"></i><span>{% trans 'My Orders' %}</span></div>
+      <div class="data-content"><a class="btn btn-primary btn-sm" href="{% url 'my-orders' %}">{% trans 'View Status'%}</a></div>
+    </div>
+
+    <!-- Edit Profile Button -->
+    <a class="btn btn-primary w-100" href="{% url 'edit-profile' %}">{% trans 'Edit Billing Information' %}</a>
+  </div>
+</div>

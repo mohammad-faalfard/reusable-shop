@@ -1,0 +1,5006 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-20 19:12+0330\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: apps/account/admin.py:35
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/helpers/tab_list.html:24
+msgid "General"
+msgstr "عمومی"
+
+#: apps/account/admin.py:44
+msgid "Personal Info"
+msgstr "اطلاعات شخصی"
+
+#: apps/account/admin.py:46
+msgid "Permissions"
+msgstr "مجوزها"
+
+#: apps/account/admin.py:49 apps/account/admin.py:87
+msgid "Important dates"
+msgstr "تاریخ‌های مهم"
+
+#: apps/account/admin.py:75
+msgid "general"
+msgstr "عمومی"
+
+#: apps/account/admin.py:77
+msgid "Contact Info"
+msgstr "اطلاعات تماس"
+
+#: apps/account/admin.py:111 apps/wallet/models.py:27 apps/wallet/models.py:90
+msgid "wallet"
+msgstr "کیف پول"
+
+#: apps/account/admin.py:117
+msgid "block & deactivate"
+msgstr "مسدود کردن و غیرفعال کردن"
+
+#: apps/account/admin.py:119
+msgid "user blocked"
+msgstr "کاربر مسدود شد"
+
+#: apps/account/admin.py:123
+msgid "unblock & activate"
+msgstr "برداشتن مسدودیت و فعال‌سازی"
+
+#: apps/account/admin.py:125
+msgid "user unblocked"
+msgstr "کاربر از حالت مسدود خارج شد"
+
+#: apps/account/apps.py:8
+msgid "Account Management"
+msgstr "مدیریت حساب کاربری"
+
+#: apps/account/forms/profile_forms.py:16
+#: apps/front_shop/templates/front_shop/login.html:34
+#: apps/front_shop/templates/front_shop/register.html:18
+msgid "Username"
+msgstr "نام کاربری"
+
+#: apps/account/forms/profile_forms.py:18 apps/account/models/user.py:45
+msgid "Phone Number"
+msgstr "شماره تلفن"
+
+#: apps/account/forms/profile_forms.py:21
+#: apps/front_shop/templates/partials/profile_card.html:19
+#: apps/info/models/contact_us.py:48
+msgid "Email Address"
+msgstr "ایمیل"
+
+#: apps/account/forms/profile_forms.py:37
+msgid "Address Title"
+msgstr "عنوان ادرس"
+
+#: apps/account/forms/profile_forms.py:40 apps/account/models/address.py:37
+msgid "Postal Code"
+msgstr "کد پستی"
+
+#: apps/account/forms/profile_forms.py:46
+msgid "Street Address"
+msgstr "ادرس خیابان"
+
+#: apps/account/models/address.py:28 apps/account/models/user.py:91
+#: apps/blogs/models/blog_bookmark.py:21 apps/carts/models.py:16
+#: apps/front_shop/templates/front_shop/edit-profile.html:24
+#: apps/order/models/order.py:34 apps/order/models/order_item.py:32
+#: apps/products/models/product_review.py:43
+#: apps/products/models/product_wishlist.py:31
+#: apps/promotions/models/coupon_consume.py:20
+#: venv/lib/python3.12/site-packages/unfold/contrib/guardian/templates/admin/guardian/model/obj_perms_manage_user.html:43
+#: venv/lib/python3.12/site-packages/unfold/contrib/guardian/templates/unfold/guardian/group_form.html:33
+#: venv/lib/python3.12/site-packages/unfold/contrib/guardian/templates/unfold/guardian/user_form.html:15
+#: venv/lib/python3.12/site-packages/unfold/contrib/guardian/templates/unfold/guardian/user_form.html:33
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/object_history.html:38
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/object_history.html:54
+msgid "User"
+msgstr "کاربر"
+
+#: apps/account/models/address.py:32 apps/blogs/models/blog_category.py:23
+#: apps/blogs/models/post.py:26 apps/cms/models/banner.py:29
+#: apps/cms/models/product_offer.py:25 apps/cms/models/slider.py:27
+#: apps/info/models/cities.py:20 apps/info/models/faq.py:22
+#: apps/info/models/faq_group.py:17 apps/info/models/states.py:17
+#: apps/products/models/product.py:34 apps/products/models/product_brand.py:10
+#: apps/products/models/product_category.py:29
+#: apps/products/models/product_discount.py:39
+#: apps/products/models/product_property.py:27
+#: apps/products/models/product_tag.py:23 apps/promotions/models/coupon.py:47
+#: apps/shipments/models.py:27
+msgid "Title"
+msgstr "عنوان"
+
+#: apps/account/models/address.py:43 apps/info/models/cities.py:34
+msgid "City"
+msgstr "شهر"
+
+#: apps/account/models/address.py:48
+msgid "Street"
+msgstr "خیابان"
+
+#: apps/account/models/address.py:55
+#: apps/front_shop/templates/partials/profile_card.html:35
+#: apps/info/admin.py:76 apps/info/models/shop_location.py:19
+msgid "Address"
+msgstr "آدرس"
+
+#: apps/account/models/address.py:56 shop/admin_panel.py:243
+msgid "Addresses"
+msgstr "آدرس ها"
+
+#: apps/account/models/proxy_models.py:20
+msgid "admin user"
+msgstr "کاربر مدیر"
+
+#: apps/account/models/proxy_models.py:21
+msgid "admin users"
+msgstr "کاربران مدیر"
+
+#: apps/account/models/proxy_models.py:36
+msgid "Normal user"
+msgstr "کاربر عادی"
+
+#: apps/account/models/proxy_models.py:37
+msgid "Normal users"
+msgstr "کاربران عادی"
+
+#: apps/account/models/proxy_models.py:52
+msgid "new user"
+msgstr "کاربر جدید"
+
+#: apps/account/models/proxy_models.py:53
+msgid "new users"
+msgstr "کاربران جدید"
+
+#: apps/account/models/user.py:52
+msgid "Is Verified Phone Number"
+msgstr "آیا شماره تلفن تایید شده است؟"
+
+#: apps/account/models/user.py:57
+#: apps/front_shop/templates/front_shop/register.html:23 apps/info/forms.py:51
+msgid "Email"
+msgstr "ایمیل"
+
+#: apps/account/models/user.py:63
+msgid "Is Verified Email"
+msgstr "آیا ایمیل تایید شده است؟"
+
+#: apps/account/models/user.py:68
+msgid "Reset Password Token"
+msgstr "توکن بازنشانی رمز عبور"
+
+#: apps/account/models/user.py:79
+msgid "Wallet"
+msgstr "کیف پول"
+
+#: apps/account/models/user.py:92 shop/admin_panel.py:232
+msgid "Users"
+msgstr "کاربران"
+
+#: apps/base/apps.py:8
+msgid "Base Data"
+msgstr "داده‌های پایه"
+
+#: apps/blogs/admin.py:38 apps/blogs/admin.py:63 apps/blogs/admin.py:95
+#: apps/promotions/admin.py:17 apps/promotions/admin.py:74
+msgid "Timestamps"
+msgstr "برچسب زمان"
+
+#: apps/blogs/apps.py:9
+msgid "blogs"
+msgstr "وبلاگ"
+
+#: apps/blogs/forms.py:19
+msgid "Write your comment..."
+msgstr "نظر خود را بنویسید..."
+
+#: apps/blogs/models/blog_bookmark.py:27 apps/blogs/models/post_comment.py:28
+msgid "Post"
+msgstr "پست"
+
+#: apps/blogs/models/blog_bookmark.py:34
+msgid "Blog Bookmark"
+msgstr "بوکمارک"
+
+#: apps/blogs/models/blog_bookmark.py:35
+msgid "Blog Bookmarks"
+msgstr "بوکمارک ها"
+
+#: apps/blogs/models/blog_category.py:24 apps/info/models/faq.py:26
+#: apps/products/models/product_category.py:41 apps/shipments/admin.py:51
+#: apps/shipments/models.py:42
+msgid "Logo"
+msgstr "لوگو"
+
+#: apps/blogs/models/blog_category.py:26
+#: apps/products/models/product_category.py:36
+msgid "Parent"
+msgstr "والد"
+
+#: apps/blogs/models/blog_category.py:33
+msgid "Blog Category"
+msgstr "دسته بندی"
+
+#: apps/blogs/models/blog_category.py:34
+msgid "Blog Categories"
+msgstr "دسته بندی ها"
+
+#: apps/blogs/models/post.py:31 apps/info/models/contact_us.py:71
+#: apps/products/models/product.py:40
+msgid "Category"
+msgstr "دسته بندی"
+
+#: apps/blogs/models/post.py:33
+msgid "Content"
+msgstr "محتوا"
+
+#: apps/blogs/models/post.py:34 apps/blogs/models/tags.py:23
+#: apps/products/models/product.py:65
+msgid "Tags"
+msgstr "برچسب‌ها"
+
+#: apps/blogs/models/post.py:37
+msgid "Read Time (minutes)"
+msgstr "زمان مطالعه (دقیقه)"
+
+#: apps/blogs/models/post.py:38
+msgid ""
+"Estimated time to read the post in minutes. Calculated based on word count."
+msgstr ""
+"زمان تقریبی برای خواندن پست به دقیقه. بر اساس تعداد کلمات محاسبه می‌شود."
+
+#: apps/blogs/models/post.py:40 apps/cms/models/banner.py:32
+#: apps/products/models/product_images.py:26 shop/admin_panel.py:196
+#: venv/lib/python3.12/site-packages/django/db/models/fields/files.py:420
+msgid "Image"
+msgstr "تصویر"
+
+#: apps/blogs/models/post.py:62
+msgid "Blog Post"
+msgstr "پست"
+
+#: apps/blogs/models/post.py:63 shop/admin_panel.py:399
+msgid "Blog Posts"
+msgstr "پست ها"
+
+#: apps/blogs/models/post_comment.py:32
+msgid "Edited At"
+msgstr "ویرایش شده در"
+
+#: apps/blogs/models/post_comment.py:36
+msgid "Accepted"
+msgstr "آیا تأیید شده است"
+
+#: apps/blogs/models/post_comment.py:40
+msgid "Comment Text"
+msgstr "کامنت"
+
+#: apps/blogs/models/post_comment.py:48
+msgid "Reply to"
+msgstr "پاسخ به"
+
+#: apps/blogs/models/post_comment.py:55
+msgid "Sender"
+msgstr "فرستنده"
+
+#: apps/blogs/models/post_comment.py:64
+msgid "You cannot reply to your own comment."
+msgstr "شما نمی‌توانید به کامنت خود پاسخ دهید."
+
+#: apps/blogs/models/post_comment.py:67
+msgid "Post Comment"
+msgstr "نظر"
+
+#: apps/blogs/models/post_comment.py:68
+msgid "Post Comments"
+msgstr "نظر ها"
+
+#: apps/blogs/models/tags.py:16
+msgid "Tag Name"
+msgstr "نام برچسب"
+
+#: apps/blogs/models/tags.py:22
+msgid "Tag"
+msgstr "برچسب"
+
+#: apps/carts/apps.py:8 apps/carts/models.py:32 shop/admin_panel.py:364
+msgid "Carts"
+msgstr "سبد های خرید"
+
+#: apps/carts/models.py:22
+msgid "Session ID"
+msgstr "شناسه جلسه"
+
+#: apps/carts/models.py:31 apps/carts/models.py:53 apps/carts/models.py:60
+#: apps/front_shop/templates/front_shop/pages.html:54
+#: apps/front_shop/templates/partials/footer.html:14
+msgid "Cart"
+msgstr "سبد خرید"
+
+#: apps/carts/models.py:37
+msgid "Each cart must at least have a user or session ID."
+msgstr "هر سبد خرید باید حداقل یک شناسه کاربر یا شناسه جلسه داشته باشد."
+
+#: apps/carts/models.py:42
+#: venv/lib/python3.12/site-packages/django/forms/widgets.py:800
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/helpers/boolean.html:8
+msgid "Unknown"
+msgstr "ناشناخته"
+
+#: apps/carts/models.py:64 apps/order/models/order_item.py:62
+msgid "Quantity"
+msgstr "تعداد"
+
+#: apps/carts/models.py:70
+msgid "Minimum Quantity Of Product Is 1"
+msgstr "حداقل تعداد محصول ۱ است"
+
+#: apps/carts/models.py:76
+msgid "Cart Item"
+msgstr "آیتم خرید"
+
+#: apps/carts/models.py:77
+msgid "Cart Items"
+msgstr "آیتم سبد خرید"
+
+#: apps/carts/models.py:86
+msgid "Duplicate Product Inside The Cart"
+msgstr "محصول تکراری در سبد خرید"
+
+#: apps/cms/apps.py:8 shop/admin_panel.py:308
+msgid "CMS Management"
+msgstr "مدیریت محتوا"
+
+#: apps/cms/models/banner.py:42 apps/cms/models/slider.py:37
+#: venv/lib/python3.12/site-packages/unfold/contrib/forms/templates/unfold/forms/helpers/toolbar.html:27
+#: venv/lib/python3.12/site-packages/unfold/contrib/forms/templates/unfold/forms/helpers/toolbar.html:98
+msgid "Link"
+msgstr "لینک"
+
+#: apps/cms/models/banner.py:43
+msgid "Optional link to associate with the banner."
+msgstr "لینک اختیاری برای ارتباط با بنر."
+
+#: apps/cms/models/banner.py:46 apps/info/admin.py:58 apps/info/forms.py:86
+#: apps/products/models/product_review.py:46
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2441
+msgid "Text"
+msgstr "متن"
+
+#: apps/cms/models/banner.py:52 apps/cms/models/slider.py:47
+msgid "Button Text"
+msgstr "متن دکمه"
+
+#: apps/cms/models/banner.py:56
+msgid "Holder"
+msgstr "محل قرارگیری بنر"
+
+#: apps/cms/models/banner.py:57
+msgid "Placement of the banner in the frontend."
+msgstr "محل قرارگیری بنر در سایت."
+
+#: apps/cms/models/banner.py:61
+msgid "Banner"
+msgstr "بنر"
+
+#: apps/cms/models/banner.py:62 shop/admin_panel.py:313
+msgid "Banners"
+msgstr "بنر ها"
+
+#: apps/cms/models/product_offer.py:28
+#: apps/products/models/product_discount.py:52
+msgid "Active From"
+msgstr "فعال از"
+
+#: apps/cms/models/product_offer.py:32
+#: apps/products/models/product_discount.py:57
+msgid "Active Until"
+msgstr "معتبر تا"
+
+#: apps/cms/models/product_offer.py:37 apps/cms/models/product_offer.py:66
+msgid "Product Offer"
+msgstr "پیشنهاد محصول"
+
+#: apps/cms/models/product_offer.py:38 shop/admin_panel.py:117
+#: shop/admin_panel.py:323
+msgid "Product Offers"
+msgstr "پیشنهادات محصول"
+
+#: apps/cms/models/product_offer.py:71 apps/order/models/order_item.py:46
+#: apps/products/models/product.py:74
+#: apps/products/models/product_discount.py:32
+#: apps/products/models/product_images.py:23
+#: apps/products/models/product_property.py:37
+#: apps/products/models/product_review.py:37
+#: apps/products/models/product_wishlist.py:24
+msgid "Product"
+msgstr "کالا"
+
+#: apps/cms/models/product_offer.py:78 apps/products/models/product.py:51
+msgid "Stock"
+msgstr "موجودی"
+
+#: apps/cms/models/product_offer.py:83
+msgid "Sold Stock"
+msgstr "فروخته شده"
+
+#: apps/cms/models/product_offer.py:87
+msgid "Discount"
+msgstr "تخفیف"
+
+#: apps/cms/models/product_offer.py:93
+msgid "Product Offer Item"
+msgstr "آیتم پیشنهاد محصول"
+
+#: apps/cms/models/product_offer.py:94 shop/admin_panel.py:122
+msgid "Product Offer Items"
+msgstr "آیتم های پیشنهاد محصول"
+
+#: apps/cms/models/slider.py:30
+msgid "Media"
+msgstr "رسانه"
+
+#: apps/cms/models/slider.py:41
+msgid "Subtitle"
+msgstr "زیرنویس"
+
+#: apps/cms/models/slider.py:51
+msgid "Slider"
+msgstr "اسلایدر"
+
+#: apps/cms/models/slider.py:52 shop/admin_panel.py:318
+msgid "Sliders"
+msgstr "اسلایدر ها"
+
+#: apps/dashboard/templates/admin/dashboard.html:8
+#: shop/admin_panel.py:213
+msgid "Dashboard"
+msgstr "داشبورد"
+
+#: apps/dashboard/templates/admin/dashboard.html:8
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/app_index.html:5
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/base_site.html:3
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/index.html:7
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/layouts/base.html:11
+msgid "Django site admin"
+msgstr "مدیر سایت جنگو"
+
+#: apps/dashboard/templates/admin/dashboard.html:35
+msgid "Last 7 days"
+msgstr "هفت روز گذشته"
+
+#: apps/dashboard/templates/admin/dashboard.html:52
+msgid "The most trending products in last 2 weeks"
+msgstr "محصولات پرطرفدار در دو هفته گذشته"
+
+#: apps/dashboard/utils.py:16
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:7
+msgid "Monday"
+msgstr "دوشنبه"
+
+#: apps/dashboard/utils.py:16
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:8
+msgid "Tuesday"
+msgstr "سه‌شنبه"
+
+#: apps/dashboard/utils.py:16
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:9
+msgid "Wednesday"
+msgstr "چهارشنبه"
+
+#: apps/dashboard/utils.py:16
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:10
+msgid "Thursday"
+msgstr "پنج‌شنبه"
+
+#: apps/dashboard/utils.py:16
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:11
+msgid "Friday"
+msgstr "جمعه"
+
+#: apps/dashboard/utils.py:16
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:12
+msgid "Saturday"
+msgstr "شنبه"
+
+#: apps/dashboard/utils.py:16
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:13
+msgid "Sunday"
+msgstr "یکشنبه"
+
+#: apps/dashboard/utils.py:54
+msgid "Development"
+msgstr "توسعه"
+
+#: apps/dashboard/utils.py:56
+msgid "Production"
+msgstr "تولید"
+
+#: apps/dashboard/views.py:27
+msgid "progress from last week"
+msgstr "پیشرفت از هفته گذشته"
+
+#: apps/dashboard/views.py:47
+msgid "Registered Users"
+msgstr "کاربران ثبت‌ نام‌شده"
+
+#: apps/dashboard/views.py:59
+msgid "Wallet Balances"
+msgstr "موجودی کیف پول"
+
+#: apps/front_shop/templates/base.html:26
+msgid "shop"
+msgstr "فروشگاه"
+
+#: apps/front_shop/templates/base.html:86
+msgid "Page Title"
+msgstr "عنوان"
+
+#: apps/front_shop/templates/front_shop/about-us.html:6
+msgid "about us"
+msgstr "درباره ما"
+
+#: apps/front_shop/templates/front_shop/about-us.html:23
+msgid "For more information, submit a request."
+msgstr "برای اطلاعات بیشتر، یک درخواست ارسال کنید."
+
+#: apps/front_shop/templates/front_shop/about-us.html:30
+msgid "Submit A Query"
+msgstr "ارسال درخواست"
+
+#: apps/front_shop/templates/front_shop/blog-details.html:7
+msgid "Blog Detail"
+msgstr "جزئیات پست"
+
+#: apps/front_shop/templates/front_shop/blog-details.html:25
+msgid "Follow"
+msgstr "دنبال کنید"
+
+#: apps/front_shop/templates/front_shop/blog-details.html:27
+msgid "min read"
+msgstr "دقیقه مطالعه"
+
+#: apps/front_shop/templates/front_shop/blog-details.html:42
+#: shop/admin_panel.py:409
+msgid "Comments"
+msgstr "نظر ها"
+
+#: apps/front_shop/templates/front_shop/blog-details.html:63
+msgid "Submit A Comment"
+msgstr "ارسال نظر"
+
+#: apps/front_shop/templates/front_shop/blog-details.html:67
+msgid "post comment"
+msgstr "ثبت نظر"
+
+#: apps/front_shop/templates/front_shop/blog-grid.html:6
+#: apps/front_shop/templates/front_shop/pages.html:102
+msgid "Blog Grid"
+msgstr "گرید وبلاگ"
+
+#: apps/front_shop/templates/front_shop/blog-grid.html:41
+#: apps/front_shop/templates/front_shop/blog-list.html:56
+msgid "min"
+msgstr "دقیقه"
+
+#: apps/front_shop/templates/front_shop/blog-grid.html:43
+#: apps/front_shop/templates/front_shop/blog-list.html:36
+msgid "Read More"
+msgstr "بیشتر بخوانید"
+
+#: apps/front_shop/templates/front_shop/blog-grid.html:53
+#: apps/front_shop/templates/front_shop/blog-list.html:68
+msgid "Read by category"
+msgstr "مطالعه بر اساس دسته‌بندی"
+
+#: apps/front_shop/templates/front_shop/blog-list.html:6
+#: apps/front_shop/templates/front_shop/pages.html:105
+msgid "Blog List"
+msgstr "لیست بلاگ"
+
+#: apps/front_shop/templates/front_shop/cart.html:7
+msgid "cart"
+msgstr "سبد خرید"
+
+#: apps/front_shop/templates/front_shop/cart.html:48
+msgid "Have a coupon?"
+msgstr "کد تخفیف دارید؟"
+
+#: apps/front_shop/templates/front_shop/cart.html:50
+msgid "Enter your coupon code here &amp; get awesome discounts!"
+msgstr "کد تخفیف خود را وارد کنید و تخفیف‌های عالی دریافت کنید!"
+
+#: apps/front_shop/templates/front_shop/cart.html:56
+#: apps/front_shop/templates/front_shop/cart.html:127
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/edit_inline/tabular.html:164
+msgid "Remove"
+msgstr "حذف"
+
+#: apps/front_shop/templates/front_shop/cart.html:56
+#: apps/front_shop/templates/front_shop/cart.html:126
+msgid "Apply"
+msgstr "اعمال"
+
+#: apps/front_shop/templates/front_shop/cart.html:70
+msgid "Login And Complete Your Profile First"
+msgstr "ابتدا پروفایل خود را کامل کنید"
+
+#: apps/front_shop/templates/front_shop/cart.html:73
+msgid "Checkout Now"
+msgstr "پرداخت"
+
+#: apps/front_shop/templates/front_shop/cart.html:107
+msgid "Error removing item from cart"
+msgstr "خطا در حذف آیتم از سبد خرید"
+
+#: apps/front_shop/templates/front_shop/cart.html:154
+msgid "Coupon removed successfully!"
+msgstr "کد تخفیف با موفقیت حذف شد!"
+
+#: apps/front_shop/templates/front_shop/cart.html:160
+msgid "Coupon applied successfully!"
+msgstr "کد تخفیف با موفقیت اعمال شد!"
+
+#: apps/front_shop/templates/front_shop/cart.html:176
+msgid "An error occurred while applying the coupon."
+msgstr "هنگام اعمال کد تخفیف خطا رخ داد."
+
+#: apps/front_shop/templates/front_shop/category.html:6
+#: apps/front_shop/templates/front_shop/pages.html:20
+#: apps/front_shop/templates/front_shop/shop-grid.html:6
+#: apps/front_shop/templates/partials/sidenav.html:49
+msgid "Shop Grid"
+msgstr "گرید محصولات"
+
+#: apps/front_shop/templates/front_shop/category.html:41
+#: apps/front_shop/templates/front_shop/shop-grid.html:41
+#: apps/products/models/product.py:46
+msgid "Brand"
+msgstr "برند"
+
+#: apps/front_shop/templates/front_shop/category.html:61
+#: apps/front_shop/templates/front_shop/shop-grid.html:61
+#: shop/admin_panel.py:81 shop/admin_panel.py:260
+#: shop/admin_panel.py:404
+msgid "Categories"
+msgstr "دسته بندی ها"
+
+#: apps/front_shop/templates/front_shop/category.html:82
+#: apps/front_shop/templates/front_shop/shop-grid.html:82
+#: apps/products/filters.py:37
+msgid "Ratings"
+msgstr "امتیاز ها"
+
+#: apps/front_shop/templates/front_shop/category.html:124
+#: apps/front_shop/templates/front_shop/shop-grid.html:124
+msgid "Price Range"
+msgstr "محدوده قیمت"
+
+#: apps/front_shop/templates/front_shop/category.html:131
+#: apps/front_shop/templates/front_shop/shop-grid.html:131
+msgid "Min"
+msgstr "کمترین"
+
+#: apps/front_shop/templates/front_shop/category.html:137
+#: apps/front_shop/templates/front_shop/shop-grid.html:137
+msgid "Max"
+msgstr "بیشترین"
+
+#: apps/front_shop/templates/front_shop/category.html:146
+#: apps/front_shop/templates/front_shop/shop-grid.html:146
+msgid "Apply Filter"
+msgstr "اعمال فیلترها"
+
+#: apps/front_shop/templates/front_shop/category.html:163
+#: apps/front_shop/templates/front_shop/shop-grid.html:163
+msgid "Sort by"
+msgstr "مرتب‌سازی بر اساس"
+
+#: apps/front_shop/templates/front_shop/category.html:166
+#: apps/front_shop/templates/front_shop/shop-grid.html:166
+#: apps/front_shop/templates/front_shop/shop-list.html:32
+#: apps/products/filters.py:10 core/choice.py:91
+msgid "Newest"
+msgstr "جدیدترین"
+
+#: apps/front_shop/templates/front_shop/category.html:169
+#: apps/front_shop/templates/front_shop/shop-grid.html:169
+#: apps/products/filters.py:11
+msgid "Popular"
+msgstr "محبوب"
+
+#: apps/front_shop/templates/front_shop/category.html:172
+#: apps/front_shop/templates/front_shop/shop-grid.html:172
+#: apps/products/filters.py:12 apps/products/models/product_review.py:55
+msgid "Rating"
+msgstr "امتیاز"
+
+#: apps/front_shop/templates/front_shop/change-password-message.html:20
+#: apps/front_shop/templates/front_shop/pages.html:78
+msgid "Login"
+msgstr "ورود"
+
+#: apps/front_shop/templates/front_shop/change-password-message.html:22
+#: apps/front_shop/templates/front_shop/forget-password-success.html:19
+msgid "Go Home"
+msgstr "برو به صفحه اصلی"
+
+#: apps/front_shop/templates/front_shop/change-password.html:7
+#: apps/front_shop/templates/front_shop/pages.html:93
+msgid "Change Password"
+msgstr "تغییر رمز عبور"
+
+#: apps/front_shop/templates/front_shop/change-password.html:39
+msgid "Old Password"
+msgstr "رمز عبور فعلی"
+
+#: apps/front_shop/templates/front_shop/change-password.html:47
+msgid "New Password"
+msgstr "رمز عبور جدید"
+
+#: apps/front_shop/templates/front_shop/change-password.html:55
+msgid "Repeat New Password"
+msgstr "تکرار رمز عبور جدید"
+
+#: apps/front_shop/templates/front_shop/change-password.html:61
+msgid "Update Password"
+msgstr "تغییر رمز عبور"
+
+#: apps/front_shop/templates/front_shop/checkout-cash.html:6
+msgid "Cash On Delivery"
+msgstr "پرداخت در محل"
+
+#: apps/front_shop/templates/front_shop/checkout-cash.html:17
+msgid "Credit Card Image"
+msgstr "تصویر کارت اعتباری"
+
+#: apps/front_shop/templates/front_shop/checkout-cash.html:22
+msgid "Pay when you receive your products"
+msgstr "هنگامی که محصولات خود را دریافت کردید پرداخت کنید"
+
+#: apps/front_shop/templates/front_shop/checkout-cash.html:31
+msgid "Order Now"
+msgstr "ثبت نهایی سفارش"
+
+#: apps/front_shop/templates/front_shop/checkout-payment.html:6
+msgid "Payment Method"
+msgstr "روش پرداخت"
+
+#: apps/front_shop/templates/front_shop/checkout-payment.html:25
+msgid "Cash On Delivary"
+msgstr "پرداخت در محل"
+
+#: apps/front_shop/templates/front_shop/checkout.html:7
+msgid "checkout"
+msgstr "پرداخت"
+
+#: apps/front_shop/templates/front_shop/checkout.html:19
+msgid "Billing Information"
+msgstr "مشخصات خریدار"
+
+#: apps/front_shop/templates/front_shop/checkout.html:29
+msgid "Shipping Method"
+msgstr "روش ارسال"
+
+#: apps/front_shop/templates/front_shop/checkout.html:55
+msgid "Your billing information is incomplete. Please update it to proceed."
+msgstr "اطلاعات صورتحساب شما کامل نیست. لطفاً برای ادامه آن را بروزرسانی کنید."
+
+#: apps/front_shop/templates/front_shop/checkout.html:61
+msgid "Please select a shipping method to proceed."
+msgstr "لطفاً یک روش ارسال را برای ادامه انتخاب کنید."
+
+#: apps/front_shop/templates/front_shop/checkout.html:68
+msgid "Complete Profile First"
+msgstr "ابتدا پروفایل خود را کامل کنید"
+
+#: apps/front_shop/templates/front_shop/checkout.html:71
+msgid "Confirm & Pay"
+msgstr "تأیید و پرداخت"
+
+#: apps/front_shop/templates/front_shop/contact.html:8
+#: apps/front_shop/templates/front_shop/contact.html:25
+#: apps/front_shop/templates/front_shop/pages.html:132
+#: shop/admin_panel.py:86 shop/admin_panel.py:452
+msgid "Contact Us"
+msgstr "ارتباط با ما"
+
+#: apps/front_shop/templates/front_shop/contact.html:27
+msgid ""
+"Write to us. We will reply to you as soon as possible. But yes, it can take "
+"up to 24 hours."
+msgstr ""
+"واسمون بنویسید. ما جواب میدیم ولی ممکنه یخورده زمان ببرهحداکثر تا ۲۴ ساعت"
+
+#: apps/front_shop/templates/front_shop/contact.html:46
+msgid "Send Now"
+msgstr ""
+
+#: apps/front_shop/templates/front_shop/edit-profile.html:7
+#: apps/front_shop/templates/front_shop/pages.html:126
+msgid "Edit Profile"
+msgstr "ویرایش پروفایل"
+
+#: apps/front_shop/templates/front_shop/edit-profile.html:43
+msgid "Address Details"
+msgstr "آدرس"
+
+#: apps/front_shop/templates/front_shop/edit-profile.html:69
+msgid "Save All Changes"
+msgstr "ذخیره تغییرات"
+
+#: apps/front_shop/templates/front_shop/flash-sale.html:6
+#: apps/front_shop/templates/front_shop/home.html:83
+#: apps/front_shop/templates/front_shop/pages.html:42
+#: apps/front_shop/templates/partials/sidenav.html:56
+msgid "Flash Sale"
+msgstr "فروش ویژه"
+
+#: apps/front_shop/templates/front_shop/forget-password-success.html:16
+msgid "Password recovery email is sent successfully. Please check your inbox!"
+msgstr ""
+"ایمیل بازیابی رمز عبور با موفقیت ارسال شد. لطفاً صندوق ورودی خود را بررسی "
+"کنید!"
+
+#: apps/front_shop/templates/front_shop/forget-password.html:15
+msgid "Email or Username"
+msgstr "نام کاربری یا ایمیل"
+
+#: apps/front_shop/templates/front_shop/forget-password.html:17
+#, fuzzy
+#| msgid "Email or Username"
+msgid "Enter your email or username"
+msgstr "نام کاربری یا ایمیل"
+
+#: apps/front_shop/templates/front_shop/forget-password.html:20
+#, fuzzy
+#| msgid "Email or Username"
+msgid "Please enter your email or username."
+msgstr "نام کاربری یا ایمیل"
+
+#: apps/front_shop/templates/front_shop/forget-password.html:24
+msgid "Reset Password"
+msgstr "بازیابی رمز عبور"
+
+#: apps/front_shop/templates/front_shop/forget-password.html:30
+msgid "Email or username not found. Please try again."
+msgstr "ایمیل یا نام کاربری یافت نشد. لطفاً دوباره تلاش کنید"
+
+#: apps/front_shop/templates/front_shop/home.html:7
+msgid "Home Page"
+msgstr "خانه"
+
+#: apps/front_shop/templates/front_shop/home.html:16
+msgid "Add to Home Screen"
+msgstr "افزودن به صفحه اصلی"
+
+#: apps/front_shop/templates/front_shop/home.html:17
+#: venv/lib/python3.12/site-packages/unfold/contrib/simple_history/templates/simple_history/submit_line.html:20
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/submit_line.html:34
+msgid "Close"
+msgstr "بستن"
+
+#: apps/front_shop/templates/front_shop/home.html:19
+msgid "Click the Add to Home Screen button to use it like a regular app!"
+msgstr ""
+"دکمه افزودن به صفحه اصلی را بزنید تا مانند یک اپلیکیشن معمولی از آن استفاده "
+"کنید!"
+
+#: apps/front_shop/templates/front_shop/home.html:31
+#: apps/front_shop/templates/front_shop/support.html:20
+msgid "Search"
+msgstr "جستجو"
+
+#: apps/front_shop/templates/front_shop/home.html:114
+msgid "You can change your display to a dark background using a dark mode."
+msgstr ""
+"شما می‌توانید نمایش خود را با استفاده از حالت تاریک به پس‌زمینه‌ای تیره تغییر "
+"دهید."
+
+#: apps/front_shop/templates/front_shop/home.html:117
+msgid "Switch to Dark Mode"
+msgstr "تغییر به حالت تاریک"
+
+#: apps/front_shop/templates/front_shop/home.html:127
+#: apps/front_shop/templates/front_shop/sub-category.html:14
+#: apps/products/models/product.py:75 shop/admin_panel.py:181
+#: shop/admin_panel.py:255
+msgid "Products"
+msgstr "محصولات"
+
+#: apps/front_shop/templates/front_shop/home.html:128
+#: apps/front_shop/templates/front_shop/single-product.html:188
+msgid "View All"
+msgstr "دیدن همه"
+
+#: apps/front_shop/templates/front_shop/intro.html:13
+msgid "Start"
+msgstr "شروع"
+
+#: apps/front_shop/templates/front_shop/login.html:41
+#: apps/front_shop/templates/front_shop/login.html:43
+#: apps/front_shop/templates/front_shop/register.html:28
+#: apps/front_shop/templates/front_shop/register.html:30
+#: apps/front_shop/templates/front_shop/settings.html:147
+msgid "Password"
+msgstr "رمز عبور"
+
+#: apps/front_shop/templates/front_shop/login.html:47
+msgid "Log In"
+msgstr "ورود"
+
+#: apps/front_shop/templates/front_shop/login.html:53
+msgid "Forgot Password?"
+msgstr "فراموشی رمز عبور؟"
+
+#: apps/front_shop/templates/front_shop/login.html:55
+msgid "Didn't have an account?"
+msgstr "حساب کاربری ندارید؟"
+
+#: apps/front_shop/templates/front_shop/login.html:56
+msgid "Register Now"
+msgstr "هم اکنون ثبت نام کنید"
+
+#: apps/front_shop/templates/front_shop/login.html:63
+msgid "View as guest"
+msgstr "مشاهده به عنوان مهمان"
+
+#: apps/front_shop/templates/front_shop/my-orders.html:7
+#: apps/order/models/order.py:97 shop/admin_panel.py:135
+#: shop/admin_panel.py:300
+msgid "Orders"
+msgstr "سفارش ها"
+
+#: apps/front_shop/templates/front_shop/my-orders.html:26
+msgid "Estimate"
+msgstr "تخمین"
+
+#: apps/front_shop/templates/front_shop/notification-details.html:7
+#: apps/front_shop/templates/front_shop/notifications.html:7
+#: apps/front_shop/templates/front_shop/pages.html:123
+#: apps/front_shop/templates/front_shop/profile.html:7
+msgid "profile"
+msgstr "پروفایل"
+
+#: apps/front_shop/templates/front_shop/notifications.html:16
+msgid "Notification(s)"
+msgstr "اعلان ها"
+
+#: apps/front_shop/templates/front_shop/notifications.html:16
+msgid "Clear All"
+msgstr "خواندن همه"
+
+#: apps/front_shop/templates/front_shop/notifications.html:28
+msgid "Before"
+msgstr "قبل"
+
+#: apps/front_shop/templates/front_shop/offline.html:6
+msgid "Offline Detected"
+msgstr "وضعیت آفلاین"
+
+#: apps/front_shop/templates/front_shop/offline.html:18
+msgid "No Internet Connection!"
+msgstr "اتصال به اینترنت برقرار نیست!"
+
+#: apps/front_shop/templates/front_shop/offline.html:19
+msgid ""
+"Seems like you're offline, please check your internet connection. This page "
+"doesn't support when you offline!"
+msgstr ""
+"ظاهراً به اینترنت وصل نیستید! نگران نباشید، اینترنت خود رو بررسی کنید تا "
+"بتونید به راحتی از سایت استفاده کنید. این صفحه در حالت آفلاین کار نمی‌کنه!"
+
+#: apps/front_shop/templates/front_shop/offline.html:22
+msgid "Back Home"
+msgstr "بازگشت به خانه"
+
+#: apps/front_shop/templates/front_shop/pages.html:5
+#: apps/front_shop/templates/partials/footer.html:20
+msgid "Pages"
+msgstr "صفحات"
+
+#: apps/front_shop/templates/front_shop/pages.html:11
+#: apps/front_shop/templates/partials/footer.html:8
+#: venv/lib/python3.12/site-packages/unfold/contrib/guardian/templates/admin/guardian/model/obj_perms_manage.html:10
+#: venv/lib/python3.12/site-packages/unfold/contrib/guardian/templates/admin/guardian/model/obj_perms_manage_group.html:13
+#: venv/lib/python3.12/site-packages/unfold/contrib/guardian/templates/admin/guardian/model/obj_perms_manage_user.html:14
+#: venv/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/export.html:17
+#: venv/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/import.html:28
+#: venv/lib/python3.12/site-packages/unfold/contrib/simple_history/templates/simple_history/object_history_form.html:11
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/app_index.html:15
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/auth/user/change_password.html:13
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/base.html:23
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/change_form.html:18
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/change_list.html:31
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/delete_confirmation.html:17
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/delete_selected_confirmation.html:17
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/object_history.html:9
+#: venv/lib/python3.12/site-packages/unfold/templates/registration/password_change_done.html:12
+#: venv/lib/python3.12/site-packages/unfold/templates/registration/password_change_form.html:12
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/helpers/site_icon.html:6
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/helpers/site_icon.html:8
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/helpers/site_icon.html:10
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/helpers/site_logo.html:5
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/helpers/site_logo.html:7
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/helpers/site_logo.html:9
+msgid "Home"
+msgstr "خانه"
+
+#: apps/front_shop/templates/front_shop/pages.html:14
+msgid "Intro/Flash Screen"
+msgstr "صفحه معرفی"
+
+#: apps/front_shop/templates/front_shop/pages.html:17
+msgid "Shop"
+msgstr "فروشگاه"
+
+#: apps/front_shop/templates/front_shop/pages.html:23
+#: apps/front_shop/templates/front_shop/shop-list.html:6
+msgid "Shop List"
+msgstr "لیست محصولات"
+
+#: apps/front_shop/templates/front_shop/pages.html:36
+msgid "Wishlist Grid"
+msgstr "گرید علاقه‌مندی‌ها"
+
+#: apps/front_shop/templates/front_shop/pages.html:39
+msgid "Wishlist List"
+msgstr "لیست علاقه‌مندی‌ها"
+
+#: apps/front_shop/templates/front_shop/pages.html:45
+#: apps/front_shop/templates/partials/sidenav.html:53
+msgid "Featured Products"
+msgstr "محصولات ویژه"
+
+#: apps/front_shop/templates/front_shop/pages.html:48
+#: apps/order/models/order_status.py:63
+msgid "Order Status"
+msgstr "وضعیت سفارش"
+
+#: apps/front_shop/templates/front_shop/pages.html:51
+msgid "Cart & Checkout"
+msgstr "سبد خرید و پرداخت"
+
+#: apps/front_shop/templates/front_shop/pages.html:57
+msgid "Checkout"
+msgstr "پرداخت"
+
+#: apps/front_shop/templates/front_shop/pages.html:60
+msgid "Checkout Bank"
+msgstr "پرداخت از طریق بانک"
+
+#: apps/front_shop/templates/front_shop/pages.html:63
+msgid "Checkout Cash"
+msgstr "پرداخت نقدی"
+
+#: apps/front_shop/templates/front_shop/pages.html:66
+msgid "Checkout Credit Card"
+msgstr "پرداخت از طریق کارت اعتباری"
+
+#: apps/front_shop/templates/front_shop/pages.html:69
+msgid "Checkout Payment"
+msgstr "پرداخت در هنگام تسویه حساب"
+
+#: apps/front_shop/templates/front_shop/pages.html:72
+#: apps/front_shop/templates/front_shop/payment-success.html:6
+msgid "Payment Success"
+msgstr "پرداخت موفق"
+
+#: apps/front_shop/templates/front_shop/pages.html:75
+msgid "Authentication"
+msgstr "احراز هویت"
+
+#: apps/front_shop/templates/front_shop/pages.html:81
+msgid "Register"
+msgstr "ثبت نام"
+
+#: apps/front_shop/templates/front_shop/pages.html:84
+msgid "OTP Send"
+msgstr "ارسال رمز یکبار مصرف"
+
+#: apps/front_shop/templates/front_shop/pages.html:87
+msgid "OTP Confirmation"
+msgstr "تأیید رمز یکبار مصرف"
+
+#: apps/front_shop/templates/front_shop/pages.html:90
+msgid "Forget Password"
+msgstr "فراموشی رمز عبور؟"
+
+#: apps/front_shop/templates/front_shop/pages.html:96
+msgid "Forget Password Success"
+msgstr "بازیابی رمز عبور با موفقیت انجام شد"
+
+#: apps/front_shop/templates/front_shop/pages.html:99
+msgid "Blog"
+msgstr "بلاگ"
+
+#: apps/front_shop/templates/front_shop/pages.html:108
+msgid "Chat & Notifications"
+msgstr "چت و اعلان‌ها"
+
+#: apps/front_shop/templates/front_shop/pages.html:111
+msgid "Message/Chat"
+msgstr "پیام"
+
+#: apps/front_shop/templates/front_shop/pages.html:114
+#: apps/front_shop/templates/front_shop/settings.html:81
+#: apps/front_shop/templates/partials/sidenav.html:20
+msgid "Notifications"
+msgstr "اعلان ها"
+
+#: apps/front_shop/templates/front_shop/pages.html:117
+msgid "Notifications Details"
+msgstr "اعلان"
+
+#: apps/front_shop/templates/front_shop/pages.html:120
+msgid "Miscellaneous"
+msgstr "متفرقه"
+
+#: apps/front_shop/templates/front_shop/pages.html:129
+#: apps/info/models/about_us.py:26 shop/admin_panel.py:427
+msgid "About Us"
+msgstr "درباره ما"
+
+#: apps/front_shop/templates/front_shop/pages.html:135
+msgid "Offline"
+msgstr "صفحه آفلاین"
+
+#: apps/front_shop/templates/front_shop/pages.html:138
+msgid "Select Language"
+msgstr "انتخاب زبان"
+
+#: apps/front_shop/templates/front_shop/pages.html:141
+#: apps/front_shop/templates/front_shop/privacy-policy.html:6
+#: apps/front_shop/templates/front_shop/settings.html:132
+#: apps/info/models/privacy_policy.py:26 shop/admin_panel.py:437
+msgid "Privacy Policy"
+msgstr "سیاست حریم خصوصی"
+
+#: apps/front_shop/templates/front_shop/pages.html:144
+#: apps/front_shop/templates/front_shop/settings.html:6
+#: apps/front_shop/templates/partials/footer.html:17
+#: apps/front_shop/templates/partials/sidenav.html:28
+msgid "Settings"
+msgstr "تنظیمات"
+
+#: apps/front_shop/templates/front_shop/pages.html:147
+#: apps/front_shop/templates/front_shop/settings.html:117
+msgid "Support"
+msgstr "پشتیبانی"
+
+#: apps/front_shop/templates/front_shop/payment-failed.html:6
+#: apps/front_shop/templates/front_shop/payment-failed.html:16
+msgid "Payment Failed"
+msgstr "پرداخت ناموفق"
+
+#: apps/front_shop/templates/front_shop/payment-failed.html:18
+msgid ""
+"Something went wrong with your payment. Please try again or contact support."
+msgstr ""
+"مشکلی در پرداخت شما پیش آمده است. لطفاً دوباره تلاش کنید یا با پشتیبانی تماس "
+"بگیرید."
+
+#: apps/front_shop/templates/front_shop/payment-failed.html:21
+msgid "Error: "
+msgstr "خطا: "
+
+#: apps/front_shop/templates/front_shop/payment-failed.html:23
+msgid "Go Back to Shopping"
+msgstr "بازگشت به خرید"
+
+#: apps/front_shop/templates/front_shop/payment-success.html:16
+msgid "Payment Successful"
+msgstr "پرداخت با موفقیت انجام شد"
+
+#: apps/front_shop/templates/front_shop/payment-success.html:18
+msgid "We will notify you of all the details via email. Thank you!"
+msgstr ""
+"جزئیات خرید شما از طریق ایمیل برایتان ارسال خواهد شد. از خرید شما سپاسگزاریم!"
+
+#: apps/front_shop/templates/front_shop/payment-success.html:20
+msgid "Shopping Again"
+msgstr "خرید مجدد"
+
+#: apps/front_shop/templates/front_shop/register.html:20
+msgid "Designing World"
+msgstr ""
+
+#: apps/front_shop/templates/front_shop/register.html:25
+msgid "help@example.com"
+msgstr ""
+
+#: apps/front_shop/templates/front_shop/register.html:32
+msgid "Sign Up"
+msgstr "ثبت نام"
+
+#: apps/front_shop/templates/front_shop/register.html:38
+msgid "Already have an account?"
+msgstr "حساب کاربری ندارید؟"
+
+#: apps/front_shop/templates/front_shop/register.html:39
+#: apps/front_shop/templates/partials/sidenav.html:36
+msgid "Sign In"
+msgstr "ورود"
+
+#: apps/front_shop/templates/front_shop/search_results.html:6
+msgid "Search Results"
+msgstr "نتایج جستجو"
+
+#: apps/front_shop/templates/front_shop/search_results.html:18
+msgid "No products found."
+msgstr "محصولی یافت نشد"
+
+#: apps/front_shop/templates/front_shop/search_results.html:26
+msgid "First"
+msgstr "اول"
+
+#: apps/front_shop/templates/front_shop/search_results.html:30
+msgid "Page"
+msgstr "صفحه"
+
+#: apps/front_shop/templates/front_shop/search_results.html:30
+msgid "of"
+msgstr "از"
+
+#: apps/front_shop/templates/front_shop/search_results.html:34
+msgid "Last"
+msgstr "آخر"
+
+#: apps/front_shop/templates/front_shop/settings.html:18
+msgid "Night Mode"
+msgstr "حالت شب"
+
+#: apps/front_shop/templates/front_shop/settings.html:39
+msgid "RTL Mode"
+msgstr "حالت راست به چپ"
+
+#: apps/front_shop/templates/front_shop/settings.html:60
+msgid "Availability"
+msgstr "دسترس‌پذیری"
+
+#: apps/front_shop/templates/front_shop/settings.html:102
+msgid "Language"
+msgstr "زبان"
+
+#: apps/front_shop/templates/front_shop/settings.html:105
+msgid "Farsi"
+msgstr "فارسی"
+
+#: apps/front_shop/templates/front_shop/settings.html:120
+msgid "Get Help"
+msgstr "دریافت کمک"
+
+#: apps/front_shop/templates/front_shop/settings.html:135
+#: venv/lib/python3.12/site-packages/jalali_date/templates/admin/edit_inline/jalali_stacked.html:12
+#: venv/lib/python3.12/site-packages/jalali_date/templates/admin/edit_inline/jalali_tabular.html:34
+#: venv/lib/python3.12/site-packages/unfold/contrib/simple_history/templates/simple_history/object_history_form.html:26
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/edit_inline/stacked.html:59
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/edit_inline/tabular.html:85
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/helpers/app_list_default.html:38
+msgid "View"
+msgstr "دیدن"
+
+#: apps/front_shop/templates/front_shop/settings.html:150
+#: venv/lib/python3.12/site-packages/django/forms/widgets.py:463
+#: venv/lib/python3.12/site-packages/jalali_date/templates/admin/edit_inline/jalali_stacked.html:12
+#: venv/lib/python3.12/site-packages/jalali_date/templates/admin/edit_inline/jalali_tabular.html:34
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/edit_inline/stacked.html:57
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/edit_inline/tabular.html:83
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/helpers/app_list_default.html:42
+msgid "Change"
+msgstr "تغییر"
+
+#: apps/front_shop/templates/front_shop/shop-list.html:29
+msgid "Short by"
+msgstr "مرتب‌سازی بر اساس"
+
+#: apps/front_shop/templates/front_shop/shop-list.html:35 core/choice.py:92
+msgid "Most Viewed"
+msgstr "پر بازدیدترین"
+
+#: apps/front_shop/templates/front_shop/single-product.html:8
+msgid "Product Details"
+msgstr "اطلاعات محصول"
+
+#: apps/front_shop/templates/front_shop/single-product.html:60
+#: core/choice.py:45
+msgid "Very Good"
+msgstr "بسیار خوب"
+
+#: apps/front_shop/templates/front_shop/single-product.html:62
+#: core/choice.py:43
+msgid "Average"
+msgstr "متوسط"
+
+#: apps/front_shop/templates/front_shop/single-product.html:64
+#: core/choice.py:42
+msgid "Poor"
+msgstr "ضعیف"
+
+#: apps/front_shop/templates/front_shop/single-product.html:81
+msgid "Flash sale end in"
+msgstr "فروش ویژه"
+
+#: apps/front_shop/templates/front_shop/single-product.html:101
+msgid "Sold Out"
+msgstr "فروخته شده"
+
+#: apps/front_shop/templates/front_shop/single-product.html:146
+msgid "Add To Cart"
+msgstr "اضافه به سبد خرید"
+
+#: apps/front_shop/templates/front_shop/single-product.html:153
+msgid "Specifications"
+msgstr "مشخصات"
+
+#: apps/front_shop/templates/front_shop/single-product.html:186
+msgid "Related Products"
+msgstr "محصولات مشابه"
+
+#: apps/front_shop/templates/front_shop/single-product.html:204
+msgid "Ratings & Reviews"
+msgstr "رتبه بندی و نظرات"
+
+#: apps/front_shop/templates/front_shop/single-product.html:227
+msgid "No reviews yet."
+msgstr "برای این محصول نظری ثبت نشده است"
+
+#: apps/front_shop/templates/front_shop/single-product.html:239
+msgid "Submit A Review"
+msgstr "ثبت نظر"
+
+#: apps/front_shop/templates/front_shop/single-product.html:257
+msgid "Write your review..."
+msgstr "نظر خود را بنویسید..."
+
+#: apps/front_shop/templates/front_shop/single-product.html:259
+msgid "Login First"
+msgstr "اول لاگین کنید"
+
+#: apps/front_shop/templates/front_shop/single-product.html:262
+msgid "Save Review"
+msgstr "ذخیره نظر"
+
+#: apps/front_shop/templates/front_shop/sub-category.html:6
+msgid "Product Sub Category"
+msgstr "زیر دسته"
+
+#: apps/front_shop/templates/front_shop/support.html:6
+msgid "support"
+msgstr "پشتیبانی"
+
+#: apps/front_shop/templates/front_shop/support.html:15
+msgid "How can we help you with?"
+msgstr "چطور می‌توانیم به شما کمک کنیم؟"
+
+#: apps/front_shop/templates/front_shop/wishlist-list.html:8
+msgid "Wishlist"
+msgstr "لیست علاقه‌مندی‌ها"
+
+#: apps/front_shop/templates/front_shop/wishlist-list.html:17
+msgid "Wishlist Items"
+msgstr "کالا های مورد علاقه"
+
+#: apps/front_shop/templates/front_shop/wishlist-list.html:31
+msgid "Add all items to cart"
+msgstr "اضافه کردن همه به سبد خرید"
+
+#: apps/front_shop/templates/partials/footer.html:11
+msgid "Chat"
+msgstr "چت"
+
+#: apps/front_shop/templates/partials/product_card.html:19
+#: venv/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/import_preview.html:22
+msgid "New"
+msgstr "جدید"
+
+#: apps/front_shop/templates/partials/profile_card.html:11
+msgid "Full Name"
+msgstr "نام و نام خوانوادگی"
+
+#: apps/front_shop/templates/partials/profile_card.html:27
+msgid "Phone"
+msgstr "تلفن"
+
+#: apps/front_shop/templates/partials/profile_card.html:57
+msgid "My Orders"
+msgstr "سفارش ها"
+
+#: apps/front_shop/templates/partials/profile_card.html:58
+msgid "View Status"
+msgstr "وضعیت سفارش"
+
+#: apps/front_shop/templates/partials/profile_card.html:62
+msgid "Edit Billing Information"
+msgstr "ویرایش پروفایل"
+
+#: apps/front_shop/templates/partials/sidenav.html:16
+msgid "My Profile"
+msgstr "پروفایل من"
+
+#: apps/front_shop/templates/partials/sidenav.html:25
+msgid "My Wishlist"
+msgstr "علاقه مندی های من"
+
+#: apps/front_shop/templates/partials/sidenav.html:31
+msgid "Sign Out"
+msgstr "خروج"
+
+#: apps/front_shop/templates/partials/sidenav.html:46
+msgid "Shop Pages"
+msgstr "صفحات فروشگاه"
+
+#: apps/front_shop/templates/partials/sidenav.html:61
+msgid "All Pages"
+msgstr "همه صفحات"
+
+#: apps/front_shop/views.py:103
+msgid "Your Password Changed successfully. Please Login Again"
+msgstr "رمز عبور شما با موفقیت تغییر کرد. لطفاً دوباره وارد شوید"
+
+#: apps/front_shop/views.py:187
+msgid "Invalid username or password"
+msgstr "نام کاربری یا رمز عبور نادرست است"
+
+#: apps/front_shop/views.py:222
+msgid ""
+"Your inquiry has been successfully submitted. We will get back to you "
+"shortly."
+msgstr "درخواست شما با موفقیت ارسال شد. به زودی با شما تماس خواهیم گرفت."
+
+#: apps/front_shop/views.py:315
+msgid "Star and comment are required."
+msgstr "ستاره و کامنت اجباری هستند."
+
+#: apps/front_shop/views.py:319
+msgid "Now"
+msgstr "جدید"
+
+#: apps/front_shop/views.py:608
+msgid "Invalid request"
+msgstr "درخواست نامعتبر"
+
+#: apps/info/apps.py:8 shop/admin_panel.py:422
+msgid "Information Management"
+msgstr "مدیریت اطلاعات"
+
+#: apps/info/forms.py:23
+msgid "Message must be at least 10 characters long."
+msgstr "پیام باید حداقل ۱۰ کاراکتر باشد."
+
+#: apps/info/forms.py:42 apps/info/models/contact_us.py:44
+msgid "Name"
+msgstr "نام"
+
+#: apps/info/forms.py:60 apps/info/models/contact_us.py:53
+msgid "Subject"
+msgstr "موضوع"
+
+#: apps/info/forms.py:76 apps/info/models/contact_us.py:63
+msgid "Relevant URL"
+msgstr "آدرس اینترنتی مرتبط"
+
+#: apps/info/forms.py:103
+msgid "Email domain 'example.com' is not allowed."
+msgstr ""
+
+#: apps/info/models/about_us.py:17 apps/products/models/product.py:54
+#: apps/products/models/product_category.py:44 apps/shipments/models.py:36
+msgid "Description"
+msgstr "توضیحات"
+
+#: apps/info/models/about_us.py:19
+msgid "Maximum 1000 characters"
+msgstr "حداکثر 1000 کاراکتر"
+
+#: apps/info/models/about_us.py:23
+msgid "About Us Information"
+msgstr "اطلاعات درباره ما"
+
+#: apps/info/models/about_us.py:27
+msgid "About Us Entries"
+msgstr "درباره ما"
+
+#: apps/info/models/cities.py:27 apps/info/models/states.py:25
+msgid "State"
+msgstr "استان"
+
+#: apps/info/models/cities.py:35 shop/admin_panel.py:104
+msgid "Cities"
+msgstr "شهر ها"
+
+#: apps/info/models/contact_us.py:16 apps/messaging/models.py:15
+#: apps/messaging/models.py:40 apps/messaging/models.py:67
+#: apps/wallet/models.py:23
+msgid "title"
+msgstr "عنوان"
+
+#: apps/info/models/contact_us.py:17
+msgid "The title of the inquiry category (e.g., Buying Support)."
+msgstr "عنوان دسته درخواست (مثلاً پشتیبانی خرید)"
+
+#: apps/info/models/contact_us.py:24
+msgid "Inquiry Category"
+msgstr "دسته بندی"
+
+#: apps/info/models/contact_us.py:25
+msgid "Inquiry Categories"
+msgstr "دسته بندی ها"
+
+#: apps/info/models/contact_us.py:45
+msgid "The name of the person submitting the inquiry."
+msgstr "نام فرد ارسال کننده درخواست"
+
+#: apps/info/models/contact_us.py:49
+msgid "The email address of the person submitting the inquiry."
+msgstr "آدرس ایمیل شخصی که درخواست را ارسال کرده است."
+
+#: apps/info/models/contact_us.py:54
+msgid "The subject of the inquiry."
+msgstr "موضوع درخواست"
+
+#: apps/info/models/contact_us.py:57
+msgid "Message"
+msgstr "پیام"
+
+#: apps/info/models/contact_us.py:58
+msgid "The detailed message from the person submitting the inquiry."
+msgstr "پیام شخصی که درخواست را ارسال کرده است."
+
+#: apps/info/models/contact_us.py:64
+msgid "An optional URL relevant to your inquiry (e.g., a related webpage)."
+msgstr ""
+"یک آدرس اینترنتی اختیاری مرتبط با درخواست شما (برای مثال، صفحه وب مرتبط)."
+
+#: apps/info/models/contact_us.py:72
+msgid "Select the category of the inquiry."
+msgstr "دسته‌بندی درخواست را انتخاب کنید."
+
+#: apps/info/models/contact_us.py:79
+msgid "Contact Us Inquiry"
+msgstr "ارتباط با ما"
+
+#: apps/info/models/contact_us.py:80
+msgid "Contact Us Inquiries"
+msgstr "ارتباط با ما"
+
+#: apps/info/models/faq.py:27
+msgid "An optional logo image for the FAQ."
+msgstr "اختیاری"
+
+#: apps/info/models/faq.py:32
+msgid "Answer"
+msgstr "پاسخ"
+
+#: apps/info/models/faq.py:34 apps/products/models/product_review.py:48
+msgid "Maximum 500 characters"
+msgstr "حداکثر 500 کاراکتر"
+
+#: apps/info/models/faq.py:40 apps/info/models/faq_group.py:24
+msgid "FAQ Group"
+msgstr "گروه"
+
+#: apps/info/models/faq.py:41
+msgid "The group to which this FAQ belongs."
+msgstr "گروهی که این پرسش متداول به آن تعلق دارد."
+
+#: apps/info/models/faq.py:48
+msgid "FAQ"
+msgstr "پرسش"
+
+#: apps/info/models/faq.py:49 shop/admin_panel.py:68
+msgid "FAQs"
+msgstr "پرسش‌ ها"
+
+#: apps/info/models/faq_group.py:25 shop/admin_panel.py:63
+msgid "FAQ Groups"
+msgstr "گروه‌ها"
+
+#: apps/info/models/privacy_policy.py:17
+msgid "Privacy Policy Text"
+msgstr "متن سیاست حریم خصوصی"
+
+#: apps/info/models/privacy_policy.py:19
+msgid "Maximum 5000 characters"
+msgstr "حداکثر 5000 کاراکتر"
+
+#: apps/info/models/privacy_policy.py:23
+msgid "Privacy Policy Information"
+msgstr "اطلاعات سیاست حریم خصوصی"
+
+#: apps/info/models/privacy_policy.py:27
+msgid "Privacy Policies"
+msgstr "سیاست‌های حریم خصوصی"
+
+#: apps/info/models/shop_location.py:20
+msgid "The physical address of the shop location."
+msgstr "آدرس فیزیکی مکان فروشگاه."
+
+#: apps/info/models/shop_location.py:24
+msgid "Location"
+msgstr "مختصات فروشگاه"
+
+#: apps/info/models/shop_location.py:25
+msgid "Geographical coordinates (longitude, latitude) of the shop location."
+msgstr "مختصات جغرافیایی (طول جغرافیایی، عرض جغرافیایی) مکان فروشگاه."
+
+#: apps/info/models/shop_location.py:37
+msgid "Latitude must be between -90 and 90 degrees."
+msgstr "عرض جغرافیایی باید بین -90 و 90 درجه باشد."
+
+#: apps/info/models/shop_location.py:40
+msgid "Longitude must be between -180 and 180 degrees."
+msgstr "طول جغرافیایی باید بین -180 و 180 درجه باشد."
+
+#: apps/info/models/shop_location.py:46
+msgid "Shop Location"
+msgstr "آدرس فروشگاه"
+
+#: apps/info/models/shop_location.py:47 shop/admin_panel.py:442
+msgid "Shop Locations"
+msgstr "آدرس فروشگاه"
+
+#: apps/info/models/states.py:26 shop/admin_panel.py:99
+#: shop/admin_panel.py:447
+msgid "States"
+msgstr "استان ها"
+
+#: apps/messaging/admin.py:70
+msgid "add user to group"
+msgstr "اضافه کردن کاربر به گروه"
+
+#: apps/messaging/admin.py:82
+msgid "users successfuly added to group"
+msgstr "کاربران با موفقیت به گروه اضافه شدند"
+
+#: apps/messaging/apps.py:8
+msgid "messaging"
+msgstr "پیام‌رسانی"
+
+#: apps/messaging/forms.py:10 apps/messaging/models.py:18
+#: apps/messaging/models.py:26 apps/messaging/models.py:39
+msgid "group"
+msgstr "گروه"
+
+#: apps/messaging/messages_list.py:17 apps/messaging/messages_list.py:24
+msgid "Your account status has changed"
+msgstr "وضعیت حساب شما تغییر کرده است"
+
+#: apps/messaging/messages_list.py:18
+#, python-brace-format
+msgid ""
+"Dear {name}, your account has been activated. You can now submit your "
+"responses!"
+msgstr "{name} عزیر حساب شما فعال شده. میتونید جواب خودتون الا ارسال کنید"
+
+#: apps/messaging/messages_list.py:25
+#, python-brace-format
+msgid ""
+"Dear {name}, your account has been rejected by the shop moderator."
+msgstr "{name} عزیز, اکانت شما غیرفعال شد"
+
+#: apps/messaging/messages_list.py:31 apps/messaging/messages_list.py:40
+msgid "Welcome to shop"
+msgstr "خوش اومدید به برنت شاپ"
+
+#: apps/messaging/messages_list.py:33
+#, python-brace-format
+msgid ""
+"Dear {name}, your information has been successfully registered. After "
+"approval by the shop moderator, your account will be activated."
+msgstr ""
+"عزیز {name}، اطلاعات شما با موفقیت ثبت شد. پس از تأیید توسط مدیر "
+"shop، حساب شما فعال خواهد شد."
+
+#: apps/messaging/messages_list.py:41
+#, python-brace-format
+msgid ""
+"Hello {name}, welcome to shop! Start asking questions and discovering "
+"answers right away."
+msgstr ""
+"سلام {name}، به shop خوش آمدید! بلافاصله شروع به پرسیدن سوالات و کشف "
+"پاسخ‌ها کنید."
+
+#: apps/messaging/messages_list.py:49 apps/messaging/messages_list.py:63
+#: apps/messaging/messages_list.py:70
+msgid "Notification"
+msgstr "اعلان"
+
+#: apps/messaging/messages_list.py:50
+msgid "A new answer has been posted for your question. Read it now!"
+msgstr "یک پاسخ جدید برای سوال شما ارسال شده است. هم‌اکنون آن را بخوانید!"
+
+#: apps/messaging/messages_list.py:56
+msgid "New Achievement"
+msgstr "دستاورد جدید"
+
+#: apps/messaging/messages_list.py:57
+#, python-brace-format
+msgid "Congratulations! You have successfully received the {medal_name} medal."
+msgstr "تبریک می‌گوییم! شما با موفقیت مدال {medal_name} را دریافت کرده‌اید."
+
+#: apps/messaging/messages_list.py:64
+#, python-brace-format
+msgid ""
+"A response has been posted for your ticket titled {subject}. Please check it."
+msgstr ""
+"یک پاسخ برای تیکت شما با عنوان {subject} ارسال شده است. لطفاً آن را بررسی "
+"کنید."
+
+#: apps/messaging/messages_list.py:71
+#, python-brace-format
+msgid ""
+"Your ticket titled {subject} has been closed. We hope your issue has been "
+"fully resolved."
+msgstr ""
+"تیکت شما با عنوان {subject} بسته شده است. امیدواریم مشکل شما به طور کامل حل "
+"شده باشد."
+
+#: apps/messaging/messages_list.py:79
+msgid "New Ticket Notification"
+msgstr "اعلان تیکت جدید"
+
+#: apps/messaging/messages_list.py:80
+#, python-brace-format
+msgid "A new ticket titled {subject} has been created. Please address it."
+msgstr "یک تیکت جدید با عنوان {subject} ایجاد شده است. لطفاً به آن رسیدگی کنید."
+
+#: apps/messaging/models.py:19
+msgid "groups"
+msgstr "گروه ها"
+
+#: apps/messaging/models.py:27 apps/messaging/models.py:66
+#: apps/messaging/models.py:143
+msgid "user"
+msgstr "کاربر"
+
+#: apps/messaging/models.py:30
+msgid "group user"
+msgstr "گروه کاربر"
+
+#: apps/messaging/models.py:31
+msgid "group users"
+msgstr "گروه کاربران"
+
+#: apps/messaging/models.py:41 apps/messaging/models.py:68
+msgid "content"
+msgstr "محتوا"
+
+#: apps/messaging/models.py:42 apps/messaging/models.py:69
+msgid "send in app"
+msgstr "ارسال درون برنامه ای"
+
+#: apps/messaging/models.py:43 apps/messaging/models.py:70
+msgid "send notification"
+msgstr "ارسال اعلان"
+
+#: apps/messaging/models.py:44 apps/messaging/models.py:71
+msgid "send email"
+msgstr "ارسال ایمیل"
+
+#: apps/messaging/models.py:45 apps/messaging/models.py:72
+msgid "send sms"
+msgstr "ارسال پیامک"
+
+#: apps/messaging/models.py:48 apps/messaging/models.py:52
+msgid "group message"
+msgstr "پیام گروه"
+
+#: apps/messaging/models.py:49
+msgid "group messages"
+msgstr "پیام های گروه"
+
+#: apps/messaging/models.py:73
+msgid "is seen"
+msgstr "دیده شده"
+
+#: apps/messaging/models.py:78
+msgid "Event Type"
+msgstr "نوع رویداد"
+
+#: apps/messaging/models.py:88
+msgid "Event Data"
+msgstr "اطلاعات رویداد"
+
+#: apps/messaging/models.py:95 apps/messaging/models.py:99
+msgid "user message"
+msgstr "پیام کاربر"
+
+#: apps/messaging/models.py:96
+msgid "user messages"
+msgstr "پیام های کاربر"
+
+#: apps/messaging/models.py:145
+msgid "Token"
+msgstr "توکن"
+
+#: apps/messaging/templates/messaging/add_to_group.html:15
+#: apps/messaging/templates/messaging/add_to_group.html:16
+#: venv/lib/python3.12/site-packages/unfold/contrib/guardian/templates/admin/guardian/model/obj_perms_manage_group.html:49
+#: venv/lib/python3.12/site-packages/unfold/contrib/guardian/templates/admin/guardian/model/obj_perms_manage_user.html:50
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/pagination.html:35
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/submit_line.html:10
+msgid "Save"
+msgstr "ذخیره"
+
+#: apps/order/apps.py:8
+msgid "order management"
+msgstr "مدیریت سفارشات"
+
+#: apps/order/models/order.py:35 apps/order/models/order_item.py:33
+msgid "The user who placed the order"
+msgstr "کاربری که از کوپن استفاده کرده است."
+
+#: apps/order/models/order.py:41
+msgid "Shipping Address"
+msgstr "آدرس گیرنده"
+
+#: apps/order/models/order.py:42
+msgid "The shipping address for the order"
+msgstr "آدرس ارسال سفارش"
+
+#: apps/order/models/order.py:50 apps/promotions/models/coupon.py:130
+#: apps/promotions/models/coupon_consume.py:27
+msgid "Coupon"
+msgstr "کوپن"
+
+#: apps/order/models/order.py:51
+msgid "The coupon applied to the order"
+msgstr "کوپن اعمال شده به سفارش"
+
+#: apps/order/models/order.py:54
+msgid "Order Note"
+msgstr "یادداشت سفارش"
+
+#: apps/order/models/order.py:58
+msgid "Any special instructions for the order. Maximum 1000 characters"
+msgstr "توضیحات سفارش. حداکثر 1000 کاراکتر"
+
+#: apps/order/models/order.py:61
+msgid "Total Product Price"
+msgstr "قیمت کل محصول"
+
+#: apps/order/models/order.py:62
+msgid "The total price of all products before any discounts."
+msgstr "قیمت کل تمامی محصولات قبل از اعمال هرگونه تخفیف."
+
+#: apps/order/models/order.py:66
+msgid "Coupon Discount"
+msgstr "تخفیف کوپن"
+
+#: apps/order/models/order.py:67
+msgid ""
+"Total discount applied via coupon. This is the discount from a coupon "
+"applied to the order."
+msgstr ""
+"تخفیف کل اعمال شده از طریق کوپن. این تخفیف مربوط به کوپنی است که به سفارش "
+"اعمال شده است."
+
+#: apps/order/models/order.py:71 apps/order/models/order_item.py:58
+#: apps/products/models/product_discount.py:61
+msgid "Product Discount"
+msgstr "تخفیف محصول"
+
+#: apps/order/models/order.py:72
+msgid ""
+"Total discount applied directly to the products. This does not include "
+"coupon discounts."
+msgstr ""
+"تخفیف کل اعمال شده به طور مستقیم بر روی محصولات. این تخفیف شامل تخفیف‌های "
+"کوپن نمی‌شود."
+
+#: apps/order/models/order.py:75 apps/order/models/order_shipments.py:40
+msgid "Shipment Price"
+msgstr "هزینه ارسال"
+
+#: apps/order/models/order.py:76
+msgid "The shipment price"
+msgstr "هزینه ارسال"
+
+#: apps/order/models/order.py:80
+msgid "Total Price"
+msgstr "قیمت نهایی"
+
+#: apps/order/models/order.py:82
+msgid ""
+"The final total price after all discounts (both product and coupon "
+"discounts) have been applied and shipment price."
+msgstr ""
+"قیمت نهایی پس از اعمال تمامی تخفیف‌ها (شامل تخفیف‌های محصول و کوپن )و هزینه "
+"ارسال."
+
+#: apps/order/models/order.py:88
+msgid "Current Order Status"
+msgstr "وضعیت سفارش"
+
+#: apps/order/models/order.py:89
+msgid "The Current Order Status"
+msgstr "وضعیت سفارش"
+
+#: apps/order/models/order.py:93
+msgid "Order #{} for {}"
+msgstr "سفارش #{} برای {}"
+
+#: apps/order/models/order.py:96 apps/order/models/order_item.py:39
+#: apps/order/models/order_shipments.py:27 apps/order/models/order_status.py:39
+#: venv/lib/python3.12/site-packages/django/forms/formsets.py:484
+#: venv/lib/python3.12/site-packages/django/forms/formsets.py:491
+msgid "Order"
+msgstr "سفارش"
+
+#: apps/order/models/order_item.py:40
+msgid "The order to which this item belongs"
+msgstr "سفارشی که این آیتم به آن تعلق دارد"
+
+#: apps/order/models/order_item.py:47
+msgid "The product included in the order"
+msgstr "محصول شامل در سفارش"
+
+#: apps/order/models/order_item.py:51
+msgid "Product Title"
+msgstr "عنوان محصول"
+
+#: apps/order/models/order_item.py:54
+msgid "Product Price"
+msgstr "قیمت محصول"
+
+#: apps/order/models/order_item.py:59
+msgid "Discount applied to the product"
+msgstr "تخفیف اعمال شده به محصول"
+
+#: apps/order/models/order_item.py:63
+msgid "The quantity of the product ordered"
+msgstr "تعداد محصول سفارش داده شده"
+
+#: apps/order/models/order_item.py:66
+msgid "Final Price"
+msgstr "قیمت نهایی"
+
+#: apps/order/models/order_item.py:67
+msgid "The final price after quantity and discounts"
+msgstr "قیمت نهایی پس از اعمال تعداد و تخفیف‌ها"
+
+#: apps/order/models/order_item.py:71
+msgid "OrderItem for {} (x{})"
+msgstr "آیتم سفارش برای {} (x{})"
+
+#: apps/order/models/order_item.py:74
+msgid "Order Item"
+msgstr "آیتم سفارش"
+
+#: apps/order/models/order_item.py:75 shop/admin_panel.py:140
+msgid "Order Items"
+msgstr "آیتم‌های سفارش"
+
+#: apps/order/models/order_shipments.py:28
+msgid "The order associated with this shipment"
+msgstr "سفارشی که با این مرسوله مرتبط است"
+
+#: apps/order/models/order_shipments.py:33 apps/shipments/models.py:57
+msgid "Shipment Type"
+msgstr "نوع ارسال"
+
+#: apps/order/models/order_shipments.py:36
+msgid "Shipping Date"
+msgstr "تاریخ ارسال"
+
+#: apps/order/models/order_shipments.py:37
+msgid "The date when the shipment was made"
+msgstr "تاریخ ارسال مرسوله"
+
+#: apps/order/models/order_shipments.py:47
+msgid "Shipment #{} for Order #{}"
+msgstr "مرسوله #{} برای سفارش #{}"
+
+#: apps/order/models/order_shipments.py:50
+msgid "Order Shipment"
+msgstr "مرسوله سفارش"
+
+#: apps/order/models/order_shipments.py:51 shop/admin_panel.py:145
+msgid "Order Shipments"
+msgstr "مرسولات سفارش"
+
+#: apps/order/models/order_status.py:40
+msgid "The order related to this status"
+msgstr "سفارشی که به این وضعیت مرتبط است"
+
+#: apps/order/models/order_status.py:44
+msgid "Order Status Type"
+msgstr "نوع وضعیت سفارش"
+
+#: apps/order/models/order_status.py:45
+msgid "The type of order status"
+msgstr "نوع وضعیت سفارش را نشان می‌دهد"
+
+#: apps/order/models/order_status.py:50
+msgid "Timestamp"
+msgstr "برچسب زمان"
+
+#: apps/order/models/order_status.py:56
+msgid "Estimated Delivery Time"
+msgstr "زمان تخمینی تحویل"
+
+#: apps/order/models/order_status.py:60
+msgid "Order #{} Status {}"
+msgstr "وضعیت سفارش #{} {}"
+
+#: apps/order/models/order_status.py:64 shop/admin_panel.py:150
+msgid "Order Statuses"
+msgstr "وضعیت سفارش ها"
+
+#: apps/products/apps.py:8
+msgid "Products Management"
+msgstr "مدیریت محصولات"
+
+#: apps/products/filters.py:20 apps/products/filters.py:26
+msgid "Other"
+msgstr "بقیه"
+
+#: apps/products/filters.py:32
+msgid "Sort By"
+msgstr "مرتب‌سازی بر اساس"
+
+#: apps/products/models/product.py:56
+#: apps/products/models/product_category.py:46
+msgid "Maximum 3000 characters"
+msgstr "حداکثر 1000 کاراکتر"
+
+#: apps/products/models/product.py:59 apps/shipments/models.py:46
+msgid "Price"
+msgstr "قیمت"
+
+#: apps/products/models/product.py:70
+msgid "Variants"
+msgstr "محصولات مشابه"
+
+#: apps/products/models/product_brand.py:16
+msgid "Product Brand"
+msgstr "برند محصول"
+
+#: apps/products/models/product_brand.py:17
+msgid "Product Brands"
+msgstr "برند های محصول"
+
+#: apps/products/models/product_category.py:50
+msgid "Product Category"
+msgstr "دسته بندی محصول"
+
+#: apps/products/models/product_category.py:51
+msgid "Product Categories"
+msgstr "دسته‌بندی‌های محصول"
+
+#: apps/products/models/product_discount.py:43
+msgid "Type"
+msgstr "نوع"
+
+#: apps/products/models/product_discount.py:46 core/choice.py:24
+#: core/choice.py:32
+msgid "Amount"
+msgstr "مقدار"
+
+#: apps/products/models/product_discount.py:62
+msgid "Product Discounts"
+msgstr "تخفیف‌های محصول"
+
+#: apps/products/models/product_discount.py:78
+msgid "For percentage discounts, amount must be between 0 and 100."
+msgstr "برای تخفیف‌های درصدی، مقدار باید بین ۰ تا ۱۰۰ باشد."
+
+#: apps/products/models/product_images.py:38
+msgid "Alt Text"
+msgstr "متن"
+
+#: apps/products/models/product_images.py:42
+msgid "Product Image"
+msgstr "تصویر محصول"
+
+#: apps/products/models/product_images.py:43
+msgid "Product Images"
+msgstr "تصاویر محصول"
+
+#: apps/products/models/product_property.py:31
+#: venv/lib/python3.12/site-packages/unfold/contrib/filters/forms.py:77
+msgid "Value"
+msgstr "مقدار"
+
+#: apps/products/models/product_property.py:41
+msgid "Product Property"
+msgstr "ویژگی محصول"
+
+#: apps/products/models/product_property.py:42
+msgid "Product Properties"
+msgstr "ویژگی‌های محصول"
+
+#: apps/products/models/product_review.py:59
+msgid "Is Accepted"
+msgstr "آیا تأیید شده است"
+
+#: apps/products/models/product_review.py:63
+msgid "Product Review"
+msgstr "بازخورد محصول"
+
+#: apps/products/models/product_review.py:64
+msgid "Product Reviews"
+msgstr "بازخورد های محصول"
+
+#: apps/products/models/product_tag.py:27
+msgid "Product Tag"
+msgstr "برچسب محصول"
+
+#: apps/products/models/product_tag.py:28
+msgid "Product Tags"
+msgstr "برچسب های محصول"
+
+#: apps/products/models/product_wishlist.py:35
+msgid "Product Wishlist"
+msgstr "لیست علاقه‌مندی‌ محصول"
+
+#: apps/products/models/product_wishlist.py:36
+msgid "Product Wishlists"
+msgstr "لیست علاقه‌مندی‌های محصول"
+
+#: apps/promotions/admin.py:58
+msgid "Discount Details"
+msgstr "جزئیات تخفیف"
+
+#: apps/promotions/admin.py:68
+msgid "User Eligibility"
+msgstr "واجدین شرایط"
+
+#: apps/promotions/admin.py:81
+msgid "Audit Info"
+msgstr "اطلاعات حسابرسی"
+
+#: apps/promotions/apps.py:8 shop/admin_panel.py:330
+msgid "Promotions Management"
+msgstr "مدیریت پروموشن ها"
+
+#: apps/promotions/models/coupon.py:51
+#: venv/lib/python3.12/site-packages/unfold/contrib/forms/templates/unfold/forms/helpers/toolbar.html:59
+msgid "Code"
+msgstr "کد"
+
+#: apps/promotions/models/coupon.py:52
+msgid "Unique code to apply this coupon."
+msgstr "کد منحصر به فرد برای اعمال این کوپن."
+
+#: apps/promotions/models/coupon.py:57
+msgid "Valid From"
+msgstr "معتبر از"
+
+#: apps/promotions/models/coupon.py:58
+msgid "The start date and time for coupon validity."
+msgstr "تاریخ و زمان شروع اعتبار کوپن."
+
+#: apps/promotions/models/coupon.py:63
+msgid "Valid Until"
+msgstr "معتبر تا"
+
+#: apps/promotions/models/coupon.py:64
+msgid "The end date and time for coupon validity."
+msgstr "تاریخ و زمان پایان اعتبار کوپن."
+
+#: apps/promotions/models/coupon.py:67
+msgid "Total Uses"
+msgstr "تعداد استفاده‌ها"
+
+#: apps/promotions/models/coupon.py:68
+msgid "Maximum number of times this coupon can be used."
+msgstr "حداکثر تعداد دفعاتی که این کوپن می‌تواند استفاده شود."
+
+#: apps/promotions/models/coupon.py:75
+msgid "Eligible Users"
+msgstr "کاربران واجد شرایط"
+
+#: apps/promotions/models/coupon.py:76
+msgid "Users eligible to use this coupon."
+msgstr "کاربرانی که می‌توانند از این کوپن استفاده کنند."
+
+#: apps/promotions/models/coupon.py:81
+msgid "Discount Type"
+msgstr "نوع تخفیف"
+
+#: apps/promotions/models/coupon.py:82
+msgid "Type of discount: percentage or fixed amount."
+msgstr "نوع تخفیف: درصد یا مبلغ ثابت."
+
+#: apps/promotions/models/coupon.py:85
+msgid "Minimum Cart Value"
+msgstr "حداقل ارزش سبد خرید"
+
+#: apps/promotions/models/coupon.py:86
+msgid "Minimum cart value required to apply this coupon."
+msgstr "حداقل ارزش سبد خرید مورد نیاز برای اعمال این کوپن."
+
+#: apps/promotions/models/coupon.py:92
+msgid "Discount Amount"
+msgstr "مقدار تخفیف"
+
+#: apps/promotions/models/coupon.py:93
+msgid "The actual discount amount applied to the cart (fixed or percentage)."
+msgstr "مبلغ تخفیف اعمال شده روی سبد خرید (ثابت یا درصد)"
+
+#: apps/promotions/models/coupon.py:99
+msgid "Maximum Discount Total"
+msgstr "حداکثر مجموع تخفیف"
+
+#: apps/promotions/models/coupon.py:100
+msgid "Maximum discount amount for a cart when the coupon type is percentage."
+msgstr "حداکثر مقدار تخفیف برای سبد خرید وقتی که نوع کوپن درصدی باشد."
+
+#: apps/promotions/models/coupon.py:123
+msgid "The valid_from date cannot be later than the valid_until date."
+msgstr "تاریخ شروع معتبر نمی‌تواند بعد از تاریخ پایان معتبر باشد."
+
+#: apps/promotions/models/coupon.py:127
+msgid "For percentage discounts, the amount must be between 0 and 100."
+msgstr "برای تخفیف‌های درصدی، مقدار باید بین ۰ تا ۱۰۰ باشد."
+
+#: apps/promotions/models/coupon.py:131 shop/admin_panel.py:163
+#: shop/admin_panel.py:335
+msgid "Coupons"
+msgstr "کوپن‌ها"
+
+#: apps/promotions/models/coupon_consume.py:21
+msgid "The user who used the coupon."
+msgstr "کاربری که از کوپن استفاده کرده است."
+
+#: apps/promotions/models/coupon_consume.py:28
+msgid "The coupon that was consumed."
+msgstr "کوپنی که مصرف شده است."
+
+#: apps/promotions/models/coupon_consume.py:35
+msgid "Coupon Consumption"
+msgstr "مصرف کوپن"
+
+#: apps/promotions/models/coupon_consume.py:36
+msgid "Coupon Consumptions"
+msgstr "مصارف کوپن‌ها"
+
+#: apps/promotions/queries.py:31
+msgid "Invalid coupon code."
+msgstr "کوپن معتیر نیست"
+
+#: apps/promotions/queries.py:37 apps/promotions/queries.py:54
+msgid "This coupon has expired."
+msgstr "این کوپن منقضی شده است."
+
+#: apps/promotions/queries.py:51
+msgid "This coupon is not yet valid."
+msgstr "این کوپن معتبر نیست."
+
+#: apps/promotions/queries.py:58
+msgid "This coupon has reached its usage limit."
+msgstr "این کوپن به حد استفاده خود رسیده است."
+
+#: apps/promotions/queries.py:62
+msgid "You have already used this coupon."
+msgstr "شما قبلاً از این کوپن استفاده کرده اید"
+
+#: apps/promotions/queries.py:66
+msgid "This coupon is no longer active."
+msgstr "این کوپن در حال حاضر فعال نیست."
+
+#: apps/promotions/queries.py:70
+#, python-brace-format
+msgid ""
+"Your cart total price must be at least {coupon.min_cart} to use this coupon."
+msgstr ""
+"برای استفاده از این کوپن، قیمت کل سبد خرید شما باید حداقل {coupon.min_cart} "
+"باشد."
+
+#: apps/shipments/apps.py:8
+msgid "Shipments Management"
+msgstr "مدیریت ارسال‌ها"
+
+#: apps/shipments/models.py:30
+msgid "Service Type"
+msgstr "نوع خدمت"
+
+#: apps/shipments/models.py:31
+msgid "Select the type of service for this shipment."
+msgstr "نوع خدمت برای این ارسال را انتخاب کنید."
+
+#: apps/shipments/models.py:38
+msgid "A detailed description of the shipment type."
+msgstr "توضیحات دقیق ارسال."
+
+#: apps/shipments/models.py:43
+msgid "Upload the logo for the shipment type."
+msgstr "لوگوی مربوط به نوع ارسال را بارگذاری کنید."
+
+#: apps/shipments/models.py:47
+msgid "The base price for this shipment type."
+msgstr "قیمت پایه برای این نوع ارسال."
+
+#: apps/shipments/models.py:50
+msgid "VAT"
+msgstr "مالیات بر ارزش افزوده"
+
+#: apps/shipments/models.py:51
+msgid "The VAT (Value Added Tax) percentage for this shipment type."
+msgstr "درصد مالیات بر ارزش افزوده برای این نوع ارسال."
+
+#: apps/shipments/models.py:58 shop/admin_panel.py:288
+msgid "Shipment Types"
+msgstr "انواع ارسال"
+
+#: apps/wallet/apps.py:8
+msgid "wallet management"
+msgstr "مدیریت کیف پول"
+
+#: apps/wallet/models.py:24
+msgid "current balance"
+msgstr "موجودی جاری"
+
+#: apps/wallet/models.py:28
+msgid "wallets"
+msgstr "کیف پول‌ها"
+
+#: apps/wallet/models.py:93
+msgid "value"
+msgstr "مقدار"
+
+#: apps/wallet/models.py:94
+msgid "log"
+msgstr "لاگ"
+
+#: apps/wallet/models.py:99
+msgid "total balance"
+msgstr "مجموع موجودی"
+
+#: apps/wallet/models.py:102
+msgid "wallet transaction"
+msgstr "تراکنش کیف پول"
+
+#: apps/wallet/models.py:103
+msgid "wallet transactions"
+msgstr "تراکنش‌های کیف پول"
+
+#: shop/admin_panel.py:46 shop/admin_panel.py:376
+msgid "Groups"
+msgstr "گروه‌ها"
+
+#: shop/admin_panel.py:51
+msgid "Group Users"
+msgstr "کاربران گروه"
+
+#: shop/admin_panel.py:59 shop/admin_panel.py:432
+msgid "FAQ Management"
+msgstr "پرسش های متداول"
+
+#: shop/admin_panel.py:77
+msgid "Contact Us Management"
+msgstr "مدیریت ارتبا با ما"
+
+#: shop/admin_panel.py:95
+msgid "Location Management"
+msgstr "مدیریت آدرس ها"
+
+#: shop/admin_panel.py:113
+msgid "Product Offer Management"
+msgstr "مدیریت  پیشنهادات محصول"
+
+#: shop/admin_panel.py:131 shop/admin_panel.py:295
+msgid "Order Management"
+msgstr "مدیریت سفارشات"
+
+#: shop/admin_panel.py:159
+msgid "Coupon Management"
+msgstr "مدیریت کوپن "
+
+#: shop/admin_panel.py:168
+msgid "Coupon Consumes"
+msgstr "مصارف کوپن‌ها"
+
+#: shop/admin_panel.py:177 shop/admin_panel.py:250
+msgid "Product Management"
+msgstr "مدیریت  محصولات"
+
+#: shop/admin_panel.py:186
+msgid "Properties"
+msgstr "ویژگی‌ها"
+
+#: shop/admin_panel.py:191
+msgid "Discounts"
+msgstr "تخفیف ها"
+
+#: shop/admin_panel.py:208
+msgid "Navigation"
+msgstr "نویگیشن"
+
+#: shop/admin_panel.py:222
+msgid "account management"
+msgstr "مدیریت حساب کاربری"
+
+#: shop/admin_panel.py:227
+msgid "Admin Users"
+msgstr "ادمین ها"
+
+#: shop/admin_panel.py:237
+msgid "New Users"
+msgstr "کاربران جدید"
+
+#: shop/admin_panel.py:265
+msgid "Brands"
+msgstr "برند ها"
+
+#: shop/admin_panel.py:270
+msgid "Reviews"
+msgstr "بازخورد ها"
+
+#: shop/admin_panel.py:275
+msgid "Wishlists"
+msgstr "لیست علاقه‌مندی‌ها"
+
+#: shop/admin_panel.py:283
+msgid "Shipments Manangement"
+msgstr "مدیریت ارسال"
+
+#: shop/admin_panel.py:342
+msgid "Wallet Management"
+msgstr "مدیریت کیف پول"
+
+#: shop/admin_panel.py:347
+msgid "Wallets"
+msgstr "کیف پول‌ها"
+
+#: shop/admin_panel.py:352
+msgid "Transactions"
+msgstr "تراکنش‌ها"
+
+#: shop/admin_panel.py:359
+msgid "Carts Management"
+msgstr "مدیریت سبد خرید"
+
+#: shop/admin_panel.py:371
+msgid "Messaging"
+msgstr "مدیریت پیام ها"
+
+#: shop/admin_panel.py:381
+msgid "Group Messages"
+msgstr "پیام‌های گروهی"
+
+#: shop/admin_panel.py:386
+msgid "User Messages"
+msgstr "پیام‌های کاربران"
+
+#: shop/admin_panel.py:394
+msgid "Blog Management"
+msgstr "مدیریت بلاگ"
+
+#: shop/admin_panel.py:414
+msgid "Bookmark"
+msgstr "بوکمارک"
+
+#: shop/urls.py:9 shop/urls.py:10 shop/urls.py:11
+msgid "Shop Adminstoration"
+msgstr "مدیریت فروشگاه"
+
+#: core/choice.py:7
+msgid "EXAMPLE CHOICE NOT DEFINED"
+msgstr "انتخاب نمونه تعریف نشده"
+
+#: core/choice.py:8
+msgid "EXAMPLE CHOICE ZERO"
+msgstr "انتخاب نمونه صفر"
+
+#: core/choice.py:9
+msgid "EXAMPLE CHOICE ONE"
+msgstr "انتخاب نمونه یک"
+
+#: core/choice.py:16
+msgid "Not Defined"
+msgstr "تعریف نشده"
+
+#: core/choice.py:17
+msgid "New Answer"
+msgstr "پاسخ جدید"
+
+#: core/choice.py:23 core/choice.py:31
+msgid "Percent"
+msgstr "درصد"
+
+#: core/choice.py:44
+msgid "Good"
+msgstr "خوب"
+
+#: core/choice.py:46
+msgid "Excellent"
+msgstr "عالی"
+
+#: core/choice.py:53
+msgid "Main Page - First"
+msgstr "صفحه اصلی - بنر اول"
+
+#: core/choice.py:54
+msgid "Main Page - Second"
+msgstr "صفحه اصلی - بنر دوم"
+
+#: core/choice.py:62
+msgid "Manual"
+msgstr "دستی"
+
+#: core/choice.py:76
+msgid "Payment waiting"
+msgstr "در انتظار پرداخت"
+
+#: core/choice.py:77
+msgid "Order placed"
+msgstr "سفارش ثبت شد"
+
+#: core/choice.py:78
+msgid "Product packaging"
+msgstr "بسته‌بندی محصول"
+
+#: core/choice.py:79
+msgid "Ready for shipment"
+msgstr "آماده برای ارسال"
+
+#: core/choice.py:80
+msgid "On the way"
+msgstr "در حال ارسال"
+
+#: core/choice.py:81
+msgid "Dropped in the delivery station"
+msgstr "تحویل به مرکز"
+
+#: core/choice.py:82
+msgid "Delivered"
+msgstr "تحویل داده شد"
+
+#: core/choice.py:83
+msgid "Canceled"
+msgstr "لغو شد"
+
+#: core/models/base.py:37
+msgid "Created At"
+msgstr "ایجاد شده در"
+
+#: core/models/base.py:43
+msgid "Updated at"
+msgstr "به‌روزرسانی شده در"
+
+#: core/models/base.py:48
+msgid "Is active"
+msgstr "فعال است"
+
+#: core/models/base.py:80
+msgid "view count"
+msgstr "تعداد بازدید"
+
+#: core/models/mixins.py:21
+msgid "Updated by"
+msgstr "به‌روزرسانی شده توسط"
+
+#: core/models/mixins.py:51
+msgid "Created By"
+msgstr "ایجاد شده توسط"
+
+#: core/models/mixins.py:75
+msgid "Priority"
+msgstr "اولویت"
+
+#: core/models/mixins.py:80
+msgid "Priority of the record. Starting from 0"
+msgstr "اولویت رکورد از 0 شروع می‌شود"
+
+#: venv/lib/python3.12/site-packages/IPython/core/tests/test_completer.py:434
+msgid "open('foo"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/IPython/core/tests/test_completer.py:438
+msgid "open(\"foo"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/IPython/core/tests/test_completer.py:442
+#, python-format
+msgid "%ls foo"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/IPython/core/tests/test_completer.py:604
+msgid "a[0]."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/IPython/core/tests/test_completer.py:611
+msgid "a[0].r"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/IPython/core/tests/test_completer.py:619
+msgid "a[0].from_"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/IPython/core/tests/test_completer.py:626
+msgid "assert str.star"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/IPython/core/tests/test_completer.py:633
+msgid "d['a b'].str"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/IPython/core/tests/test_completer.py:640
+msgid "a.app"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/IPython/core/tests/test_completer.py:1600
+#: venv/lib/python3.12/site-packages/IPython/core/tests/test_completer.py:1622
+#: venv/lib/python3.12/site-packages/IPython/core/tests/test_completer.py:1625
+msgid "do not suppress"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/IPython/core/tests/test_completer.py:1601
+#: venv/lib/python3.12/site-packages/IPython/core/tests/test_completer.py:1613
+#: venv/lib/python3.12/site-packages/IPython/core/tests/test_completer.py:1616
+#: venv/lib/python3.12/site-packages/IPython/core/tests/test_completer.py:1619
+msgid "suppress all"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/IPython/core/tests/test_completer.py:1602
+msgid "suppress all but a"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/IPython/core/tests/test_completer.py:1603
+msgid "suppress all but c"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/IPython/core/tests/test_completer.py:1651
+#: venv/lib/python3.12/site-packages/IPython/core/tests/test_completer.py:1654
+msgid "---"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/IPython/core/tests/test_completer.py:1657
+msgid "--"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/_termui_impl.py:518
+#, python-brace-format
+msgid "{editor}: Editing failed"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/_termui_impl.py:522
+#, python-brace-format
+msgid "{editor}: Editing failed: {e}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:1120
+msgid "Aborted!"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:1309
+#: venv/lib/python3.12/site-packages/click/decorators.py:559
+msgid "Show this message and exit."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:1340
+#: venv/lib/python3.12/site-packages/click/core.py:1370
+#, python-brace-format
+msgid "(Deprecated) {text}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:1387
+msgid "Options"
+msgstr "گزینه ها"
+
+#: venv/lib/python3.12/site-packages/click/core.py:1413
+#, python-brace-format
+msgid "Got unexpected extra argument ({args})"
+msgid_plural "Got unexpected extra arguments ({args})"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:1429
+msgid "DeprecationWarning: The command {name!r} is deprecated."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:1636
+msgid "Commands"
+msgstr "دستورات"
+
+#: venv/lib/python3.12/site-packages/click/core.py:1668
+msgid "Missing command."
+msgstr "دستور از دست رفته"
+
+#: venv/lib/python3.12/site-packages/click/core.py:1746
+msgid "No such command {name!r}."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:2310
+msgid "Value must be an iterable."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:2331
+#, python-brace-format
+msgid "Takes {nargs} values but 1 was given."
+msgid_plural "Takes {nargs} values but {len} were given."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:2778
+#, python-brace-format
+msgid "env var: {var}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:2808
+msgid "(dynamic)"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:2821
+#, python-brace-format
+msgid "default: {default}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/core.py:2834
+msgid "required"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/decorators.py:465
+#, python-format
+msgid "%(prog)s, version %(version)s"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/decorators.py:528
+msgid "Show the version and exit."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:44
+#: venv/lib/python3.12/site-packages/click/exceptions.py:80
+#, python-brace-format
+msgid "Error: {message}"
+msgstr "خطا: {message}"
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:72
+#, python-brace-format
+msgid "Try '{command} {option}' for help."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:121
+#, python-brace-format
+msgid "Invalid value: {message}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:123
+#, python-brace-format
+msgid "Invalid value for {param_hint}: {message}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:179
+#, fuzzy
+#| msgid "Missing command."
+msgid "Missing argument"
+msgstr "دستور از دست رفته"
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:181
+#, fuzzy
+#| msgid "Missing command."
+msgid "Missing option"
+msgstr "دستور از دست رفته"
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:183
+msgid "Missing parameter"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:185
+#, python-brace-format
+msgid "Missing {param_type}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:192
+#, python-brace-format
+msgid "Missing parameter: {param_name}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:212
+#, python-brace-format
+msgid "No such option: {name}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:224
+#, python-brace-format
+msgid "Did you mean {possibility}?"
+msgid_plural "(Possible options: {possibilities})"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:262
+msgid "unknown error"
+msgstr "خطای نامشخص"
+
+#: venv/lib/python3.12/site-packages/click/exceptions.py:269
+msgid "Could not open file {filename!r}: {message}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/parser.py:231
+msgid "Argument {name!r} takes {nargs} values."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/parser.py:413
+msgid "Option {name!r} does not take a value."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/parser.py:474
+msgid "Option {name!r} requires an argument."
+msgid_plural "Option {name!r} requires {nargs} arguments."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/click/shell_completion.py:319
+msgid "Shell completion is not supported for Bash versions older than 4.4."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/shell_completion.py:326
+msgid "Couldn't detect Bash version, shell completion is not supported."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/termui.py:158
+msgid "Repeat for confirmation"
+msgstr "برای تأیید دوباره تکرار کنید"
+
+#: venv/lib/python3.12/site-packages/click/termui.py:174
+msgid "Error: The value you entered was invalid."
+msgstr "خطا: مقداری که وارد کرده‌اید نامعتبر است."
+
+#: venv/lib/python3.12/site-packages/click/termui.py:176
+#, python-brace-format
+msgid "Error: {e.message}"
+msgstr "خطا: {e.message}"
+
+#: venv/lib/python3.12/site-packages/click/termui.py:187
+msgid "Error: The two entered values do not match."
+msgstr "خطا: دو مقداری که وارد کرده‌اید مطابقت ندارند."
+
+#: venv/lib/python3.12/site-packages/click/termui.py:243
+msgid "Error: invalid input"
+msgstr "خطا: ورودی نامعتبر است."
+
+#: venv/lib/python3.12/site-packages/click/termui.py:773
+msgid "Press any key to continue..."
+msgstr "برای ادامه هر کلیدی را کلیک کنید..."
+
+#: venv/lib/python3.12/site-packages/click/types.py:266
+#, python-brace-format
+msgid ""
+"Choose from:\n"
+"\t{choices}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:298
+msgid "{value!r} is not {choice}."
+msgid_plural "{value!r} is not one of {choices}."
+msgstr[0] "مقدار %(value)r یک انتخاب معتبر نیست."
+msgstr[1] "مقدار %(value)r یک انتخاب معتبر نیست."
+
+#: venv/lib/python3.12/site-packages/click/types.py:392
+msgid "{value!r} does not match the format {format}."
+msgid_plural "{value!r} does not match the formats {formats}."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:414
+msgid "{value!r} is not a valid {number_type}."
+msgstr "{value!r} یک {number_type} معتبر نیست."
+
+#: venv/lib/python3.12/site-packages/click/types.py:470
+#, fuzzy, python-brace-format
+#| msgid "{value!r} is not a valid {number_type}."
+msgid "{value} is not in the range {range}."
+msgstr "{value!r} یک {number_type} معتبر نیست."
+
+#: venv/lib/python3.12/site-packages/click/types.py:611
+msgid "{value!r} is not a valid boolean."
+msgstr "{value!r} یک مقدار صفر و یک معتبر نیست."
+
+#: venv/lib/python3.12/site-packages/click/types.py:635
+msgid "{value!r} is not a valid UUID."
+msgstr "{value!r} یک UUID معتبر نیست."
+
+#: venv/lib/python3.12/site-packages/click/types.py:822
+msgid "file"
+msgstr "فایل"
+
+#: venv/lib/python3.12/site-packages/click/types.py:824
+msgid "directory"
+msgstr "دایرکتوری"
+
+#: venv/lib/python3.12/site-packages/click/types.py:826
+msgid "path"
+msgstr "مسیر"
+
+#: venv/lib/python3.12/site-packages/click/types.py:877
+msgid "{name} {filename!r} does not exist."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:886
+msgid "{name} {filename!r} is a file."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:894
+#, python-brace-format
+msgid "{name} '{filename}' is a directory."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:903
+#, fuzzy
+#| msgid "{value!r} is not a valid boolean."
+msgid "{name} {filename!r} is not readable."
+msgstr "{value!r} یک مقدار صفر و یک معتبر نیست."
+
+#: venv/lib/python3.12/site-packages/click/types.py:912
+msgid "{name} {filename!r} is not writable."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:921
+msgid "{name} {filename!r} is not executable."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/click/types.py:988
+#, python-brace-format
+msgid "{len_type} values are required, but {len_value} was given."
+msgid_plural "{len_type} values are required, but {len_value} were given."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/django/contrib/messages/apps.py:16
+msgid "Messages"
+msgstr "پیام ها"
+
+#: venv/lib/python3.12/site-packages/django/contrib/sitemaps/apps.py:8
+msgid "Site Maps"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/contrib/staticfiles/apps.py:9
+msgid "Static Files"
+msgstr "فایل‌های استاتیک"
+
+#: venv/lib/python3.12/site-packages/django/contrib/syndication/apps.py:7
+msgid "Syndication"
+msgstr "انتشار مطالب"
+
+#. Translators: String used to replace omitted page numbers in elided page
+#. range generated by paginators, e.g. [1, 2, '…', 5, 6, 7, '…', 9, 10].
+#: venv/lib/python3.12/site-packages/django/core/paginator.py:30
+msgid "…"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/paginator.py:32
+msgid "That page number is not an integer"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/paginator.py:33
+msgid "That page number is less than 1"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/paginator.py:34
+msgid "That page contains no results"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:22
+msgid "Enter a valid value."
+msgstr "مقدار معتبر وارد کنید."
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:70
+msgid "Enter a valid domain name."
+msgstr "نام دامنه معتبر وارد کنید."
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:152
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:768
+msgid "Enter a valid URL."
+msgstr "آدرس اینترنتی معتبر وارد کنید."
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:213
+msgid "Enter a valid integer."
+msgstr "عدد صحیح معتبر وارد کنید."
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:224
+msgid "Enter a valid email address."
+msgstr "آدرس ایمیل معتبر وارد کنید."
+
+#. Translators: "letters" means latin letters: a-z and A-Z.
+#: venv/lib/python3.12/site-packages/django/core/validators.py:307
+msgid ""
+"Enter a valid “slug” consisting of letters, numbers, underscores or hyphens."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:315
+msgid ""
+"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
+"hyphens."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:327
+#: venv/lib/python3.12/site-packages/django/core/validators.py:336
+#: venv/lib/python3.12/site-packages/django/core/validators.py:350
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2215
+#, fuzzy, python-format
+#| msgid "Enter a valid email address."
+msgid "Enter a valid %(protocol)s address."
+msgstr "آدرس ایمیل معتبر وارد کنید."
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:329
+msgid "IPv4"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:338
+#: venv/lib/python3.12/site-packages/django/utils/ipv6.py:30
+msgid "IPv6"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:352
+msgid "IPv4 or IPv6"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:393
+msgid "Enter only digits separated by commas."
+msgstr "فقط اعداد را با کاما از هم جدا کنید."
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:399
+#, python-format
+msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
+msgstr ""
+"مطمئن شوید که این مقدار %(limit_value)s است (در حال حاضر %(show_value)s است)."
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:434
+#, python-format
+msgid "Ensure this value is less than or equal to %(limit_value)s."
+msgstr "مطمئن شوید که این مقدار کمتر از یا برابر با %(limit_value)s است."
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:443
+#, python-format
+msgid "Ensure this value is greater than or equal to %(limit_value)s."
+msgstr "مطمئن شوید که این مقدار بزرگتر از یا برابر با %(limit_value)s است."
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:452
+#, python-format
+msgid "Ensure this value is a multiple of step size %(limit_value)s."
+msgstr "مطمئن شوید که این مقدار یک مضرب از اندازه گام %(limit_value)s است."
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:459
+#, python-format
+msgid ""
+"Ensure this value is a multiple of step size %(limit_value)s, starting from "
+"%(offset)s, e.g. %(offset)s, %(valid_value1)s, %(valid_value2)s, and so on."
+msgstr ""
+"مطمئن شوید که این مقدار یک مضرب از اندازه گام %(limit_value)s است، شروع از "
+"%(offset)s، برای مثال: %(offset)s، %(valid_value1)s، %(valid_value2)s، و "
+"غیره."
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:491
+#, fuzzy, python-format
+#| msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
+msgid ""
+"Ensure this value has at least %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at least %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+"مطمئن شوید که این مقدار %(limit_value)s است (در حال حاضر %(show_value)s است)."
+msgstr[1] ""
+"مطمئن شوید که این مقدار %(limit_value)s است (در حال حاضر %(show_value)s است)."
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:509
+#, fuzzy, python-format
+#| msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
+msgid ""
+"Ensure this value has at most %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at most %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+"مطمئن شوید که این مقدار %(limit_value)s است (در حال حاضر %(show_value)s است)."
+msgstr[1] ""
+"مطمئن شوید که این مقدار %(limit_value)s است (در حال حاضر %(show_value)s است)."
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:532
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:359
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:398
+#, fuzzy
+#| msgid "Line number"
+msgid "Enter a number."
+msgstr "شماره خط"
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:534
+#, python-format
+msgid "Ensure that there are no more than %(max)s digit in total."
+msgid_plural "Ensure that there are no more than %(max)s digits in total."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:539
+#, python-format
+msgid "Ensure that there are no more than %(max)s decimal place."
+msgid_plural "Ensure that there are no more than %(max)s decimal places."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:544
+#, python-format
+msgid ""
+"Ensure that there are no more than %(max)s digit before the decimal point."
+msgid_plural ""
+"Ensure that there are no more than %(max)s digits before the decimal point."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:615
+#, python-format
+msgid ""
+"File extension “%(extension)s” is not allowed. Allowed extensions are: "
+"%(allowed_extensions)s."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/core/validators.py:677
+msgid "Null characters are not allowed."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/base.py:1571
+#: venv/lib/python3.12/site-packages/django/forms/models.py:908
+#: venv/lib/python3.12/site-packages/unfold/contrib/inlines/admin.py:103
+msgid "and"
+msgstr "و"
+
+#: venv/lib/python3.12/site-packages/django/db/models/base.py:1573
+#, python-format
+msgid "%(model_name)s with this %(field_labels)s already exists."
+msgstr "%(model_name)s با این %(field_labels)s قبلاً وجود دارد."
+
+#: venv/lib/python3.12/site-packages/django/db/models/constraints.py:22
+#, python-format
+msgid "Constraint “%(name)s” is violated."
+msgstr "محدودیت «%(name)s» نقض شده است."
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:134
+#, python-format
+msgid "Value %(value)r is not a valid choice."
+msgstr "مقدار %(value)r یک انتخاب معتبر نیست."
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:135
+msgid "This field cannot be null."
+msgstr "این فیلد نمی‌تواند خالی باشد."
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:136
+msgid "This field cannot be blank."
+msgstr "این فیلد نمی‌تواند خالی باقی بماند."
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:137
+#, python-format
+msgid "%(model_name)s with this %(field_label)s already exists."
+msgstr "%(model_name)s با این %(field_label)s قبلاً وجود دارد."
+
+#. Translators: The 'lookup_type' is one of 'date', 'year' or
+#. 'month'. Eg: "Title must be unique for pub_date year"
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:141
+#, python-format
+msgid ""
+"%(field_label)s must be unique for %(date_field_label)s %(lookup_type)s."
+msgstr ""
+"%(field_label)s باید برای %(date_field_label)s %(lookup_type)s یکتا باشد."
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:180
+#, python-format
+msgid "Field of type: %(field_type)s"
+msgstr "فیلد از نوع: %(field_type)s"
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1156
+#, python-format
+msgid "“%(value)s” value must be either True or False."
+msgstr "مقدار «%(value)s» باید True یا False باشد."
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1157
+#, python-format
+msgid "“%(value)s” value must be either True, False, or None."
+msgstr "مقدار «%(value)s» باید True، False یا None باشد."
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1159
+msgid "Boolean (Either True or False)"
+msgstr "بولین (یا True یا False)"
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1209
+#, python-format
+msgid "String (up to %(max_length)s)"
+msgstr "رشته (تا حداکثر %(max_length)s)"
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1211
+msgid "String (unlimited)"
+msgstr "رشته (بدون محدودیت)"
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1320
+msgid "Comma-separated integers"
+msgstr "اعداد صحیح جدا شده با کاما"
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1421
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid date format. It must be in YYYY-MM-DD "
+"format."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1425
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1560
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (YYYY-MM-DD) but it is an invalid "
+"date."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1429
+msgid "Date (without time)"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1556
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[."
+"uuuuuu]][TZ] format."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1564
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
+"[TZ]) but it is an invalid date/time."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1569
+#, fuzzy
+#| msgid "Date/time"
+msgid "Date (with time)"
+msgstr "تاریخ/زمان"
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1696
+#, fuzzy, python-format
+#| msgid "“%(value)s” value must be either True or False."
+msgid "“%(value)s” value must be a decimal number."
+msgstr "مقدار «%(value)s» باید True یا False باشد."
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1698
+#, fuzzy
+#| msgid "Line number"
+msgid "Decimal number"
+msgstr "شماره خط"
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1859
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in [DD] [[HH:]MM:]ss[."
+"uuuuuu] format."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1863
+msgid "Duration"
+msgstr "مدت"
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1915
+msgid "Email address"
+msgstr "ایمیل"
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:1940
+msgid "File path"
+msgstr "مسیر فایل"
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2018
+#, fuzzy, python-format
+#| msgid "“%(value)s” value must be either True or False."
+msgid "“%(value)s” value must be a float."
+msgstr "مقدار «%(value)s» باید True یا False باشد."
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2020
+msgid "Floating point number"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2060
+#, fuzzy, python-format
+#| msgid "“%(value)s” value must be either True or False."
+msgid "“%(value)s” value must be an integer."
+msgstr "مقدار «%(value)s» باید True یا False باشد."
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2062
+msgid "Integer"
+msgstr "عدد صحیح"
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2158
+msgid "Big (8 byte) integer"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2175
+#, fuzzy
+#| msgid "Integer"
+msgid "Small integer"
+msgstr "عدد صحیح"
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2183
+#, fuzzy
+#| msgid "Email address"
+msgid "IPv4 address"
+msgstr "ایمیل"
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2214
+#, fuzzy
+#| msgid "Address"
+msgid "IP address"
+msgstr "آدرس"
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2305
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2306
+#, fuzzy, python-format
+#| msgid "“%(value)s” value must be either True or False."
+msgid "“%(value)s” value must be either None, True or False."
+msgstr "مقدار «%(value)s» باید True یا False باشد."
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2308
+msgid "Boolean (Either True, False or None)"
+msgstr "بولی (یا True، یا False، یا None)"
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2359
+msgid "Positive big integer"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2374
+#, fuzzy
+#| msgid "Comma-separated integers"
+msgid "Positive integer"
+msgstr "اعداد صحیح جدا شده با کاما"
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2389
+msgid "Positive small integer"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2405
+#, fuzzy, python-format
+#| msgid "String (up to %(max_length)s)"
+msgid "Slug (up to %(max_length)s)"
+msgstr "رشته (تا حداکثر %(max_length)s)"
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2521
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] "
+"format."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2525
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an "
+"invalid time."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2529
+#: venv/lib/python3.12/site-packages/unfold/contrib/filters/forms.py:174
+#: venv/lib/python3.12/site-packages/unfold/contrib/filters/forms.py:190
+#: venv/lib/python3.12/site-packages/unfold/widgets.py:464
+msgid "Time"
+msgstr "زمان"
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2637
+msgid "URL"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2661
+msgid "Raw binary data"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2726
+#, fuzzy, python-format
+#| msgid "{value!r} is not a valid UUID."
+msgid "“%(value)s” is not a valid UUID."
+msgstr "{value!r} یک UUID معتبر نیست."
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/__init__.py:2728
+msgid "Universally unique identifier"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/files.py:244
+msgid "File"
+msgstr "فایل"
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/json.py:24
+msgid "A JSON object"
+msgstr "یک شیء JSON"
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/json.py:26
+msgid "Value must be valid JSON."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/related.py:932
+#, fuzzy, python-format
+#| msgid "%(model_name)s with this %(field_label)s already exists."
+msgid "%(model)s instance with %(field)s %(value)r does not exist."
+msgstr "%(model_name)s با این %(field_label)s قبلاً وجود دارد."
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/related.py:934
+msgid "Foreign Key (type determined by related field)"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/related.py:1228
+msgid "One-to-one relationship"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/related.py:1285
+#, python-format
+msgid "%(from)s-%(to)s relationship"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/related.py:1287
+#, python-format
+msgid "%(from)s-%(to)s relationships"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/db/models/fields/related.py:1335
+msgid "Many-to-many relationship"
+msgstr ""
+
+#. Translators: If found as last label character, these punctuation
+#. characters will prevent the default label_suffix to be appended to the label
+#: venv/lib/python3.12/site-packages/django/forms/boundfield.py:185
+msgid ":?.!"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:95
+msgid "This field is required."
+msgstr "این فیلد الزامی است."
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:308
+msgid "Enter a whole number."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:479
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:1260
+#, fuzzy
+#| msgid "Enter a valid email address."
+msgid "Enter a valid date."
+msgstr "آدرس ایمیل معتبر وارد کنید."
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:502
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:1261
+#, fuzzy
+#| msgid "Enter a valid email address."
+msgid "Enter a valid time."
+msgstr "آدرس ایمیل معتبر وارد کنید."
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:529
+#, fuzzy
+#| msgid "Enter a valid email address."
+msgid "Enter a valid date/time."
+msgstr "آدرس ایمیل معتبر وارد کنید."
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:563
+#, fuzzy
+#| msgid "Enter a valid email address."
+msgid "Enter a valid duration."
+msgstr "آدرس ایمیل معتبر وارد کنید."
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:564
+#, python-brace-format
+msgid "The number of days must be between {min_days} and {max_days}."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:633
+msgid "No file was submitted. Check the encoding type on the form."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:634
+msgid "No file was submitted."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:635
+msgid "The submitted file is empty."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:637
+#, python-format
+msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
+msgid_plural ""
+"Ensure this filename has at most %(max)d characters (it has %(length)d)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:642
+msgid "Please either submit a file or check the clear checkbox, not both."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:710
+msgid ""
+"Upload a valid image. The file you uploaded was either not an image or a "
+"corrupted image."
+msgstr ""
+"یک تصویر معتبر آپلود کنید. فایلی که آپلود کردید یا تصویر نیست یا خراب است."
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:882
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:968
+#: venv/lib/python3.12/site-packages/django/forms/models.py:1592
+#, python-format
+msgid "Select a valid choice. %(value)s is not one of the available choices."
+msgstr "یک انتخاب معتبر انجام دهید. %(value)s یکی از گزینه‌های موجود نیست."
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:970
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:1089
+#: venv/lib/python3.12/site-packages/django/forms/models.py:1590
+#, fuzzy
+#| msgid "Enter a valid email address."
+msgid "Enter a list of values."
+msgstr "آدرس ایمیل معتبر وارد کنید."
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:1090
+msgid "Enter a complete value."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:1329
+#, fuzzy
+#| msgid "{value!r} is not a valid UUID."
+msgid "Enter a valid UUID."
+msgstr "{value!r} یک UUID معتبر نیست."
+
+#: venv/lib/python3.12/site-packages/django/forms/fields.py:1359
+#, fuzzy
+#| msgid "Enter a valid email address."
+msgid "Enter a valid JSON."
+msgstr "آدرس ایمیل معتبر وارد کنید."
+
+#. Translators: This is the default suffix added to form field labels
+#: venv/lib/python3.12/site-packages/django/forms/forms.py:94
+msgid ":"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/forms.py:230
+#, python-format
+msgid "(Hidden field %(name)s) %(error)s"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/formsets.py:61
+#, python-format
+msgid ""
+"ManagementForm data is missing or has been tampered with. Missing fields: "
+"%(field_names)s. You may need to file a bug report if the issue persists."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/formsets.py:65
+#, python-format
+msgid "Please submit at most %(num)d form."
+msgid_plural "Please submit at most %(num)d forms."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/django/forms/formsets.py:70
+#, python-format
+msgid "Please submit at least %(num)d form."
+msgid_plural "Please submit at least %(num)d forms."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/django/forms/formsets.py:499
+#: venv/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/import_preview.html:26
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/submit_line.html:55
+msgid "Delete"
+msgstr "حذف"
+
+#: venv/lib/python3.12/site-packages/django/forms/models.py:901
+#, python-format
+msgid "Please correct the duplicate data for %(field)s."
+msgstr "لطفاً داده‌های تکراری برای %(field)s را اصلاح کنید."
+
+#: venv/lib/python3.12/site-packages/django/forms/models.py:906
+#, fuzzy, python-format
+#| msgid "Please correct the duplicate data for %(field)s."
+msgid "Please correct the duplicate data for %(field)s, which must be unique."
+msgstr "لطفاً داده‌های تکراری برای %(field)s را اصلاح کنید."
+
+#: venv/lib/python3.12/site-packages/django/forms/models.py:913
+#, fuzzy, python-format
+#| msgid "Please correct the duplicate data for %(field)s."
+msgid ""
+"Please correct the duplicate data for %(field_name)s which must be unique "
+"for the %(lookup)s in %(date_field)s."
+msgstr "لطفاً داده‌های تکراری برای %(field)s را اصلاح کنید."
+
+#: venv/lib/python3.12/site-packages/django/forms/models.py:922
+msgid "Please correct the duplicate values below."
+msgstr "لطفاً مقادیر تکراری زیر را اصلاح کنید."
+
+#: venv/lib/python3.12/site-packages/django/forms/models.py:1359
+msgid "The inline value did not match the parent instance."
+msgstr "مقدار درون‌خطی با نمونه والد مطابقت ندارد."
+
+#: venv/lib/python3.12/site-packages/django/forms/models.py:1450
+msgid "Select a valid choice. That choice is not one of the available choices."
+msgstr "یک گزینه معتبر انتخاب کنید. این گزینه یکی از گزینه‌های موجود نیست."
+
+#: venv/lib/python3.12/site-packages/django/forms/models.py:1594
+#, fuzzy, python-format
+#| msgid "This is not a valid IPv6 address."
+msgid "“%(pk)s” is not a valid value."
+msgstr "این یک آدرس IPv6 معتبر نیست."
+
+#: venv/lib/python3.12/site-packages/django/forms/utils.py:227
+#, python-format
+msgid ""
+"%(datetime)s couldn’t be interpreted in time zone %(current_timezone)s; it "
+"may be ambiguous or it may not exist."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/forms/widgets.py:461
+msgid "Clear"
+msgstr "پاک کردن"
+
+#: venv/lib/python3.12/site-packages/django/forms/widgets.py:462
+msgid "Currently"
+msgstr "در حال حاضر"
+
+#: venv/lib/python3.12/site-packages/django/forms/widgets.py:801
+msgid "Yes"
+msgstr "بله"
+
+#: venv/lib/python3.12/site-packages/django/forms/widgets.py:802
+msgid "No"
+msgstr "خیر"
+
+#. Translators: Please do not add spaces around commas.
+#: venv/lib/python3.12/site-packages/django/template/defaultfilters.py:873
+msgid "yes,no,maybe"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/template/defaultfilters.py:903
+#: venv/lib/python3.12/site-packages/django/template/defaultfilters.py:920
+#, python-format
+msgid "%(size)d byte"
+msgid_plural "%(size)d bytes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/django/template/defaultfilters.py:922
+#, python-format
+msgid "%s KB"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/template/defaultfilters.py:924
+#, python-format
+msgid "%s MB"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/template/defaultfilters.py:926
+#, python-format
+msgid "%s GB"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/template/defaultfilters.py:928
+#, python-format
+msgid "%s TB"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/template/defaultfilters.py:930
+#, python-format
+msgid "%s PB"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/dateformat.py:74
+msgid "p.m."
+msgstr "عصر"
+
+#: venv/lib/python3.12/site-packages/django/utils/dateformat.py:75
+msgid "a.m."
+msgstr "صبح"
+
+#: venv/lib/python3.12/site-packages/django/utils/dateformat.py:80
+msgid "PM"
+msgstr "عصر"
+
+#: venv/lib/python3.12/site-packages/django/utils/dateformat.py:81
+msgid "AM"
+msgstr "صبح"
+
+#: venv/lib/python3.12/site-packages/django/utils/dateformat.py:153
+msgid "midnight"
+msgstr "نیمه شب"
+
+#: venv/lib/python3.12/site-packages/django/utils/dateformat.py:155
+msgid "noon"
+msgstr "عصر"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:16
+msgid "Mon"
+msgstr "دوشنبه"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:17
+msgid "Tue"
+msgstr "سه شنبه"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:18
+msgid "Wed"
+msgstr "چهارشنبه"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:19
+msgid "Thu"
+msgstr "پنج شنبه"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:20
+msgid "Fri"
+msgstr "جمعه"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:21
+msgid "Sat"
+msgstr "شنبه"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:22
+msgid "Sun"
+msgstr "یکشنبه"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:25
+msgid "January"
+msgstr "ژانویه"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:26
+msgid "February"
+msgstr "فوریه"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:27
+msgid "March"
+msgstr "مارچ"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:28
+msgid "April"
+msgstr "آوریل"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:29
+#, fuzzy
+#| msgctxt "abbrev. month"
+#| msgid "May"
+msgid "May"
+msgstr "مه"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:30
+msgid "June"
+msgstr "ژوئن"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:31
+msgid "July"
+msgstr "جولای"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:32
+msgid "August"
+msgstr "آگست"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:33
+msgid "September"
+msgstr "سپتامبر"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:34
+msgid "October"
+msgstr "اوکتبر"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:35
+msgid "November"
+msgstr "نوامبر"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:36
+msgid "December"
+msgstr "دسامبر"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:39
+msgid "jan"
+msgstr "ژانویه"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:40
+msgid "feb"
+msgstr "فوریه"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:41
+msgid "mar"
+msgstr "مارچ"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:42
+msgid "apr"
+msgstr "آوریل"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:43
+msgid "may"
+msgstr "مه"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:44
+msgid "jun"
+msgstr "ژوئن"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:45
+msgid "jul"
+msgstr "جولای"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:46
+msgid "aug"
+msgstr "آگست"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:47
+msgid "sep"
+msgstr "سپتامبر"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:48
+msgid "oct"
+msgstr "اوکتبر"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:49
+msgid "nov"
+msgstr "نوامبر"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:50
+msgid "dec"
+msgstr "دسامبر"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:53
+msgctxt "abbrev. month"
+msgid "Jan."
+msgstr "ژانویه"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:54
+msgctxt "abbrev. month"
+msgid "Feb."
+msgstr "فوریه"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:55
+msgctxt "abbrev. month"
+msgid "March"
+msgstr "مارچ"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:56
+msgctxt "abbrev. month"
+msgid "April"
+msgstr "آوریل"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:57
+msgctxt "abbrev. month"
+msgid "May"
+msgstr "مه"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:58
+msgctxt "abbrev. month"
+msgid "June"
+msgstr "ژوئن"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:59
+msgctxt "abbrev. month"
+msgid "July"
+msgstr "جولای"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:60
+msgctxt "abbrev. month"
+msgid "Aug."
+msgstr "آگست"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:61
+msgctxt "abbrev. month"
+msgid "Sept."
+msgstr "سپتامبر"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:62
+msgctxt "abbrev. month"
+msgid "Oct."
+msgstr "اوکتبر"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:63
+msgctxt "abbrev. month"
+msgid "Nov."
+msgstr "نوامبر"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:64
+msgctxt "abbrev. month"
+msgid "Dec."
+msgstr "دسامبر"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:67
+msgctxt "alt. month"
+msgid "January"
+msgstr "ژانویه"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:68
+msgctxt "alt. month"
+msgid "February"
+msgstr "فوریه"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:69
+msgctxt "alt. month"
+msgid "March"
+msgstr "مارچ"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:70
+msgctxt "alt. month"
+msgid "April"
+msgstr "آوریل"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:71
+msgctxt "alt. month"
+msgid "May"
+msgstr "مه"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:72
+msgctxt "alt. month"
+msgid "June"
+msgstr "ژوئن"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:73
+msgctxt "alt. month"
+msgid "July"
+msgstr "جولای"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:74
+msgctxt "alt. month"
+msgid "August"
+msgstr "آگست"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:75
+msgctxt "alt. month"
+msgid "September"
+msgstr "سپتامبر"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:76
+msgctxt "alt. month"
+msgid "October"
+msgstr "اوکتبر"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:77
+msgctxt "alt. month"
+msgid "November"
+msgstr "نوامبر"
+
+#: venv/lib/python3.12/site-packages/django/utils/dates.py:78
+msgctxt "alt. month"
+msgid "December"
+msgstr "دسامبر"
+
+#: venv/lib/python3.12/site-packages/django/utils/ipv6.py:8
+msgid "This is not a valid IPv6 address."
+msgstr "این یک آدرس IPv6 معتبر نیست."
+
+#: venv/lib/python3.12/site-packages/django/utils/text.py:75
+#, python-format
+msgctxt "String to return when truncating text"
+msgid "%(truncated_text)s…"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/text.py:286
+msgid "or"
+msgstr "یا"
+
+#. Translators: This string is used as a separator between list elements
+#: venv/lib/python3.12/site-packages/django/utils/text.py:305
+#: venv/lib/python3.12/site-packages/django/utils/timesince.py:135
+msgid ", "
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/utils/timesince.py:8
+#, python-format
+msgid "%(num)d year"
+msgid_plural "%(num)d years"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/django/utils/timesince.py:9
+#, python-format
+msgid "%(num)d month"
+msgid_plural "%(num)d months"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/django/utils/timesince.py:10
+#, python-format
+msgid "%(num)d week"
+msgid_plural "%(num)d weeks"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/django/utils/timesince.py:11
+#, python-format
+msgid "%(num)d day"
+msgid_plural "%(num)d days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/django/utils/timesince.py:12
+#, python-format
+msgid "%(num)d hour"
+msgid_plural "%(num)d hours"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/django/utils/timesince.py:13
+#, python-format
+msgid "%(num)d minute"
+msgid_plural "%(num)d minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/django/views/csrf.py:29
+msgid "Forbidden"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/csrf.py:30
+msgid "CSRF verification failed. Request aborted."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/csrf.py:34
+msgid ""
+"You are seeing this message because this HTTPS site requires a “Referer "
+"header” to be sent by your web browser, but none was sent. This header is "
+"required for security reasons, to ensure that your browser is not being "
+"hijacked by third parties."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/csrf.py:40
+msgid ""
+"If you have configured your browser to disable “Referer” headers, please re-"
+"enable them, at least for this site, or for HTTPS connections, or for “same-"
+"origin” requests."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/csrf.py:45
+msgid ""
+"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
+"including the “Referrer-Policy: no-referrer” header, please remove them. The "
+"CSRF protection requires the “Referer” header to do strict referer checking. "
+"If you’re concerned about privacy, use alternatives like <a "
+"rel=\"noreferrer\" …> for links to third-party sites."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/csrf.py:54
+msgid ""
+"You are seeing this message because this site requires a CSRF cookie when "
+"submitting forms. This cookie is required for security reasons, to ensure "
+"that your browser is not being hijacked by third parties."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/csrf.py:60
+msgid ""
+"If you have configured your browser to disable cookies, please re-enable "
+"them, at least for this site, or for “same-origin” requests."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/csrf.py:66
+msgid "More information is available with DEBUG=True."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:44
+msgid "No year specified"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:64
+#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:115
+#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:214
+msgid "Date out of range"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:94
+msgid "No month specified"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:147
+msgid "No day specified"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:194
+msgid "No week specified"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:349
+#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:380
+#, python-format
+msgid "No %(verbose_name_plural)s available"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:652
+#, python-format
+msgid ""
+"Future %(verbose_name_plural)s not available because %(class_name)s."
+"allow_future is False."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/generic/dates.py:692
+#, python-format
+msgid "Invalid date string “%(datestr)s” given format “%(format)s”"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/generic/detail.py:56
+#, python-format
+msgid "No %(verbose_name)s found matching the query"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/generic/list.py:70
+msgid "Page is not “last”, nor can it be converted to an int."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/generic/list.py:77
+#, python-format
+msgid "Invalid page (%(page_number)s): %(message)s"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/generic/list.py:169
+#, python-format
+msgid "Empty list and “%(class_name)s.allow_empty” is False."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/static.py:49
+msgid "Directory indexes are not allowed here."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/static.py:51
+#, python-format
+msgid "“%(path)s” does not exist"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/static.py:68
+#: venv/lib/python3.12/site-packages/django/views/templates/directory_index.html:8
+#: venv/lib/python3.12/site-packages/django/views/templates/directory_index.html:11
+#, python-format
+msgid "Index of %(directory)s"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:7
+#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:204
+msgid "The install worked successfully! Congratulations!"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:206
+#, python-format
+msgid ""
+"View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
+"target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:208
+#, python-format
+msgid ""
+"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
+"%(version)s/ref/settings/#debug\" target=\"_blank\" "
+"rel=\"noopener\">DEBUG=True</a> is in your settings file and you have not "
+"configured any URLs."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:217
+msgid "Django Documentation"
+msgstr "مستندات جنگو"
+
+#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:218
+msgid "Topics, references, &amp; how-to’s"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:226
+msgid "Tutorial: A Polling App"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:227
+msgid "Get started with Django"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:235
+#, fuzzy
+#| msgid "Django Documentation"
+msgid "Django Community"
+msgstr "مستندات جنگو"
+
+#: venv/lib/python3.12/site-packages/django/views/templates/default_urlconf.html:236
+msgid "Connect, get help, or contribute"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/jalali_date/templates/admin/edit_inline/jalali_stacked.html:14
+#: venv/lib/python3.12/site-packages/jalali_date/templates/admin/edit_inline/jalali_tabular.html:36
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/change_form_object_tools.html:12
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/edit_inline/stacked.html:71
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/edit_inline/tabular.html:93
+msgid "View on site"
+msgstr "مشاهده سایت"
+
+#: venv/lib/python3.12/site-packages/jalali_date/templates/admin/edit_inline/jalali_tabular.html:20
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/edit_inline/tabular.html:47
+msgid "Delete?"
+msgstr "حذف؟"
+
+#: venv/lib/python3.12/site-packages/jalali_date/widgets.py:49
+msgid "Date:"
+msgstr ":تاریخ"
+
+#: venv/lib/python3.12/site-packages/jalali_date/widgets.py:49
+msgid "Time:"
+msgstr "زمان:"
+
+#: venv/lib/python3.12/site-packages/kombu/transport/qpid.py:1311
+#, python-format
+msgid "Attempting to connect to qpid with SASL mechanism %s"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/kombu/transport/qpid.py:1316
+#, python-format
+msgid "Connected to qpid with SASL mechanism %s"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/kombu/transport/qpid.py:1334
+#, python-format
+msgid "Unable to connect to qpid with SASL mechanism %s"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/tests/tests/templatetags/test_jalali_admin_safe_readonly_template_tag.py:84
+msgid "%H.%M.%S | %Y-%m-%d"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/tests/tests/templatetags/test_jalali_now_template_tag.py:46
+#: venv/lib/python3.12/site-packages/tests/tests/templatetags/test_to_jalali_template_tag.py:66
+msgid "%Y-%m-%d"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/unfold/admin.py:124
+#: venv/lib/python3.12/site-packages/unfold/templatetags/unfold_list.py:325
+msgid "Select record"
+msgstr "انتخاب رکورد"
+
+#: venv/lib/python3.12/site-packages/unfold/admin.py:156
+#: venv/lib/python3.12/site-packages/unfold/admin.py:177
+msgid "Select value"
+msgstr "انتخاب مقدار"
+
+#: venv/lib/python3.12/site-packages/unfold/admin.py:546
+msgid "Select action"
+msgstr "انتخاب عملیات"
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/filters/admin.py:59
+#: venv/lib/python3.12/site-packages/unfold/contrib/filters/admin.py:117
+msgid "All"
+msgstr "همه"
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/filters/admin.py:83
+#: venv/lib/python3.12/site-packages/unfold/contrib/filters/admin.py:106
+#: venv/lib/python3.12/site-packages/unfold/contrib/filters/admin.py:123
+#: venv/lib/python3.12/site-packages/unfold/contrib/filters/admin.py:150
+#: venv/lib/python3.12/site-packages/unfold/contrib/filters/admin.py:167
+msgid "By {}"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/filters/forms.py:93
+#: venv/lib/python3.12/site-packages/unfold/contrib/filters/forms.py:133
+msgid "From"
+msgstr "از"
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/filters/forms.py:100
+#: venv/lib/python3.12/site-packages/unfold/contrib/filters/forms.py:143
+msgid "To"
+msgstr "تا"
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/filters/forms.py:169
+msgid "Date from"
+msgstr "تاریخ از"
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/filters/forms.py:185
+msgid "Date to"
+msgstr "تاریخ تا"
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/filters/templates/unfold/filters/filters_date_range.html:5
+#: venv/lib/python3.12/site-packages/unfold/contrib/filters/templates/unfold/filters/filters_datetime_range.html:5
+#: venv/lib/python3.12/site-packages/unfold/contrib/filters/templates/unfold/filters/filters_numeric_range.html:5
+#: venv/lib/python3.12/site-packages/unfold/contrib/filters/templates/unfold/filters/filters_numeric_single.html:5
+#: venv/lib/python3.12/site-packages/unfold/contrib/filters/templates/unfold/filters/filters_numeric_slider.html:7
+#, python-format
+msgid "By %(filter_title)s"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/filters/templates/unfold/filters/filters_numeric_slider.html:30
+msgid "Not enough data."
+msgstr "داده کافی نیست."
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/forms/templates/unfold/forms/array.html:30
+msgid "Add new item"
+msgstr "افزودن آیتم جدید"
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/forms/templates/unfold/forms/helpers/toolbar.html:7
+msgid "Paragraph"
+msgstr "پاراگراف"
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/forms/templates/unfold/forms/helpers/toolbar.html:11
+msgid "Underlined"
+msgstr "زیرخط دار"
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/forms/templates/unfold/forms/helpers/toolbar.html:15
+msgid "Bold"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/forms/templates/unfold/forms/helpers/toolbar.html:19
+msgid "Italic"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/forms/templates/unfold/forms/helpers/toolbar.html:23
+msgid "Strike"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/forms/templates/unfold/forms/helpers/toolbar.html:35
+#: venv/lib/python3.12/site-packages/unfold/contrib/forms/templates/unfold/forms/helpers/toolbar.html:39
+#: venv/lib/python3.12/site-packages/unfold/contrib/forms/templates/unfold/forms/helpers/toolbar.html:43
+#: venv/lib/python3.12/site-packages/unfold/contrib/forms/templates/unfold/forms/helpers/toolbar.html:47
+msgid "Heading"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/forms/templates/unfold/forms/helpers/toolbar.html:55
+msgid "Quote"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/forms/templates/unfold/forms/helpers/toolbar.html:63
+msgid "Unordered list"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/forms/templates/unfold/forms/helpers/toolbar.html:67
+#, fuzzy
+#| msgid "Orders"
+msgid "Ordered list"
+msgstr "سفارش ها"
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/forms/templates/unfold/forms/helpers/toolbar.html:71
+msgid "Indent increase"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/forms/templates/unfold/forms/helpers/toolbar.html:75
+msgid "Indent decrease"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/forms/templates/unfold/forms/helpers/toolbar.html:83
+msgid "Undo"
+msgstr "بازگشت"
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/forms/templates/unfold/forms/helpers/toolbar.html:87
+msgid "Redo"
+msgstr "انجام مجدد"
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/forms/templates/unfold/forms/helpers/toolbar.html:95
+msgid "Enter an URL"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/forms/templates/unfold/forms/helpers/toolbar.html:102
+msgid "Unlink"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/guardian/templates/admin/guardian/model/change_form.html:8
+#: venv/lib/python3.12/site-packages/unfold/contrib/guardian/templates/admin/guardian/model/obj_perms_manage.html:22
+#: venv/lib/python3.12/site-packages/unfold/contrib/guardian/templates/admin/guardian/model/obj_perms_manage_group.html:25
+#: venv/lib/python3.12/site-packages/unfold/contrib/guardian/templates/admin/guardian/model/obj_perms_manage_user.html:26
+msgid "Object permissions"
+msgstr "مجوزهای آبجکت"
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/guardian/templates/admin/guardian/model/obj_perms_manage_group.html:39
+#: venv/lib/python3.12/site-packages/unfold/contrib/guardian/templates/admin/guardian/model/obj_perms_manage_user.html:40
+#: venv/lib/python3.12/site-packages/unfold/contrib/simple_history/templates/simple_history/object_history_list.html:10
+#: venv/lib/python3.12/site-packages/unfold/contrib/simple_history/templates/simple_history/object_history_list.html:44
+msgid "Object"
+msgstr "آبجکت"
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/guardian/templates/admin/guardian/model/obj_perms_manage_group.html:42
+#: venv/lib/python3.12/site-packages/unfold/contrib/guardian/templates/unfold/guardian/group_form.html:15
+msgid "Group"
+msgstr "گروه"
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/guardian/templates/unfold/guardian/group_form.html:7
+msgid "Group permissions"
+msgstr "مجوزهای گروه"
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/guardian/templates/unfold/guardian/group_form.html:25
+#: venv/lib/python3.12/site-packages/unfold/contrib/guardian/templates/unfold/guardian/group_form.html:49
+#: venv/lib/python3.12/site-packages/unfold/contrib/guardian/templates/unfold/guardian/user_form.html:25
+#: venv/lib/python3.12/site-packages/unfold/contrib/guardian/templates/unfold/guardian/user_form.html:49
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/object_history.html:42
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/object_history.html:58
+msgid "Action"
+msgstr "عملیات"
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/guardian/templates/unfold/guardian/group_form.html:51
+#: venv/lib/python3.12/site-packages/unfold/contrib/guardian/templates/unfold/guardian/user_form.html:51
+msgid "Edit"
+msgstr "ویرایش"
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/guardian/templates/unfold/guardian/group_form.html:67
+msgid "Manage group"
+msgstr "مدیریت گروه"
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/guardian/templates/unfold/guardian/user_form.html:7
+msgid "User permissions"
+msgstr "مجوزهای کاربر"
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/guardian/templates/unfold/guardian/user_form.html:67
+msgid "Manage user"
+msgstr "مدیریت کاربر"
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/change_form.html:8
+#: venv/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/change_list_export_item.html:4
+#: venv/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/export.html:28
+msgid "Export"
+msgstr "صادر"
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/change_list_import_item.html:4
+#: venv/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/import.html:39
+msgid "Import"
+msgstr "واردات"
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/export.html:41
+#, python-format
+msgid ""
+"\n"
+"                    Export %(len)s selected item.\n"
+"                "
+msgid_plural ""
+"\n"
+"                    Export %(len)s selected items.\n"
+"                "
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/export.html:60
+msgid "This exporter will export the following fields"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/export.html:79
+#: venv/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/import_form.html:21
+msgid "Submit"
+msgstr "ارسال"
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/import_confirm.html:10
+msgid ""
+"Below is a preview of data to be imported. If you are satisfied with the "
+"results, click 'Confirm import'"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/import_confirm.html:15
+msgid "Confirm import"
+msgstr "تأیید واردات"
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/import_errors.html:19
+msgid "Line number"
+msgstr "شماره خط"
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/import_preview.html:24
+msgid "Skipped"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/import_preview.html:28
+msgid "Update"
+msgstr "به‌روزرسانی"
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/import_validation.html:6
+msgid "Some rows failed to validate"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/import_validation.html:10
+msgid ""
+"Please correct these errors in your data where possible, then reupload it "
+"using the form above."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/import_validation.html:22
+#: venv/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/import_validation.html:40
+msgid "Row"
+msgstr "سطر"
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/import_validation.html:26
+#: venv/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/import_validation.html:44
+msgid "Errors"
+msgstr "خطاها"
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/import_validation.html:70
+msgid "Non field specific"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/resource_fields_list.html:6
+msgid "This exporter will export the following fields: "
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/import_export/templates/admin/import_export/resource_fields_list.html:8
+msgid "This importer will import the following fields: "
+msgstr ""
+
+#. Translators: Model verbose name and instance representation,
+#. suitable to be an item in a list.
+#: venv/lib/python3.12/site-packages/unfold/contrib/inlines/admin.py:94
+#, python-format
+msgid "%(class_name)s %(instance)s"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/inlines/admin.py:106
+#, python-format
+msgid ""
+"Deleting %(class_name)s %(instance)s would require deleting the following "
+"protected related objects: %(related_objects)s"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/simple_history/templates/simple_history/object_history.html:8
+msgid ""
+"Choose a date from the list below to revert to a previous version of this "
+"object."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/simple_history/templates/simple_history/object_history.html:16
+msgid "This object doesn't have a change history."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/simple_history/templates/simple_history/object_history_form.html:22
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/change_form_object_tools.html:6
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/object_history.html:21
+msgid "History"
+msgstr "تاریخچه"
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/simple_history/templates/simple_history/object_history_form.html:29
+#: venv/lib/python3.12/site-packages/unfold/contrib/simple_history/templates/simple_history/submit_line.html:9
+msgid "Revert"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/simple_history/templates/simple_history/object_history_form.html:48
+msgid ""
+"Press the 'Revert' button below to revert to this version of the object."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/simple_history/templates/simple_history/object_history_form.html:52
+msgid "Press the 'Change History' button below to edit the history."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/simple_history/templates/simple_history/object_history_list.html:20
+#: venv/lib/python3.12/site-packages/unfold/contrib/simple_history/templates/simple_history/object_history_list.html:56
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/object_history.html:34
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/object_history.html:50
+msgid "Date/time"
+msgstr "تاریخ/زمان"
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/simple_history/templates/simple_history/object_history_list.html:24
+#: venv/lib/python3.12/site-packages/unfold/contrib/simple_history/templates/simple_history/object_history_list.html:60
+msgid "Comment"
+msgstr "کامنت"
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/simple_history/templates/simple_history/object_history_list.html:28
+#: venv/lib/python3.12/site-packages/unfold/contrib/simple_history/templates/simple_history/object_history_list.html:64
+msgid "Changed by"
+msgstr "تغییر داده شده توسط"
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/simple_history/templates/simple_history/object_history_list.html:32
+#: venv/lib/python3.12/site-packages/unfold/contrib/simple_history/templates/simple_history/object_history_list.html:78
+msgid "Change reason"
+msgstr "دلیل تغییر"
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/simple_history/templates/simple_history/object_history_list.html:36
+#: venv/lib/python3.12/site-packages/unfold/contrib/simple_history/templates/simple_history/object_history_list.html:82
+msgid "Changes"
+msgstr "تغییرات"
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/simple_history/templates/simple_history/object_history_list.html:74
+msgid "None"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/unfold/contrib/simple_history/templates/simple_history/submit_line.html:15
+msgid "Change History"
+msgstr "تاریخچه تغییرات"
+
+#: venv/lib/python3.12/site-packages/unfold/forms.py:44
+msgid "Select action to run"
+msgstr "عملیات مورد نظر برای اجرا را انتخاب کنید"
+
+#: venv/lib/python3.12/site-packages/unfold/forms.py:102
+msgid ""
+"Raw passwords are not stored, so there is no way to see this user’s "
+"password, but you can change the password using <a href=\"{}\" class=\"text-"
+"primary-600 dark:text-primary-500\">this form</a>."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/actions.html:22
+msgid "Run the selected action"
+msgstr "اجرای عمل انتخاب‌ شده"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/actions.html:23
+msgid "Run"
+msgstr "اجرا"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/actions.html:42
+msgid "Click here to select the objects across all pages"
+msgstr "برای انتخاب اشیاء در تمام صفحات اینجا را کلیک کنید"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/actions.html:43
+#, python-format
+msgid "Select all %(total_count)s %(module_name)s"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/actions.html:49
+msgid "Clear selection"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/app_index.html:30
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/base_site.html:6
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/index.html:12
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/layouts/base.html:6
+msgid "Django administration"
+msgstr "مدیریت جنگو"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/app_list.html:12
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/helpers/app_list_default.html:9
+#, python-format
+msgid "Models in the %(name)s application"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/app_list.html:47
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/helpers/app_list.html:98
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/helpers/app_list_default.html:59
+msgid "You don’t have permission to view or edit anything."
+msgstr "شما اجازه مشاهده یا ویرایش هیچ چیزی را ندارید."
+
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/auth/user/add_form.html:7
+msgid ""
+"First, enter a username and password. Then, you’ll be able to edit more user "
+"options."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/auth/user/add_form.html:9
+msgid "Enter a username and password."
+msgstr "یک نام کاربری و رمز عبور وارد کنید."
+
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/auth/user/change_password.html:25
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/auth/user/change_password.html:55
+#: venv/lib/python3.12/site-packages/unfold/templates/registration/password_change_done.html:15
+#: venv/lib/python3.12/site-packages/unfold/templates/registration/password_change_form.html:15
+#: venv/lib/python3.12/site-packages/unfold/templates/registration/password_change_form.html:46
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/helpers/account_links.html:23
+msgid "Change password"
+msgstr "تغییر رمز عبور"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/auth/user/change_password.html:44
+#, python-format
+msgid "Enter a new password for the user <strong>%(username)s</strong>."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/change_form.html:32
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/helpers/add_link.html:5
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/helpers/add_link.html:8
+#, python-format
+msgid "Add %(name)s"
+msgstr "افزودن %(name)s"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/change_list.html:99
+msgid "Filters"
+msgstr "فیلتر ها"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/change_list_results.html:28
+msgid "Select all rows"
+msgstr "انتخاب همه ردیف‌ها"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/change_list_results.html:42
+msgid "Toggle sorting"
+msgstr "تغییر ترتیب مرتب‌سازی"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/change_list_results.html:50
+msgid "Remove from sorting"
+msgstr "حذف از مرتب‌سازی"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/change_list_results.html:56
+#, python-format
+msgid "Sorting priority: %(priority_number)s"
+msgstr "اولویت مرتب‌سازی: %(priority_number)s"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/delete_confirmation.html:37
+#, python-format
+msgid ""
+"Deleting the %(object_name)s '%(escaped_object)s' would result in deleting "
+"related objects, but your account doesn't have permission to delete the "
+"following types of objects:"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/delete_confirmation.html:53
+#, python-format
+msgid ""
+"Deleting the %(object_name)s '%(escaped_object)s' would require deleting the "
+"following protected related objects:"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/delete_confirmation.html:69
+#, python-format
+msgid ""
+"Are you sure you want to delete the %(object_name)s \"%(escaped_object)s\"? "
+"All of the following related items will be deleted:"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/delete_confirmation.html:76
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/delete_selected_confirmation.html:71
+msgid "Objects"
+msgstr "اشیاء"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/delete_selected_confirmation.html:27
+msgid "Delete multiple objects"
+msgstr "حذف چندین شیء"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/delete_selected_confirmation.html:37
+#, python-format
+msgid ""
+"Deleting the selected %(objects_name)s would result in deleting related "
+"objects, but your account doesn't have permission to delete the following "
+"types of objects:"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/delete_selected_confirmation.html:50
+#, python-format
+msgid ""
+"Deleting the selected %(objects_name)s would require deleting the following "
+"protected related objects:"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/delete_selected_confirmation.html:64
+#, python-format
+msgid ""
+"Are you sure you want to delete the selected %(objects_name)s? All of the "
+"following objects and their related items will be deleted:"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/filter.html:5
+#, python-format
+msgid " By %(filter_title)s "
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/includes/object_delete_summary.html:5
+msgid "Summary"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/login.html:31
+msgid "Welcome back to"
+msgstr "خوش آمدید به"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/login.html:42
+#, python-format
+msgid ""
+"You are authenticated as %(username)s, but are not authorized to access this "
+"page. Would you like to login to a different account?"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/login.html:63
+msgid "Log in"
+msgstr "ورود"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/login.html:72
+msgid "Forgotten your password or username?"
+msgstr "رمز عبور یا نام کاربری خود را فراموش کرده‌اید؟"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/login.html:84
+msgid "Return to site"
+msgstr "بازگشت به سایت"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/nav_sidebar.html:7
+msgid "Menu"
+msgstr "منو"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/object_history.html:81
+msgid "entry"
+msgid_plural "entries"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/object_history.html:84
+msgid ""
+"This object doesn’t have a change history. It probably wasn’t added via this "
+"admin site."
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/pagination.html:28
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/helpers/welcomemsg.html:22
+msgid "Show all"
+msgstr "نمایش همه"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/search_form.html:6
+msgid "Type to search"
+msgstr "جستجو"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/submit_line.html:23
+msgid "Save and continue editing"
+msgstr "ذخیره و ادامه ویرایش"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/submit_line.html:25
+msgid "Save and view"
+msgstr "ذخیره و مشاهده"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/submit_line.html:40
+msgid "Save and add another"
+msgstr "ذخیره و افزودن مورد دیگر"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/admin/submit_line.html:46
+msgid "Save as new"
+msgstr "ذخیره به عنوان جدید"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/registration/logged_out.html:11
+msgid "You have been successfully logged out from the administration"
+msgstr "شما با موفقیت از مدیریت سیستم خارج شدید"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/registration/logged_out.html:16
+msgid "Thanks for spending some quality time with the web site today."
+msgstr "از اینکه امروز وقت خود را با وب‌سایت گذراندید، متشکریم."
+
+#: venv/lib/python3.12/site-packages/unfold/templates/registration/logged_out.html:20
+msgid "Log in again"
+msgstr "دوباره وارد شوید"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/registration/password_change_done.html:26
+msgid "Your password was changed."
+msgstr "رمز عبور شما تغییر یافت."
+
+#: venv/lib/python3.12/site-packages/unfold/templates/registration/password_change_form.html:35
+msgid ""
+"Please enter your old password, for security’s sake, and then enter your new "
+"password twice so we can verify you typed it in correctly."
+msgstr ""
+"لطفاً رمز عبور قدیمی خود را وارد کنید، به دلیل مسائل امنیتی، سپس رمز عبور "
+"جدید خود را دو بار وارد کنید تا ما بتوانیم صحت وارد کردن آن را بررسی کنیم."
+
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/change_list_filter.html:9
+msgid "Filter"
+msgstr "فیلتر"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/change_list_filter.html:16
+msgid "Hide counts"
+msgstr "مخفی کردن شمارش‌ها"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/change_list_filter.html:20
+msgid "Show counts"
+msgstr "نمایش شمارش‌ها"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/change_list_filter.html:29
+msgid "Clear all filters"
+msgstr "حذف همه فیلترها"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/change_list_filter.html:50
+msgid "Apply Filters"
+msgstr "اعمال فیلترها"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/helpers/account_links.html:17
+msgid "View site"
+msgstr "مشاهده سایت"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/helpers/account_links.html:32
+msgid "Log out"
+msgstr "خروج"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/helpers/actions_row.html:4
+msgid "More actions"
+msgstr "اقدامات بیشتر"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/helpers/app_list.html:68
+msgid "All applications"
+msgstr "تمامی برنامه‌ها"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/helpers/app_list_default.html:31
+msgid "Add"
+msgstr "افزودن"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/helpers/boolean.html:10
+msgid "True"
+msgstr "بله"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/helpers/boolean.html:12
+msgid "False"
+msgstr "خیر"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/helpers/delete_submit_line.html:5
+msgid "No, take me back"
+msgstr "نه، مرا برگردان"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/helpers/delete_submit_line.html:9
+msgid "Yes, I’m sure"
+msgstr "بله، مطمئنم"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/helpers/display_header.html:10
+msgid "Record picture"
+msgstr "تصویر ثبت"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/helpers/history.html:9
+msgid "Recent actions"
+msgstr "اقدامات اخیر"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/helpers/history.html:28
+msgid "Unknown content"
+msgstr "محتوای ناشناخته"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/helpers/messages/errornote.html:6
+msgid "Please correct the error below."
+msgstr "لطفاً خطای زیر را اصلاح کنید."
+
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/helpers/messages/errornote.html:8
+msgid "Please correct the errors below."
+msgstr "لطفاً خطاهای زیر را اصلاح کنید."
+
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/helpers/search.html:18
+msgid "Search apps and models..."
+msgstr "جستجو در برنامه‌ها و مدل‌ها..."
+
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/helpers/search.html:18
+msgid "Filter navigation items"
+msgstr "فیلتر موارد نویگیشن"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/helpers/theme_switch.html:15
+msgid "Dark"
+msgstr "تاریک"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/helpers/theme_switch.html:22
+msgid "Light"
+msgstr "روشن"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/helpers/theme_switch.html:29
+msgid "System"
+msgstr "سیستم"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/helpers/welcomemsg.html:22
+#, python-format
+msgid "%(counter)s result"
+msgid_plural "%(counter)s results"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/helpers/welcomemsg.html:22
+#, python-format
+msgid "%(full_result_count)s total"
+msgstr ""
+
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/helpers/welcomemsg.html:30
+msgid "Welcome,"
+msgstr "خوش آمدید،"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/widgets/clearable_file_input.html:6
+msgid "Image preview"
+msgstr "پیش‌نمایش تصویر"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/widgets/clearable_file_input.html:24
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/widgets/clearable_file_input_small.html:17
+msgid "Choose file to upload"
+msgstr "فایل برای بارگذاری را انتخاب کنید"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/widgets/related_widget_wrapper.html:16
+#, python-format
+msgid "Change selected %(model)s"
+msgstr "تغییر %(model)s های انتخاب شده"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/widgets/related_widget_wrapper.html:26
+#, python-format
+msgid "Add another %(model)s"
+msgstr "اضافه کردن %(model)s دیگری"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/widgets/related_widget_wrapper.html:35
+#, python-format
+msgid "View selected %(model)s"
+msgstr "مشاهده %(model)s های انتخاب شده"
+
+#: venv/lib/python3.12/site-packages/unfold/templates/unfold/widgets/related_widget_wrapper.html:45
+#, python-format
+msgid "Delete selected %(model)s"
+msgstr "حذف %(model)s های انتخاب شده"
+
+#: venv/lib/python3.12/site-packages/unfold/templatetags/unfold_list.py:109
+msgid "Select all objects on this page for an action"
+msgstr "تمام اشیاء این صفحه را برای اقدام انتخاب کنید"
+
+#: venv/lib/python3.12/site-packages/unfold/widgets.py:459
+msgid "Date"
+msgstr "تاریخ"
+
+#: venv/lib/python3.12/site-packages/unfold/widgets.py:553
+msgid "Select currency"
+msgstr "انتخاب ارز"
+
+#~ msgid "Enter old password"
+#~ msgstr "رمز عبور فعلی خود را وارد کنید"
+
+#~ msgid "Enter new password"
+#~ msgstr "رمز عبور جدید خود را وارد کنید"
+
+#~ msgid "Repeat new password"
+#~ msgstr "رمز عبور جدید را دوباره وارد کنید"
+
+#~ msgid "A password reset email has been sent!"
+#~ msgstr "یک ایمیل بازنشانی رمز عبور ارسال شده است!"
+
+#~ msgid "Sub Categories"
+#~ msgstr "زیر دسته"
+
+#~ msgid "wishlist list"
+#~ msgstr "لیست علاقه‌مندی‌ها"
+
+#~ msgid "Guest"
+#~ msgstr "مهمان"

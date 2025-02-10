@@ -1,0 +1,25 @@
+{% extends 'base.html' %} <!-- Extends the base template for consistent layout across pages -->
+{% load static %} <!-- Load static files for resources like images, CSS, JS -->
+{% load static i18n %} <!-- Load translation files for internationalization -->
+{% load humanize %} <!-- Load humanize filter for formatting data, such as date/time -->
+
+{% block page_title %}
+  {% trans 'profile' %} <!-- Translated page title for user profile -->
+{% endblock %}
+
+{% block content %}
+
+      <div class="container">
+        <!-- Notifications Details Area-->
+        <div class="notification-area pt-3 pb-2">
+          <!-- Notification Details-->
+          <div class="list-group-item d-flex py-3 bg-transparent"><span class="noti-icon"><i class="ti ti-check"></i></span>
+            <div class="noti-info">
+              <h6>{{notif.title}}</h6>
+              {{notif.content|safe}}
+
+            </div>
+          </div>
+        </div>
+      </div>
+{% endblock %}

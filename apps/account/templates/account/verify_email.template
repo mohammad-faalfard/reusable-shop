@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Bernet_shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333333;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #cccccc;
+            border-radius: 8px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header img {
+            max-width: 100px;
+        }
+        .content {
+            margin-bottom: 20px;
+        }
+        .code-container {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 24px;
+            font-weight: bold;
+            color: #28a745;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #777777;
+        }
+                .social-media {
+            margin-top: 10px;
+        }
+        .social-media a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #777777;
+        }
+        .social-media img {
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="">
+                <img src="{{bernet_shop_icon}}" alt="Bernet-shop Logo">
+            </a>
+        </div>
+        <div class="content">
+            <p>Dear {{name}},</p>
+            <p>Thank you for signing up.</p>
+            <p>enter this code to verify your email address:</p>
+        </div>
+        <div class="code-container">
+           {{code}}
+        </div>
+        <div class="content">
+            <p>Once you've verified your email, you'll have full access to to our platform</p>
+            <p>Sincerely,<br>
+            The Bernet-shop Team</p>
+        </div>
+        <div class="footer">
+            <p>Follow us on social media:</p>
+            <div class="social-media">
+                <a href="" target="_blank">
+                    <img src="{{facebook_icon}}" alt="Facebook">
+                </a>
+                <a href="" target="_blank">
+                    <img src="{{instagram_icon}}" alt="Instagram">
+                </a>
+                <a href="" target="_blank">
+                    <img src="{{twitter_icon}}" alt="X (Twitter)">
+                </a>
+            </div>
+            <p>&copy; 2024 Bernet-shop. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

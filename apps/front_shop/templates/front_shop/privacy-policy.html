@@ -1,0 +1,18 @@
+{% extends 'base.html' %} <!-- Extends the base template for common layout -->
+{% load static %} <!-- Load static files for resources like images, CSS, JS -->
+{% load static i18n %} <!-- Load translation files for internationalization -->
+
+{% block page_title %}
+  {% trans 'Privacy Policy' %} <!-- Translated page title for Privacy Policy -->
+{% endblock %}
+
+{% block content %}
+  <div class="page-content-wrapper">
+    <div class="container">
+      <!-- Privacy Policy Section -->
+      <div class="privacy-policy-wrapper py-3">
+        <p>{{ privacy_policy_text|safe }}</p> <!-- Display the privacy policy text, marked as safe for HTML rendering -->
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'base.html' %} <!-- Extends the base template for consistent layout across pages -->
+{% load static %} <!-- Load static files for resources like images, CSS, JS -->
+{% load static i18n %} <!-- Load translation files for internationalization -->
+{% load humanize %} <!-- Load humanize filter for formatting data, such as date/time -->
+
+{% block page_title %}
+  {% trans 'Orders' %} <!-- Translated page title for user profile -->
+{% endblock %}
+
+{% block content %}
+  {% for order in orders%}
+      <div class="my-order-wrapper">
+          <div class="container">
+              <div class="card">
+                  <div class="card-body p-4">
+
+
+                      {% for status in order.statuses %}
+                          <div class="single-order-status {% if status.active %}active{% endif %}">
+                              <div class="order-icon"><i class="{{status.icon}}"></i></div>
+                              <div class="order-text">
+                                  <h6>{{ status.label }}</h6>
+                                  {% if status.timestamp %}
+                                  <span>{{ status.timestamp }}</span>
+                                  {%else%}
+                                  <span> {{ status.estimated_time}} :{% trans 'Estimate' %}</span>
+                                  {% endif %}
+                              </div>
+                              <div class="order-status"><i class="ti ti-circle-check"></i></div>
+                          </div>
+                      {% endfor %}
+                  </div>
+              </div>
+          </div>
+      </div>
+{% endfor %}
+
+{% endblock %}

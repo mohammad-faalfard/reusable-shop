@@ -1,0 +1,26 @@
+{% extends 'base.html' %} <!-- Extends the base template for common layout -->
+{% load static %} <!-- Load static files for resources like images, CSS, JS -->
+{% load i18n %} <!-- Load translation files for internationalization -->
+
+{% block page_title %}
+  {% trans 'Payment Failed' %} <!-- Translated page title for payment failure -->
+{% endblock %}
+
+{% block content %}
+  <!-- Order/Payment Failure -->
+  <div class="order-failed-wrapper">
+    <div class="content text-center">
+      <div class="display-1 text-danger mb-2">
+        <i class="ti ti-basket-off"></i> <!-- Icon indicating payment failure -->
+      </div>
+      <h5 class="text-danger">{% trans 'Payment Failed' %}</h5> <!-- Failure message -->
+      <p class="text-danger opacity-75">
+        {% trans 'Something went wrong with your payment. Please try again or contact support.' %} <!-- Message explaining the issue -->
+      </p>
+      <p class="text-danger opacity-75">
+        {% trans 'Error: ' %} {{ error }} <!-- Display specific error message -->
+      </p>
+      <a class="btn btn-danger mt-3" href="{% url 'home' %}"><i class="ti ti-arrow-left pe-2"></i>{% trans 'Go Back to Shopping' %} <!-- Button to navigate back to the home page --></a>
+    </div>
+  </div>
+{% endblock %}

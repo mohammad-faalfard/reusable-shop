@@ -1,0 +1,151 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load static i18n %}
+{% load humanize %}
+
+{% block page_title %}
+  {% trans 'checkout' %}
+{% endblock %}
+
+{% block content %}
+
+  <div class="page-content-wrapper">
+    <div class="container">
+      <div class="checkout-wrapper-area py-3">
+        <!-- Billing Address Section -->
+        <div class="billing-information-card mb-3">
+          <div class="card billing-information-title-card">
+            <div class="card-body">
+              <h6 class="text-center mb-0">{% trans 'Billing Information' %}</h6>
+            </div>
+          </div>
+          {% include 'partials/profile_card.html' %}
+        </div>
+
+        <!-- Shipping Method Choose -->
+        <div class="shipping-method-choose mb-3">
+          <div class="card shipping-method-choose-title-card">
+            <div class="card-body">
+              <h6 class="text-center mb-0">{% trans 'Shipping Method' %}</h6>
+            </div>
+          </div>
+          <div class="card shipping-method-choose-card">
+            <div class="card-body">
+              <div class="shipping-method-choose">
+                <ul class="ps-0">
+                  {% for shipment in shipment_types %}
+                    <li>
+                      <input id="shipment-{{ shipment.id }}" type="radio" name="shipment_selector" data-shipment-id="{{ shipment.id }}" />
+                      <input type="hidden" id="shipment-{{ shipment.id }}-value" value="{{shipment.get_total_price}}">
+                      <label for="shipment-{{ shipment.id }}">
+                        {{ shipment.title }}
+                        <span>: {{ shipment.description|safe }}</span><span>{{ shipment.get_total_price |floatformat:'-1'|intcomma:False }} تومان</span>
+                      </label>
+                      <div class="check"></div>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {% if profile_incomplete %}
+          <div class="alert alert-warning" role="alert">
+            {% trans 'Your billing information is incomplete. Please update it to proceed.' %}
+          </div>
+        {% endif %}
+
+        <!-- Move the error message above the button -->
+        <div id="shipment-error-message" class="alert alert-danger" style="display:none;">
+          {% trans 'Please select a shipping method to proceed.' %}
+        </div>
+
+        <div class="card cart-amount-area" dir="ltr">
+          <div class="card-body d-flex align-items-center justify-content-between">
+            <h5 class="total-price mb-0" id="total-price">${{ final_price |floatformat:'-1'|intcomma:False }}</h5>
+            {% if profile_incomplete %}
+              <button class="btn btn-secondary" disabled>{% trans 'Complete Profile First' %}</button>
+            {% else %}
+              <!-- Use an anchor tag to link to the payment method page when the button is clicked -->
+              <a class="btn btn-primary disable" id="confirm-pay-btn" href="{% url 'payment-method-select' %}" disabled>{% trans 'Confirm & Pay' %}</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const shipmentRadios = document.querySelectorAll('input[name="shipment_selector"]')
+      const confirmButton = document.getElementById('confirm-pay-btn')
+      const errorMessage = document.getElementById('shipment-error-message')
+      const totalPrice = document.getElementById('total-price')
+      const currentTotal = parseInt(totalPrice.textContent.replace(/,/g, '').replace("$",''), 10);
+
+      let selectedShipmentId = null
+
+      shipmentRadios.forEach(function (radio) {
+        radio.addEventListener('change', function () {
+          if (radio.checked) {
+            const shipmentPrice = parseInt(document.getElementById(radio.id+'-value').value,10)
+            const newPrice = currentTotal + shipmentPrice
+            totalPrice.textContent ="$" + newPrice.toLocaleString()
+            selectedShipmentId = radio.dataset.shipmentId // Store the selected shipment ID
+            errorMessage.style.display = 'none' // Hide the error message
+            confirmButton.classList.remove('disable');
+
+
+
+          }
+        })
+      })
+
+      // Check if a shipment type is already selected on page load
+      if (document.querySelector('input[name="shipment_selector"]:checked')) {
+        selectedShipmentId = document.querySelector('input[name="shipment_selector"]:checked').dataset.shipmentId
+        confirmButton.classList.remove('disable');
+        errorMessage.style.display = 'none'
+      } else {
+        confirmButton.classList.add('disable');;
+        errorMessage.style.display = 'block' // Show the error message initially
+      }
+
+      // Send selected shipment to session when Confirm & Pay is clicked
+      confirmButton.addEventListener('click', function (e) {
+        if (!selectedShipmentId) {
+          e.preventDefault() // Prevent navigation when no shipment is selected
+          errorMessage.style.display = 'block' // Ensure the error message is shown
+          return
+        }
+
+        // Send AJAX request to store the selected shipment in the session
+        fetch("{% url 'store-shipment-selection' %}", {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': '{{ csrf_token }}'
+          },
+          body: JSON.stringify({
+            shipment_id: selectedShipmentId
+          })
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.success) {
+              // Redirect to payment method page if successful
+              window.location.href = "{% url 'payment-method-select' %}"
+
+            } else {
+              errorMessage.style.display = 'block' // Show an error if something went wrong
+            }
+          })
+          .catch((error) => {
+            console.error('Error:', error)
+            errorMessage.style.display = 'block' // Show an error if AJAX fails
+          })
+      })
+    })
+  </script>
+{% endblock %}

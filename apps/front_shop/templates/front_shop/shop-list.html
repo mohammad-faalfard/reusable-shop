@@ -1,0 +1,51 @@
+{% extends 'base.html' %} <!-- Extends the base template for a consistent page structure -->
+{% load static %} <!-- Load static files (images, CSS, JavaScript) for the page -->
+{% load i18n %} <!-- Load internationalization (i18n) to allow for translated text -->
+
+{% block page_title %}
+  {% trans 'Shop List' %} <!-- Translated title for the page, "Shop List" -->
+{% endblock %}
+
+{% block content %}
+  <div class="py-3">
+    <div class="container">
+      <div class="row g-1 align-items-center rtl-flex-d-row-r" dir="ltr">
+        <div class="col-8">
+          <!-- Product Categories Slider -->
+          <div class="product-catagories owl-carousel catagory-slides">
+            {% for category in categories %}
+              <a class="shadow-sm" href="?category_id={{ category.id }}">
+                <img src="{{ category.logo.url }}" alt="{{ category.title }}" /> <!-- Display category logo -->
+                {{ category.title }} <!-- Display category title -->
+              </a>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="col-4">
+          <!-- Product Sorting Dropdown -->
+          <div class="select-product-catagory">
+            <select class="right small border-0" id="selectProductCatagory" name="selectProductCatagory" aria-label="Default select example" hx-get="." hx-target="#product-list" hx-include="[name='selectProductCatagory']">
+              <option selected>
+                {% trans 'Short by' %} <!-- Placeholder for sorting options -->
+              </option>
+              <option value="1">
+                {% trans 'Newest' %} <!-- Option for sorting by newest products -->
+              </option>
+              <option value="2">
+                {% trans 'Most Viewed' %} <!-- Option for sorting by most viewed products -->
+              </option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="mb-3"></div>
+      <div class="row g-2">
+        <!-- Weekly Product Card Loop -->
+        {% for product in products %}
+          <!-- Include Product Card for each product -->
+          {% include 'partials/horizontal_product_card.html' %} <!-- Display the product card for each product -->
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endblock %}

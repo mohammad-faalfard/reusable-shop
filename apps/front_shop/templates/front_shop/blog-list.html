@@ -1,0 +1,89 @@
+{% extends 'base.html' %} <!-- Extends the base template for consistent layout -->
+{% load static %} <!-- Loads static files like images, CSS, and JavaScript -->
+{% load i18n %} <!-- Loads translation tools for internationalization -->
+
+{% block page_title %}
+  {% trans 'Blog List' %} <!-- Page title, translated to the appropriate language -->
+{% endblock %}
+
+{% block content %}
+  <!-- Blog List Section -->
+  <div class="top-products-area py-3">
+    <div class="container">
+      <div class="section-heading d-flex align-items-center justify-content-between rtl-flex-d-row-r">
+        <!-- Layout Options for switching between grid and list view -->
+        <div class="layout-options">
+          <a href="{% url 'blog-grid' %}"><i class="ti ti-border-all"></i></a>
+          <a class="active" href="{% url 'blog-list' %}"><i class="ti ti-list-check"></i></a>
+        </div>
+      </div>
+
+      <div class="row g-2 rtl-flex-d-row-r">
+        <!-- Loop through all blog posts -->
+        {% for post in posts %}
+          <!-- Single Blog Card -->
+          <div class="col-12 col-md-6">
+            <div class="card blog-card list-card">
+              <!-- Post Image -->
+              <div class="post-img">
+                <img src="{{ post.image.url }}" alt="{{ post.title }}" />
+              </div>
+
+              <!-- Post Bookmark Icon -->
+              <a class="post-bookmark" href="#"><i class="ti ti-bookmark"></i></a>
+
+              <!-- Read More Button -->
+              <a class="btn btn-primary btn-sm read-more-btn" href="{% url 'blog-details' post.id %}">{% trans 'Read More' %}</a>
+
+              <!-- Post Content -->
+              <div class="post-content">
+                <div class="bg-shapes">
+                  <div class="circle1"></div>
+                  <div class="circle2"></div>
+                  <div class="circle3"></div>
+                  <div class="circle4"></div>
+                </div>
+
+                <!-- Post Category -->
+                <a class="post-catagory d-block" href="#">{{ post.category.title }}</a>
+
+                <!-- Post Title -->
+                <a class="post-title" href="{% url 'blog-details' post.id %}">{{ post.title }}</a>
+
+                <!-- Post Meta (Author and Time) -->
+                <div class="post-meta d-flex align-items-center justify-content-between flex-wrap">
+                  <a href="#"><i class="ti ti-user"></i>{{ post.created_by.full_name }}</a>
+                  <span><i class="ti ti-clock"></i>{{ post.read_time }}{% trans 'min' %}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Categories Section -->
+    <div class="container">
+      <div class="section-heading pt-3 rtl-text-right">
+        <h6>{% trans 'Read by category' %}</h6>
+      </div>
+      <div class="row g-2 rtl-flex-d-row-r">
+        <!-- Loop through all categories -->
+        {% for category in categories %}
+          <!-- Single Category Block -->
+          <div class="col-4">
+            <div class="card blog-catagory-card">
+              <div class="card-body">
+                <a href="?category_id={{ category.id }}">
+                  <!-- Display the category logo -->
+                  <img src="{{ category.logo.url }}" alt="{{ category.title }}" class="category-logo" />
+                  <span class="d-block">{{ category.title }}</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endblock %}

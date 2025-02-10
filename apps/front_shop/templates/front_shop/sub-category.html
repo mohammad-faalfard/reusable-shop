@@ -1,0 +1,26 @@
+{% extends 'base.html' %} <!-- Extends the base template for a consistent page layout -->
+{% load static %} <!-- Load static files (images, CSS, JS) for the page -->
+{% load i18n %} <!-- Load internationalization (i18n) for translations -->
+
+{% block page_title %}
+  {% trans 'Product Sub Category' %} <!-- Title for the page, translated to the appropriate language -->
+{% endblock %}
+
+{% block content %}
+  <!-- Sub Category's Product List Section -->
+  <div class="top-products-area py-3">
+    <div class="container">
+      <div class="section-heading d-flex align-items-center justify-content-between dir-rtl">
+        <h6>{% trans 'Products' %}</h6> <!-- Section heading for the product list, translated -->
+      </div>
+
+      <!-- Row displaying the products -->
+      <div class="row g-2">
+        {% for product in products %}
+          <!-- Product Card: Includes details for each product -->
+          {% include 'partials/product_card.html' %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endblock %}

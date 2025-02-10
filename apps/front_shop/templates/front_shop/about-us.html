@@ -1,0 +1,37 @@
+{% extends 'base.html' %} <!-- Extends the base template to maintain consistent page layout -->
+{% load static %} <!-- Loads static files like images, CSS, and JavaScript -->
+{% load static i18n %} <!-- Loads translation tools for internationalization -->
+
+{% block page_title %}
+  {% trans 'about us' %} <!-- Page title, translated to the appropriate language -->
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <div class="card">
+      <div class="card-body">
+        <div class="about-content-wrap dir-rtl">
+          <!-- Displaying a background image for the about section -->
+          <img class="mb-3" src="{% static 'img/bg-img/11.png' %}" alt="" />
+
+          <!-- Displaying the content of the about_us variable (safe to render HTML) -->
+          <h5>{{ about_us.text|safe }}</h5>
+
+          <!-- Contact button section -->
+          <div class="contact-btn-wrap text-center">
+            <p class="mb-2">
+              {% trans 'For more information, submit a request.' %}
+            </p> <!-- Request submission prompt -->
+
+            <!-- Button to navigate to the contact page for submitting a query -->
+            <a class="btn btn-primary btn-lg w-100" href="contact.html">
+              <i class="ti ti-mail me-2"></i>
+              <span style="display:inline-block; width: 1px;"></span>
+              {% trans 'Submit A Query' %} <!-- Button text, translated -->
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
